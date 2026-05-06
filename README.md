@@ -180,9 +180,14 @@ next agent can continue without rediscovering the plan.
     ├── 04-archive-the-work.md
     ├── 04-archive-the-work.zh-CN.md
     ├── 05-maintainer-friendly-pr.md
-    └── 05-maintainer-friendly-pr.zh-CN.md
+    ├── 05-maintainer-friendly-pr.zh-CN.md
+    ├── 06-handoff-first-local-maintenance.md
+    └── 06-handoff-first-local-maintenance.zh-CN.md
 └── skills
     ├── agent-self-evolution
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── codex-state-maintenance
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     └── maintainer-friendly-pr
@@ -199,12 +204,14 @@ next agent can continue without rediscovering the plan.
 | Progressive rollout | [03-progressive-rollout.md](examples/03-progressive-rollout.md) | [03-progressive-rollout.zh-CN.md](examples/03-progressive-rollout.zh-CN.md) |
 | Archive the work | [04-archive-the-work.md](examples/04-archive-the-work.md) | [04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
 | Maintainer-friendly upstream PRs | [05-maintainer-friendly-pr.md](examples/05-maintainer-friendly-pr.md) | [05-maintainer-friendly-pr.zh-CN.md](examples/05-maintainer-friendly-pr.zh-CN.md) |
+| Handoff-first local maintenance | [06-handoff-first-local-maintenance.md](examples/06-handoff-first-local-maintenance.md) | [06-handoff-first-local-maintenance.zh-CN.md](examples/06-handoff-first-local-maintenance.zh-CN.md) |
 
 ## Skill package
 
 This repo also includes portable skills:
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md)
+- [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md)
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md)
 
 Copy a folder under `skills/` into any agent system that supports file-based
@@ -222,6 +229,11 @@ for approval.
 PRs that are small, reviewable, and truthful. It removes irrelevant tool noise
 from branch names, commit metadata, and PR bodies, while preserving honest
 accountability and project disclosure rules.
+
+`codex-state-maintenance` teaches the agent how to keep local Codex state fast
+without reckless cleanup: inspect first, write handoffs before archiving,
+backup before applying, archive instead of delete, and treat metadata repair
+as a separate permission.
 
 ## What not to do
 

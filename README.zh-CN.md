@@ -161,9 +161,14 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
     ├── 04-archive-the-work.md
     ├── 04-archive-the-work.zh-CN.md
     ├── 05-maintainer-friendly-pr.md
-    └── 05-maintainer-friendly-pr.zh-CN.md
+    ├── 05-maintainer-friendly-pr.zh-CN.md
+    ├── 06-handoff-first-local-maintenance.md
+    └── 06-handoff-first-local-maintenance.zh-CN.md
 └── skills
     ├── agent-self-evolution
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── codex-state-maintenance
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     └── maintainer-friendly-pr
@@ -180,12 +185,14 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 | 渐进式迁移 | [03-progressive-rollout.md](examples/03-progressive-rollout.md) | [03-progressive-rollout.zh-CN.md](examples/03-progressive-rollout.zh-CN.md) |
 | 归档工作成果 | [04-archive-the-work.md](examples/04-archive-the-work.md) | [04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
 | 面向维护者的上游 PR | [05-maintainer-friendly-pr.md](examples/05-maintainer-friendly-pr.md) | [05-maintainer-friendly-pr.zh-CN.md](examples/05-maintainer-friendly-pr.zh-CN.md) |
+| 先交接再维护本地状态 | [06-handoff-first-local-maintenance.md](examples/06-handoff-first-local-maintenance.md) | [06-handoff-first-local-maintenance.zh-CN.md](examples/06-handoff-first-local-maintenance.zh-CN.md) |
 
 ## Skill 包
 
 这个仓库也包含可移植 skill：
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md)
+- [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md)
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md)
 
 把 `skills/` 下面的对应目录复制到任意支持文件式 skills 的 agent 系统里即可。
@@ -196,6 +203,8 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 或其他 agent 自身表面前，agent 必须列出影响文件、说明风险和回滚方式，并向用户请求同意。
 
 `maintainer-friendly-pr` 会教 agent 如何准备外部开源 PR：让改动小、可 review、真实负责；清理分支名、commit metadata 和 PR body 里的无关工具噪声，同时遵守项目披露规则。
+
+`codex-state-maintenance` 会教 agent 如何维护本地 Codex 状态而不鲁莽清理：先 inspect，再为旧工作写 handoff，先 backup 再 apply，用 archive 代替 delete，并把 metadata repair 当作单独授权。
 
 ## 不要做什么
 
