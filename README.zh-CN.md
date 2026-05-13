@@ -171,7 +171,10 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
     ├── codex-state-maintenance
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
-    └── maintainer-friendly-pr
+    ├── maintainer-friendly-pr
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    └── production-agent-runtime
         ├── SKILL.md
         └── SKILL.zh-CN.md
 ```
@@ -194,10 +197,13 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md)
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md)
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md)
+- [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md)
 
 把 `skills/` 下面的对应目录复制到任意支持文件式 skills 的 agent 系统里即可。
 
 `agent-self-evolution` 会教 agent 如何在用户同意门禁下，改进自己的 memory、prompts、runtime rules 和 tool policies。
+
+`production-agent-runtime` 提炼自 GenericAgent 和 Hermes 的生产级运行经验，涵盖三层架构、分层记忆系统、联邦委托、失败升级协议和自愈机制。
 
 核心安全规则是：在修改 `AGENTS.md`、`agent.md`、memory 数据、prompts、skills
 或其他 agent 自身表面前，agent 必须列出影响文件、说明风险和回滚方式，并向用户请求同意。

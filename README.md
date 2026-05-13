@@ -190,7 +190,10 @@ next agent can continue without rediscovering the plan.
     ├── codex-state-maintenance
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
-    └── maintainer-friendly-pr
+    ├── maintainer-friendly-pr
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    └── production-agent-runtime
         ├── SKILL.md
         └── SKILL.zh-CN.md
 ```
@@ -213,12 +216,15 @@ This repo also includes portable skills:
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md)
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md)
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md)
+- [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md)
 
 Copy a folder under `skills/` into any agent system that supports file-based
 skills.
 
 `agent-self-evolution` teaches the agent how to improve its own memory,
 prompts, runtime rules, and tool policies with a consent gate.
+
+`production-agent-runtime` distills production-grade experience from GenericAgent and Hermes, covering three-layer architecture, layered memory, federated delegation, failure escalation, and self-healing.
 
 The key safety rule is explicit: before modifying `AGENTS.md`, `agent.md`,
 memory data, prompts, skills, or other agent-owned surfaces, the agent must
