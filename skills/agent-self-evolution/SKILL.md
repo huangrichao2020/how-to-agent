@@ -1,6 +1,6 @@
 ---
 name: agent-self-evolution
-description: Use when improving an agent's own memory, skills, prompts, runtime rules, tool policies, AGENTS.md/agent.md files, or when adapting ideas from other agent projects into the current agent.
+description: Use when improving an agent's own memory, skills, prompts, runtime rules, tool policies, AGENTS.md/agent.md files, or when adapting ideas from other agent projects into the current agent. Now includes TTSR trigger-based injection and skill evolution telemetry patterns.
 ---
 
 # Agent Self-Evolution
@@ -161,6 +161,40 @@ Closure checklist:
 - verification evidence is recorded
 - archive path is reported to the user
 
+## TTSR Integration (Trigger-based Skill & Rule injection)
+
+For agents running on constrained environments (2GB RAM, limited context budget),
+use trigger-based injection instead of loading all memory/skills into the system
+prompt:
+
+### Four-Layer Memory Hierarchy
+
+| Layer | Name | Content | Load Strategy |
+|-------|------|---------|---------------|
+| Impression | Short-term task state | Kanban, recent decisions | Always loaded |
+| Anchor | Trigger rule index | Keyword → page mapping (~500 tokens) | Always loaded |
+| Instinct | Frameworks, constitutions | Trading rules, analysis frameworks | Load on trigger match |
+| Skill/Memory | Specific operations | API endpoints, tool configs | Load on trigger match |
+
+### How to evolve with TTSR
+
+1. **New instinct discovered** → Create/update gbrain page + add trigger words to anchor index
+2. **New skill learned** → Create SKILL.md in skills directory + update skills list
+3. **Old memory landed in code** → Remove from memory (keep only active rules)
+4. **Skill used and found outdated** → Patch it immediately, don't wait
+
+## Skill Evolution Telemetry
+
+Track how skills evolve through usage:
+
+1. **Understood** → Read the skill, understood the concept
+2. **Proficient** → Successfully used it in 3+ tasks
+3. **Instinct** → Behavior changed automatically without loading the skill
+
+When a skill reaches "Instinct" level, it should be:
+- Condensed into the anchor index (trigger word → distilled rule)
+- Or promoted to an Instinct page (always-available framework)
+
 ## Copyable Prompt Trail
 
 ```text
@@ -196,3 +230,6 @@ next agent can continue without rediscovering the plan.
 - Calling the task done after code changes but before archive and index
   closure.
 - Letting completed work live only in chat history.
+- Loading all memory into the system prompt instead of using trigger-based
+  injection for constrained environments.
+- Not patching skills when they are used and found outdated.

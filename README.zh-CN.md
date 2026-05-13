@@ -23,7 +23,7 @@ agent 学会新能力，而不是一上来就重写整个 agent runtime。
 它也是一个单独为你打造的能力中心：用来沉淀你希望未来 agent 继承的记忆、技能、方法论和工作印象。
 
 它不是一个 agent 框架。它是一条真实的 prompt trail：一组人类按顺序发给
-agent 的指令，把 agent 从“去研究这些项目”一步步推到“归档新架构、讨论风险、谨慎落地第一阶段，并为后续 agent 写工作手册”。
+agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新架构、讨论风险、谨慎落地第一阶段，并为后续 agent 写工作手册"。
 
 核心想法很简单：
 
@@ -34,7 +34,7 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 
 - 正在维护本地 coding agent、工作流机器人或 agent harness 的开发者。
 - 已经有 memory、tools、skills、docs 或 wiki，但不知道如何让 agent 安全改进这些系统的人。
-- 想看真实“调教 agent 的对话过程”，而不是又一篇抽象 autonomous-agent 宣言的团队。
+- 想看真实"调教 agent 的对话过程"，而不是又一篇抽象 autonomous-agent 宣言的团队。
 
 ## 原始 prompt trail
 
@@ -54,7 +54,7 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 
 ### 1. 从外部信号开始，而不是从功能需求开始
 
-第一句话没有说“实现 open-design”或“复制 agentic-stack”。它要求 agent
+第一句话没有说"实现 open-design"或"复制 agentic-stack"。它要求 agent
 研究两个项目，并判断哪些东西对自己有帮助。
 
 这很关键。好的 agent 进化应该从源码级学习开始：
@@ -66,29 +66,29 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 
 ### 2. 先架构，再写代码
 
-第二句话把 agent 从“马上实现”里拽出来。它明确这是一次大版本改动，并要求先归档架构设计手册。
+第二句话把 agent 从"马上实现"里拽出来。它明确这是一次大版本改动，并要求先归档架构设计手册。
 
 这会把一个模糊改进变成一个稳定对象。后续 agent 可以读设计，而不是重新翻聊天记录。
 
 ### 3. 让迁移有顺序
 
-“按顺序来”很短，但约束很强。它阻止 agent 在有状态、有风险的工作里自作聪明并行推进。
+"按顺序来"很短，但约束很强。它阻止 agent 在有状态、有风险的工作里自作聪明并行推进。
 
 对 agent runtime 来说，顺序本身就是正确性的一部分。
 
 ### 4. 在落地最诱人的方案前先讨论风险
 
-第四句和第五句把“方向认可”和“上线策略”分开：
+第四句和第五句把"方向认可"和"上线策略"分开：
 
 - Plan A 是要做的
 - 但不代表要立刻全量切换
 - 需要比较直接切换和渐进运行
 
-这能防止 agent 把“我同意方向”误解成“你可以马上大改”。
+这能防止 agent 把"我同意方向"误解成"你可以马上大改"。
 
 ### 5. 迁移期间冻结相邻系统
 
-“那这期间是不是得停掉对记忆系统的改造了”是关键转折。它意识到不能一边重构 memory，一边迁移另一个大能力。
+"那这期间是不是得停掉对记忆系统的改造了"是关键转折。它意识到不能一边重构 memory，一边迁移另一个大能力。
 
 对 agent 来说，聚焦本身就是一种安全机制。
 
@@ -150,20 +150,22 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 ├── README.md
 ├── README.zh-CN.md
 ├── assets
-    └── how-to-use-agent-readme-banner.png
+│   └── how-to-use-agent-readme-banner.png
 ├── examples
-    ├── 01-source-learning.md
-    ├── 01-source-learning.zh-CN.md
-    ├── 02-architecture-first.md
-    ├── 02-architecture-first.zh-CN.md
-    ├── 03-progressive-rollout.md
-    ├── 03-progressive-rollout.zh-CN.md
-    ├── 04-archive-the-work.md
-    ├── 04-archive-the-work.zh-CN.md
-    ├── 05-maintainer-friendly-pr.md
-    ├── 05-maintainer-friendly-pr.zh-CN.md
-    ├── 06-handoff-first-local-maintenance.md
-    └── 06-handoff-first-local-maintenance.zh-CN.md
+│   ├── 01-source-learning.md
+│   ├── 01-source-learning.zh-CN.md
+│   ├── 02-architecture-first.md
+│   ├── 02-architecture-first.zh-CN.md
+│   ├── 03-progressive-rollout.md
+│   ├── 03-progressive-rollout.zh-CN.md
+│   ├── 04-archive-the-work.md
+│   ├── 04-archive-the-work.zh-CN.md
+│   ├── 05-maintainer-friendly-pr.md
+│   ├── 05-maintainer-friendly-pr.zh-CN.md
+│   ├── 06-handoff-first-local-maintenance.md
+│   ├── 06-handoff-first-local-maintenance.zh-CN.md
+│   ├── 07-production-agent-runtime-contribution.md
+│   └── 08-fuse-external-into-local-architecture.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -174,7 +176,13 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
     ├── maintainer-friendly-pr
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
-    └── production-agent-runtime
+    ├── production-agent-runtime
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── hermes-ttsr-memory
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    └── self-healing-browser
         ├── SKILL.md
         └── SKILL.zh-CN.md
 ```
@@ -189,21 +197,29 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 | 归档工作成果 | [04-archive-the-work.md](examples/04-archive-the-work.md) | [04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
 | 面向维护者的上游 PR | [05-maintainer-friendly-pr.md](examples/05-maintainer-friendly-pr.md) | [05-maintainer-friendly-pr.zh-CN.md](examples/05-maintainer-friendly-pr.zh-CN.md) |
 | 先交接再维护本地状态 | [06-handoff-first-local-maintenance.md](examples/06-handoff-first-local-maintenance.md) | [06-handoff-first-local-maintenance.zh-CN.md](examples/06-handoff-first-local-maintenance.zh-CN.md) |
+| 贡献生产级 Agent 运行时 Skill | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | — |
+| 融合外部精华到本地架构 | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
 
 ## Skill 包
 
-这个仓库也包含可移植 skill：
+这个仓库包含可移植 skill：
 
-- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md)
-- [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md)
-- [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md)
-- [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md)
+- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带同意门禁的 agent 自我进化
+- [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
+- [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — 准备可 review、真实负责的上游 PR
+- [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md) — GenericAgent + Hermes 的生产级运行经验
+- [skills/hermes-ttsr-memory/SKILL.md](skills/hermes-ttsr-memory/SKILL.md) — 2GB 约束下的触发式分层记忆架构
+- [skills/self-healing-browser/SKILL.md](skills/self-healing-browser/SKILL.md) — Agent 动态编写浏览器辅助函数的工作流
 
 把 `skills/` 下面的对应目录复制到任意支持文件式 skills 的 agent 系统里即可。
 
-`agent-self-evolution` 会教 agent 如何在用户同意门禁下，改进自己的 memory、prompts、runtime rules 和 tool policies。
+`agent-self-evolution` 会教 agent 如何在用户同意门禁下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
 
-`production-agent-runtime` 提炼自 GenericAgent 和 Hermes 的生产级运行经验，涵盖三层架构、分层记忆系统、联邦委托、失败升级协议和自愈机制。
+`production-agent-runtime` 提炼自 GenericAgent 和 Hermes 的生产级运行经验，涵盖三层架构、分层记忆系统、联邦委托、失败升级协议、自愈机制、Code Graph 依赖分析、SysWatch 系统健康诊断和自愈浏览器提取工作流。根据 2026-05 生产运行经验更新。
+
+`hermes-ttsr-memory` 引入四层记忆架构（印象 → 锚点 → 本能 → 技能/记忆），带触发式注入。系统提示词只加载锚点索引（~500 tokens），匹配触发词才注入对应本能/技能页面，用完释放。专为 2GB 约束环境设计，上下文预算是关键。
+
+`self-healing-browser` 教授"agent 编写缺失函数"的网页自动化模式。不使用僵化框架，而是维护一个辅助模块，由 agent 在任务中动态编写/修补。结合视觉 AI 解决验证码和 DOM 蒸馏，处理静态框架无法覆盖的反爬机制。
 
 核心安全规则是：在修改 `AGENTS.md`、`agent.md`、memory 数据、prompts、skills
 或其他 agent 自身表面前，agent 必须列出影响文件、说明风险和回滚方式，并向用户请求同意。
@@ -214,11 +230,13 @@ agent 的指令，把 agent 从“去研究这些项目”一步步推到“归�
 
 ## 不要做什么
 
-- 不要只对 agent 说“变聪明一点”，却不给它要写入的 artifact。
+- 不要只对 agent 说"变聪明一点"，却不给它要写入的 artifact。
 - 不要让 research 和 implementation 混在一句话里。
 - 不要一次性改 memory、tools、prompts 和 runtime wiring。
-- 不要在设计、变更记录和延续路径可被找到前接受“完成”。
+- 不要在设计、变更记录和延续路径可被找到前接受"完成"。
 - 不要因为一个外部项目看起来先进就直接照搬。
+- 不要在修改 agent 自有表面时跳过同意门禁。
+- 不要把所有记忆/技能都加载到系统提示词中——在受限环境下使用触发式注入。
 
 ## 为什么有效
 
@@ -233,3 +251,34 @@ Agents 很擅长响应当前压力，但不擅长跨 turn、重启和工具失�
 - 结束前先文档化
 
 这就是一段对话变成升级路径的方式。
+
+## 架构原则（来自 Hermes 生产经验）
+
+### 1. 分层记忆 + 触发式注入
+
+永远不要把所有记忆都塞进系统提示词。使用四层架构：
+
+| 层级 | 名称 | 加载策略 |
+|-------|------|----------|
+| 印象层 | 短期任务状态 | 始终加载（极小） |
+| 锚点层 | 触发规则索引 | 始终加载（~500 tokens） |
+| 本能层 | 框架、宪法 | 触发词匹配时加载 |
+| 技能/记忆层 | 具体操作、配置 | 触发词匹配时加载 |
+
+这使得即使有 200+ skills，系统提示词也能保持在 12K tokens 以下。
+
+### 2. 带同意门禁的自我进化
+
+Agent 应该改进自己，但修改 agent 自有表面（AGENTS.md、memory、prompts、skills）时必须经过用户明确同意。同意门禁要求：影响文件 → 为什么 → 风险 → 回滚 → 批准。
+
+### 3. 渐进式迁移 > 大爆炸
+
+对任何架构变更：shadow 模式 → 并行运行 → 渐进式迁移 → 全量切换。这就是 Phase 7 记忆架构切换如何在零宕机下完成的方法。
+
+### 4. 一切都要归档
+
+每个设计决策、迁移日志和工作手册都要放到可查找的位置（wiki、gbrain 或 docs/）。聊天记录不是存储系统。
+
+### 5. 聚焦即安全
+
+迁移期间冻结相邻子系统。在 2GB 服务器上，你不能同时重新设计 memory 和迁移 tool routing。

@@ -169,20 +169,22 @@ next agent can continue without rediscovering the plan.
 ├── README.md
 ├── README.zh-CN.md
 ├── assets
-    └── how-to-use-agent-readme-banner.png
+│   └── how-to-use-agent-readme-banner.png
 ├── examples
-    ├── 01-source-learning.md
-    ├── 01-source-learning.zh-CN.md
-    ├── 02-architecture-first.md
-    ├── 02-architecture-first.zh-CN.md
-    ├── 03-progressive-rollout.md
-    ├── 03-progressive-rollout.zh-CN.md
-    ├── 04-archive-the-work.md
-    ├── 04-archive-the-work.zh-CN.md
-    ├── 05-maintainer-friendly-pr.md
-    ├── 05-maintainer-friendly-pr.zh-CN.md
-    ├── 06-handoff-first-local-maintenance.md
-    └── 06-handoff-first-local-maintenance.zh-CN.md
+│   ├── 01-source-learning.md
+│   ├── 01-source-learning.zh-CN.md
+│   ├── 02-architecture-first.md
+│   ├── 02-architecture-first.zh-CN.md
+│   ├── 03-progressive-rollout.md
+│   ├── 03-progressive-rollout.zh-CN.md
+│   ├── 04-archive-the-work.md
+│   ├── 04-archive-the-work.zh-CN.md
+│   ├── 05-maintainer-friendly-pr.md
+│   ├── 05-maintainer-friendly-pr.zh-CN.md
+│   ├── 06-handoff-first-local-maintenance.md
+│   ├── 06-handoff-first-local-maintenance.zh-CN.md
+│   ├── 07-production-agent-runtime-contribution.md
+│   └── 08-fuse-external-into-local-architecture.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -193,7 +195,13 @@ next agent can continue without rediscovering the plan.
     ├── maintainer-friendly-pr
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
-    └── production-agent-runtime
+    ├── production-agent-runtime
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── hermes-ttsr-memory
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    └── self-healing-browser
         ├── SKILL.md
         └── SKILL.zh-CN.md
 ```
@@ -208,23 +216,45 @@ next agent can continue without rediscovering the plan.
 | Archive the work | [04-archive-the-work.md](examples/04-archive-the-work.md) | [04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
 | Maintainer-friendly upstream PRs | [05-maintainer-friendly-pr.md](examples/05-maintainer-friendly-pr.md) | [05-maintainer-friendly-pr.zh-CN.md](examples/05-maintainer-friendly-pr.zh-CN.md) |
 | Handoff-first local maintenance | [06-handoff-first-local-maintenance.md](examples/06-handoff-first-local-maintenance.md) | [06-handoff-first-local-maintenance.zh-CN.md](examples/06-handoff-first-local-maintenance.zh-CN.md) |
+| Production agent runtime contribution | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | — |
+| Fuse external精华 into local architecture | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
 
 ## Skill package
 
 This repo also includes portable skills:
 
-- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md)
-- [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md)
-- [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md)
-- [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md)
+- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with consent gates
+- [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
+- [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — Prepare reviewable, truthful upstream PRs
+- [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md) — Production-grade runtime patterns from GenericAgent + Hermes
+- [skills/hermes-ttsr-memory/SKILL.md](skills/hermes-ttsr-memory/SKILL.md) — Trigger-based layered memory architecture for 2GB-constrained agents
+- [skills/self-healing-browser/SKILL.md](skills/self-healing-browser/SKILL.md) — Agent writes missing browser helper functions dynamically
 
 Copy a folder under `skills/` into any agent system that supports file-based
 skills.
 
 `agent-self-evolution` teaches the agent how to improve its own memory,
-prompts, runtime rules, and tool policies with a consent gate.
+prompts, runtime rules, and tool policies with a consent gate. Now enhanced
+with TTSR (Trigger-based Skill & Rule injection) patterns and skill evolution
+telemetry.
 
-`production-agent-runtime` distills production-grade experience from GenericAgent and Hermes, covering three-layer architecture, layered memory, federated delegation, failure escalation, and self-healing.
+`production-agent-runtime` distills production-grade experience from
+GenericAgent and Hermes, covering three-layer architecture, layered memory,
+federated delegation, failure escalation, self-healing, Code Graph dependency
+analysis, system health diagnostics (SysWatch), and the self-healing browser
+harness. Updated with Hermes-specific patterns from 2026-05 production runs.
+
+`hermes-ttsr-memory` introduces a four-layer memory hierarchy (Impression →
+Anchor → Instinct → Skill/Memory) with trigger-based injection. The system
+prompt only loads an anchor index (~500 tokens), and matching trigger words
+inject corresponding instinct/skill pages, releasing them after use. Designed
+for 2GB-constrained environments where context budget is critical.
+
+`self-healing-browser` teaches the "agent writes missing functions" pattern
+for web automation. Instead of rigid frameworks, maintain a helper module that
+the agent dynamically writes/patches during tasks. Combined with vision AI for
+CAPTCHA solving and DOM distillation, it handles anti-bot mechanisms that
+static frameworks cannot cover.
 
 The key safety rule is explicit: before modifying `AGENTS.md`, `agent.md`,
 memory data, prompts, skills, or other agent-owned surfaces, the agent must
@@ -249,6 +279,9 @@ as a separate permission.
 - Do not accept "done" until the design, change log, and continuation path are
   findable.
 - Do not copy an external project just because it looks advanced.
+- Do not skip the consent gate when modifying agent-owned surfaces.
+- Do not load all memory/skills into the system prompt — use trigger-based
+  injection for constrained environments.
 
 ## Why this works
 
@@ -264,3 +297,40 @@ This prompt trail creates pressure in the right places:
 - documentation before closure
 
 That is how a conversation becomes an upgrade path.
+
+## Architecture principles (from Hermes production experience)
+
+### 1. Layered memory with trigger-based injection
+
+Never dump all memory into the system prompt. Use a four-layer hierarchy:
+
+| Layer | Name | Load Strategy |
+|-------|------|---------------|
+| Impression | Short-term task state | Always loaded (small) |
+| Anchor | Trigger rule index | Always loaded (~500 tokens) |
+| Instinct | Frameworks, constitutions | Load on trigger word match |
+| Skill/Memory | Specific operations, configs | Load on trigger word match |
+
+This keeps the system prompt under 12K tokens even with 200+ skills.
+
+### 2. Self-evolution with consent
+
+Agents should improve themselves, but only with explicit user approval when
+modifying agent-owned surfaces (AGENTS.md, memory, prompts, skills). The
+consent gate requires: affected files → why → risk → rollback → approval.
+
+### 3. Progressive rollout > big-bang
+
+For any architectural change: shadow mode → parallel run → progressive
+rollout → full switch. This is how Phase 7 memory architecture cutover was
+done without downtime.
+
+### 4. Archive everything
+
+Every design decision, migration log, and work manual goes into a findable
+location (wiki, gbrain, or docs/). Chat history is not a storage system.
+
+### 5. Focus is safety
+
+During a migration, freeze adjacent subsystems. You cannot redesign memory
+and migrate tool routing at the same time on a 2GB server.
