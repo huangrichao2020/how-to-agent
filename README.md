@@ -1,15 +1,15 @@
-# how-to-use-agent
+# how-to-agent
 
 Teach your agent to evolve through conversation.
 
 <p align="center">
-  <img src="assets/how-to-use-agent-readme-banner.png" alt="How to Use Agent README banner" width="100%">
+  <img src="assets/how-to-agent-readme-banner.png" alt="How to Agent README banner" width="100%">
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![English](https://img.shields.io/badge/docs-English-blue)](README.md)
 [![中文](https://img.shields.io/badge/docs-中文-red)](README.zh-CN.md)
-[![GitHub stars](https://img.shields.io/github/stars/huangrichao2020/how-to-use-agent?style=social)](https://github.com/huangrichao2020/how-to-use-agent)
+[![GitHub stars](https://img.shields.io/github/stars/huangrichao2020/how-to-agent?style=social)](https://github.com/huangrichao2020/how-to-agent)
 
 <p align="center">
   <a href="README.md"><strong>English</strong></a>
@@ -169,7 +169,7 @@ next agent can continue without rediscovering the plan.
 ├── README.md
 ├── README.zh-CN.md
 ├── assets
-│   └── how-to-use-agent-readme-banner.png
+│   └── how-to-agent-readme-banner.png
 ├── examples
 │   ├── 01-source-learning.md
 │   ├── 01-source-learning.zh-CN.md
@@ -184,7 +184,10 @@ next agent can continue without rediscovering the plan.
 │   ├── 06-handoff-first-local-maintenance.md
 │   ├── 06-handoff-first-local-maintenance.zh-CN.md
 │   ├── 07-production-agent-runtime-contribution.md
-│   └── 08-fuse-external-into-local-architecture.md
+│   ├── 07-production-agent-runtime-contribution.zh-CN.md
+│   ├── 08-fuse-external-into-local-architecture.md
+│   ├── 09-excellent-agent-architecture.md
+│   └── 09-excellent-agent-architecture.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -216,8 +219,9 @@ next agent can continue without rediscovering the plan.
 | Archive the work | [04-archive-the-work.md](examples/04-archive-the-work.md) | [04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
 | Maintainer-friendly upstream PRs | [05-maintainer-friendly-pr.md](examples/05-maintainer-friendly-pr.md) | [05-maintainer-friendly-pr.zh-CN.md](examples/05-maintainer-friendly-pr.zh-CN.md) |
 | Handoff-first local maintenance | [06-handoff-first-local-maintenance.md](examples/06-handoff-first-local-maintenance.md) | [06-handoff-first-local-maintenance.zh-CN.md](examples/06-handoff-first-local-maintenance.zh-CN.md) |
-| Production agent runtime contribution | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | — |
+| Production agent runtime contribution | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | [07-production-agent-runtime-contribution.zh-CN.md](examples/07-production-agent-runtime-contribution.zh-CN.md) |
 | Fuse external精华 into local architecture | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
+| Excellent agent architecture | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
 
 ## Skill package
 

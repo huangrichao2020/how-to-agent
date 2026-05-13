@@ -1,15 +1,15 @@
-# how-to-use-agent
+# how-to-agent
 
 通过对话教会你的 agent 自我进化。
 
 <p align="center">
-  <img src="assets/how-to-use-agent-readme-banner.png" alt="How to Use Agent README banner" width="100%">
+  <img src="assets/how-to-agent-readme-banner.png" alt="How to Agent README banner" width="100%">
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![English](https://img.shields.io/badge/docs-English-blue)](README.md)
 [![中文](https://img.shields.io/badge/docs-中文-red)](README.zh-CN.md)
-[![GitHub stars](https://img.shields.io/github/stars/huangrichao2020/how-to-use-agent?style=social)](https://github.com/huangrichao2020/how-to-use-agent)
+[![GitHub stars](https://img.shields.io/github/stars/huangrichao2020/how-to-agent?style=social)](https://github.com/huangrichao2020/how-to-agent)
 
 <p align="center">
   <a href="README.md"><strong>English</strong></a>
@@ -150,7 +150,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 ├── README.md
 ├── README.zh-CN.md
 ├── assets
-│   └── how-to-use-agent-readme-banner.png
+│   └── how-to-agent-readme-banner.png
 ├── examples
 │   ├── 01-source-learning.md
 │   ├── 01-source-learning.zh-CN.md
@@ -165,7 +165,10 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 │   ├── 06-handoff-first-local-maintenance.md
 │   ├── 06-handoff-first-local-maintenance.zh-CN.md
 │   ├── 07-production-agent-runtime-contribution.md
-│   └── 08-fuse-external-into-local-architecture.md
+│   ├── 07-production-agent-runtime-contribution.zh-CN.md
+│   ├── 08-fuse-external-into-local-architecture.md
+│   ├── 09-excellent-agent-architecture.md
+│   └── 09-excellent-agent-architecture.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -197,8 +200,9 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 归档工作成果 | [04-archive-the-work.md](examples/04-archive-the-work.md) | [04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
 | 面向维护者的上游 PR | [05-maintainer-friendly-pr.md](examples/05-maintainer-friendly-pr.md) | [05-maintainer-friendly-pr.zh-CN.md](examples/05-maintainer-friendly-pr.zh-CN.md) |
 | 先交接再维护本地状态 | [06-handoff-first-local-maintenance.md](examples/06-handoff-first-local-maintenance.md) | [06-handoff-first-local-maintenance.zh-CN.md](examples/06-handoff-first-local-maintenance.zh-CN.md) |
-| 贡献生产级 Agent 运行时 Skill | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | — |
+| 贡献生产级 Agent 运行时 Skill | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | [07-production-agent-runtime-contribution.zh-CN.md](examples/07-production-agent-runtime-contribution.zh-CN.md) |
 | 融合外部精华到本地架构 | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
+| 优秀 Agent 架构 | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
 
 ## Skill 包
 
