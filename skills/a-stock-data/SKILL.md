@@ -1,7 +1,7 @@
 ---
 name: a-stock-data
 description: "Use when the user asks about A-share stock data: quotes, fundamentals, technicals, capital flow, sectors, news. Covers Baostock, Tencent, Eastmoney, AkShare, MX API. Trigger: A股/行情/财报/涨停/板块/资金流. Do NOT trigger for non-A-share markets (US/HK/Crypto), generic finance questions, or trading advice without data context."
-version: 4.1.0
+version: 4.3.0
 ---
 
 # A 股全栈数据工具包
