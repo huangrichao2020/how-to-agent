@@ -118,6 +118,20 @@ GA/Hermes 这类 runtime 应把准入做成两步协议：
 - `/cognition context`：查看后续 turn 会注入的已准入认知上下文。
 - `cognitive_store` 元工具可以让 agent 自查 `status`、`pending`、`context`，也可以 `propose` 候选；但 `propose` 只能写 pending，不能绕过用户准入直接提升。
 
+## Cron 热记忆和 Dream 正式确认
+
+cron/corn 报告必须先写入当天 hot 频道记忆，不能只作为一次性消息发送。下一条对话应自动带入最近几小时的 cron 输出，解决“刚发完报告就想不起来”的断层。
+
+nightly dream 是正式确认机制，不是候选清单。它在用户睡觉后读取当天频道记录、cron 输出、工具结果和 pending，允许 agent 提出新认知，并自动把安全条目正式准入，第二天发 Dream 认知精炼报告。
+
+执行要点：
+
+- cron 报告写入 `source=cron`、`task`、`report`、`text`。
+- dream review 期间如果调用 `cognitive_store propose`，必须传 `target_day`。
+- dream admit 只能自动准入安全项：事实/身份 high confidence，知识/流程/滋养 medium+。
+- 原始私密日记、一天情绪或一次冲动只能保留为证据，不能自动成为正式认知。
+- dream 报告必须说明正式准入、跳过原因和对今天的影响。
+
 ## 反馈处理
 
 把反馈当成信号，不要当成自动更新。

@@ -530,6 +530,40 @@ This keeps "understand me" from becoming uncontrolled memory. The agent can
 propose what it learned, but the user decides what becomes part of the durable
 cognitive substrate.
 
+## Cron Hot Memory And Dream Admission
+
+Scheduled tasks, cron/corn reports, and automated daily briefs should not
+vanish after they are delivered. They should first enter same-day strong
+memory, then feed the nightly dream loop.
+
+Minimum mechanism:
+
+1. After cron produces the final visible report, write it into same-day hot
+   conversation memory with `source=cron`, `task=<job name>`, and
+   `report=<report path>`.
+2. The next channel turn injects recent cron outputs as context, not as a new
+   user instruction.
+3. At day end, nightly dream reads the full channel record, cron outputs, tool
+   results, and existing pending cognition.
+4. Dream may propose new cognition, but must include `target_day` so a 2:30 AM
+   run still attributes evidence to the previous day.
+5. Dream then calls the formal admission path, promotes safe items into
+   durable cognition, and sends the user a Dream cognition refinement report.
+
+Dream is not a candidate list. It is a low-disturbance formal confirmation
+mechanism: the user may actively admit cognition during the day, or passively
+review the next morning's report after the agent completes the first safe
+admission pass overnight.
+
+Dream admission boundaries:
+
+- Facts and identity rules require high confidence.
+- Knowledge, procedures, and nourishment principles can be medium/high
+  confidence.
+- Raw private diaries, one-day moods, and one-off impulses must not be made
+  permanent automatically.
+- Every admission must leave an admission log, evidence day, and report.
+
 ## Copyable Prompt
 
 ```text

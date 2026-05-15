@@ -165,6 +165,29 @@ Expose the admission store as meta-operations, not as hidden magic:
   `context`, and `propose` candidates, but `propose` must only create pending
   records. Promotion remains a user-visible admission act.
 
+## Cron Hot Memory And Dream Admission
+
+Cron/corn reports must be written into same-day hot channel memory before they
+are treated as delivered. The next conversation should automatically include
+recent cron output as context, fixing the "reported one second ago but already
+forgotten" failure mode.
+
+Nightly dream is a formal confirmation mechanism, not a candidate list. After
+the user sleeps, it reviews same-day channel records, cron outputs, tool
+results, and pending cognition; it may propose new cognition, formally admit
+safe items, and send a Dream cognition refinement report the next morning.
+
+Implementation rules:
+
+- Store cron reports with `source=cron`, `task`, `report`, and `text`.
+- If dream review calls `cognitive_store propose`, it must pass `target_day`.
+- Dream admission can only auto-admit safe items: fact/identity require high
+  confidence; knowledge/procedure/nourishment require medium+ confidence.
+- Raw private diary text, one-day moods, and one-off impulses stay as evidence
+  and must not become durable cognition automatically.
+- Dream reports must list admitted items, skipped reasons, and the effect on
+  today's behavior.
+
 ## Feedback Handling
 
 Treat feedback as a signal, not an automatic update.
