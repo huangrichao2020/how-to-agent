@@ -110,6 +110,14 @@ GA/Hermes 这类 runtime 应把准入做成两步协议：
 
 不要把原始私密日记写进这些层。L5 原文是本地证据，只有用户准入过的摘要才能提升。
 
+准入库应该暴露成元操作，而不是藏在黑箱里：
+
+- `/cognition status`：查看 pending 数量和各正式层数量。
+- `/cognition pending`：列出当前聊天 / 会话范围内最新待准入候选。
+- `/cognition admit`：在用户明确确认后，把当前范围内 pending 候选提升到正式层。
+- `/cognition context`：查看后续 turn 会注入的已准入认知上下文。
+- `cognitive_store` 元工具可以让 agent 自查 `status`、`pending`、`context`，也可以 `propose` 候选；但 `propose` 只能写 pending，不能绕过用户准入直接提升。
+
 ## 反馈处理
 
 把反馈当成信号，不要当成自动更新。

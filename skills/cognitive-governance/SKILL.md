@@ -152,6 +152,19 @@ Use these durable surfaces:
 Never write raw private diary text into these surfaces. Raw L5 material stays
 local evidence; only user-approved summaries can be admitted.
 
+Expose the admission store as meta-operations, not as hidden magic:
+
+- `/cognition status` shows pending count and admitted layer counts.
+- `/cognition pending` lists the latest pending candidates for the current
+  chat/session scope.
+- `/cognition admit` promotes the scoped pending candidates after explicit
+  user confirmation.
+- `/cognition context` shows the admitted cognition that would be injected
+  into future turns.
+- A `cognitive_store` meta-tool may let the agent inspect `status`, `pending`,
+  `context`, and `propose` candidates, but `propose` must only create pending
+  records. Promotion remains a user-visible admission act.
+
 ## Feedback Handling
 
 Treat feedback as a signal, not an automatic update.
