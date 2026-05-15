@@ -168,12 +168,20 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 │   ├── 07-production-agent-runtime-contribution.zh-CN.md
 │   ├── 08-fuse-external-into-local-architecture.md
 │   ├── 09-excellent-agent-architecture.md
-│   └── 09-excellent-agent-architecture.zh-CN.md
+│   ├── 09-excellent-agent-architecture.zh-CN.md
+│   ├── 10-cognitive-governance.md
+│   └── 10-cognitive-governance.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
+    ├── cognitive-governance
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
     ├── codex-state-maintenance
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── l5-diary-capture
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── maintainer-friendly-pr
@@ -203,12 +211,15 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 贡献生产级 Agent 运行时 Skill | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | [07-production-agent-runtime-contribution.zh-CN.md](examples/07-production-agent-runtime-contribution.zh-CN.md) |
 | 融合外部精华到本地架构 | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
 | 优秀 Agent 架构 | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
+| 认知治理 | [10-cognitive-governance.md](examples/10-cognitive-governance.md) | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md) |
 
 ## Skill 包
 
 这个仓库包含可移植 skill：
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带同意门禁的 agent 自我进化
+- [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为治理成认知质量循环
+- [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — 把用户日记和语音输入接成 L5 人类真实行为层
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — 准备可 review、真实负责的上游 PR
 - [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md) — GenericAgent + Hermes 的生产级运行经验
@@ -218,6 +229,10 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 把 `skills/` 下面的对应目录复制到任意支持文件式 skills 的 agent 系统里即可。
 
 `agent-self-evolution` 会教 agent 如何在用户同意门禁下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
+
+`cognitive-governance` 会教 agent 在写入持久状态前，先区分痕迹、事件、断言、事实、知识、流程、身份、滋养和 L5 人类真实行为。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory。
+
+`l5-diary-capture` 会教 agent 如何接住用户用语音输入或文字写下的日记：先不打断地接收，再分层整理行为事实、情绪状态、现实反馈和明日最小一步，最后询问哪些内容只本地保存、哪些可以沉淀。
 
 `production-agent-runtime` 提炼自 GenericAgent 和 Hermes 的生产级运行经验，涵盖三层架构、分层记忆系统、联邦委托、失败升级协议、自愈机制、Code Graph 依赖分析、SysWatch 系统健康诊断和自愈浏览器提取工作流。根据 2026-05 生产运行经验更新。
 

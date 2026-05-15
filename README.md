@@ -187,12 +187,20 @@ next agent can continue without rediscovering the plan.
 │   ├── 07-production-agent-runtime-contribution.zh-CN.md
 │   ├── 08-fuse-external-into-local-architecture.md
 │   ├── 09-excellent-agent-architecture.md
-│   └── 09-excellent-agent-architecture.zh-CN.md
+│   ├── 09-excellent-agent-architecture.zh-CN.md
+│   ├── 10-cognitive-governance.md
+│   └── 10-cognitive-governance.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
+    ├── cognitive-governance
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
     ├── codex-state-maintenance
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── l5-diary-capture
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── maintainer-friendly-pr
@@ -222,12 +230,15 @@ next agent can continue without rediscovering the plan.
 | Production agent runtime contribution | [07-production-agent-runtime-contribution.md](examples/07-production-agent-runtime-contribution.md) | [07-production-agent-runtime-contribution.zh-CN.md](examples/07-production-agent-runtime-contribution.zh-CN.md) |
 | Fuse external精华 into local architecture | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
 | Excellent agent architecture | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
+| Cognitive governance | [10-cognitive-governance.md](examples/10-cognitive-governance.md) | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md) |
 
 ## Skill package
 
 This repo also includes portable skills:
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with consent gates
+- [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a governed cognition loop
+- [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — Prepare reviewable, truthful upstream PRs
 - [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md) — Production-grade runtime patterns from GenericAgent + Hermes
@@ -241,6 +252,17 @@ skills.
 prompts, runtime rules, and tool policies with a consent gate. Now enhanced
 with TTSR (Trigger-based Skill & Rule injection) patterns and skill evolution
 telemetry.
+
+`cognitive-governance` teaches the agent how to classify traces, episodes,
+claims, facts, knowledge, procedures, identity, nourishment, and L5 human real
+behavior before writing durable state. It is the working theory for improving
+attention, association, response quality, feedback learning, and long-term
+growth instead of merely storing more memory.
+
+`l5-diary-capture` teaches the agent how to receive diary entries written by
+text or voice input: do not interrupt, layer behavior facts, emotional state,
+reality feedback, and tomorrow's smallest next step, then ask what remains local
+and what may be admitted.
 
 `production-agent-runtime` distills production-grade experience from
 GenericAgent and Hermes, covering three-layer architecture, layered memory,
