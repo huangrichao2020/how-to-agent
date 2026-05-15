@@ -1,0 +1,50 @@
+{"name": "a-stock-market-analysis-framework", "description": "", "triggers": ["a-stock-market-analysis-framework", "a stock market analysis framework"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "agent-brain-structure-migration", "description": "", "triggers": ["agent brain structure migration", "agent-brain-structure-migration"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "agent-enhancements", "description": "", "triggers": ["agent enhancements", "agent-enhancements"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "ai-brand-design", "description": "", "triggers": ["ai brand design", "ai-brand-design"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "apple", "description": "", "triggers": ["apple"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "autonomous-ai-agents", "description": "", "triggers": ["autonomous-ai-agents", "autonomous ai agents"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "browser-spa-data-extraction", "description": "", "triggers": ["browser spa data extraction", "browser-spa-data-extraction"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "copaw-imported", "description": "", "triggers": ["copaw imported", "copaw-imported"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "creative", "description": "", "triggers": ["creative"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "data-science", "description": "", "triggers": ["data science", "data-science"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "devops", "description": "", "triggers": ["devops"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "dogfood", "description": "", "triggers": ["dogfood"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "domain", "description": "", "triggers": ["domain"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "email", "description": "", "triggers": ["email"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "gaming", "description": "", "triggers": ["gaming"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "github", "description": "", "triggers": ["github"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "harmonist-schema-v2", "description": "", "triggers": ["harmonist-schema-v2", "harmonist schema v2"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "horizontal-vertical-analysis", "description": "", "triggers": ["horizontal vertical analysis", "horizontal-vertical-analysis"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "huashu-design", "description": "", "triggers": ["huashu-design", "huashu design"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "knowledge-sync", "description": "", "triggers": ["knowledge-sync", "knowledge sync"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-approval", "description": "", "triggers": ["lark-approval", "lark approval"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-attendance", "description": "", "triggers": ["lark-attendance", "lark attendance"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-base", "description": "", "triggers": ["lark-base", "lark base"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-calendar", "description": "", "triggers": ["lark calendar", "lark-calendar"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-contact", "description": "", "triggers": ["lark contact", "lark-contact"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-doc", "description": "", "triggers": ["lark doc", "lark-doc"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-drive", "description": "", "triggers": ["lark-drive", "lark drive"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-event", "description": "", "triggers": ["lark-event", "lark event"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-im", "description": "", "triggers": ["lark-im", "lark im"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-mail", "description": "", "triggers": ["lark mail", "lark-mail"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-minutes", "description": "", "triggers": ["lark minutes", "lark-minutes"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-okr", "description": "", "triggers": ["lark-okr", "lark okr"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-openapi-explorer", "description": "", "triggers": ["lark openapi explorer", "lark-openapi-explorer"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-shared", "description": "", "triggers": ["lark shared", "lark-shared"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-sheets", "description": "", "triggers": ["lark sheets", "lark-sheets"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-skill-maker", "description": "", "triggers": ["lark skill maker", "lark-skill-maker"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-slides", "description": "", "triggers": ["lark-slides", "lark slides"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-task", "description": "", "triggers": ["lark-task", "lark task"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-vc", "description": "", "triggers": ["lark vc", "lark-vc"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-whiteboard", "description": "", "triggers": ["lark-whiteboard", "lark whiteboard"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-wiki", "description": "", "triggers": ["lark-wiki", "lark wiki"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-workflow-meeting-summary", "description": "", "triggers": ["lark-workflow-meeting-summary", "lark workflow meeting summary"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "lark-workflow-standup-report", "description": "", "triggers": ["lark workflow standup report", "lark-workflow-standup-report"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "larksuite-cli-tool-usage", "description": "", "triggers": ["larksuite-cli-tool-usage", "larksuite cli tool usage"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "longform-writing-quality", "description": "", "triggers": ["longform-writing-quality", "longform writing quality"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "mcp", "description": "", "triggers": ["mcp"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "media", "description": "", "triggers": ["media"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "messaging", "description": "", "triggers": ["messaging"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "mlops", "description": "", "triggers": ["mlops"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "note-taking", "description": "", "triggers": ["note-taking", "note taking"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
