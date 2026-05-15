@@ -1,17 +1,26 @@
 ---
 name: himalaya
-description: CLI to manage emails via IMAP/SMTP. Use himalaya to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language).
-version: 1.1.0
-author: community
-license: MIT
+description: "CLI to manage emails via IMAP/SMTP. Use `himalaya` to list, read, write, reply, forward, search, and organize emails from the terminal. Supports multiple accounts and message composition with MML (MIME Meta Language)."
+homepage: https://github.com/pimalaya/himalaya
+category: communication
+categories:
+  - communication
+  - email
 metadata:
-  hermes:
-    tags: [Email, IMAP, SMTP, CLI, Communication]
-    homepage: https://github.com/pimalaya/himalaya
-prerequisites:
-  commands: [himalaya]
+  builtin_skill_version: "1.2"
+  copaw:
+    emoji: "📧"
+    requires:
+      bins:
+        - himalaya
+    install:
+      - id: brew
+        kind: brew
+        formula: himalaya
+        bins:
+          - himalaya
+        label: "Install Himalaya (brew)"
 ---
-
 # Himalaya Email CLI
 
 Himalaya is a CLI email client that lets you manage emails from the terminal using IMAP, SMTP, Notmuch, or Sendmail backends.
@@ -19,33 +28,44 @@ Himalaya is a CLI email client that lets you manage emails from the terminal usi
 ## References
 
 - `references/configuration.md` (config file setup + IMAP/SMTP authentication)
-- `references/message-composition.md` (MML syntax for composing emails)
 
 ## Prerequisites
 
-1. Himalaya CLI installed (`himalaya --version` to verify)
+1. **Himalaya CLI** — the `himalaya` binary must already be on `PATH`. Check with `himalaya --version`.
+   - **Recommended: v1.2.0 or newer.** Older releases can fail against some IMAP servers; v1.2.0+ includes related fixes.
 2. A configuration file at `~/.config/himalaya/config.toml`
 3. IMAP/SMTP credentials configured (password stored securely)
 
-### Installation
+## Pre-flight Checklist
+
+Before any operation, run through this checklist:
 
 ```bash
-# Pre-built binary (Linux/macOS — recommended)
-curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | PREFIX=~/.local sh
+# 1. Version check
+himalaya --version   # Must be >= 1.2.0
 
-# macOS via Homebrew
-brew install himalaya
+# 2. Config exists
+ls ~/.config/himalaya/config.toml
 
-# Or via cargo (any platform with Rust)
-cargo install himalaya --locked
+# 3. Auth command works
+# (Replace with whatever your auth.cmd is configured to)
+pass show email/imap 2>/dev/null && echo "✅ Auth OK" || echo "❌ Auth broken"
+
+# 4. Account loaded
+himalaya account list
+
+# 5. IMAP connection alive
+himalaya folder list
 ```
+
+If any step fails, see [Troubleshooting Quick Reference](#troubleshooting-quick-reference) below.
 
 ## Configuration Setup
 
-Run the interactive wizard to set up an account:
+Run the interactive wizard to set up an account (replace `default` with any name you want, e.g. `gmail`, `work`):
 
 ```bash
-himalaya account configure
+himalaya account configure default
 ```
 
 Or create `~/.config/himalaya/config.toml` manually:
@@ -73,22 +93,17 @@ message.send.backend.auth.type = "password"
 message.send.backend.auth.cmd = "pass show email/smtp"
 ```
 
-## Hermes Integration Notes
-
-- **Reading, listing, searching, moving, deleting** all work directly through the terminal tool
-- **Composing/replying/forwarding** — piped input (`cat << EOF | himalaya template send`) is recommended for reliability. Interactive `$EDITOR` mode works with `pty=true` + background + process tool, but requires knowing the editor and its commands
-- Use `--output json` for structured output that's easier to parse programmatically
-- The `himalaya account configure` wizard requires interactive input — use PTY mode: `terminal(command="himalaya account configure", pty=true)`
+If you are using 163 mail account, add `backend.extensions.id.send-after-auth = true` in the config file to ensure proper functionality.
 
 ## Common Operations
 
-### List Folders
+### 步骤 1: 列出文件夹
 
 ```bash
 himalaya folder list
 ```
 
-### List Emails
+### 步骤 2: 列出邮件
 
 List emails in INBOX (default):
 
@@ -108,13 +123,19 @@ List with pagination:
 himalaya envelope list --page 1 --page-size 20
 ```
 
-### Search Emails
+If meet with error, try:
+
+```bash
+himalaya envelope list -f INBOX -s 1
+```
+
+### 步骤 3: 搜索邮件
 
 ```bash
 himalaya envelope list from john@example.com subject meeting
 ```
 
-### Read an Email
+### 步骤 4: 读取邮件
 
 Read email by ID (shows plain text):
 
@@ -128,64 +149,84 @@ Export raw MIME:
 himalaya message export 42 --full
 ```
 
-### Reply to an Email
+### 步骤 5: 发送邮件
 
-To reply non-interactively from Hermes, read the original message, compose a reply, and pipe it:
+**Recommended approach:** Use `template write | template send` pipeline for simple emails.
 
-```bash
-# Get the reply template, edit it, and send
-himalaya template reply 42 | sed 's/^$/\nYour reply text here\n/' | himalaya template send
-```
-
-Or build the reply manually:
+**Send a simple email:**
 
 ```bash
-cat << 'EOF' | himalaya template send
-From: you@example.com
-To: sender@example.com
-Subject: Re: Original Subject
-In-Reply-To: <original-message-id>
-
-Your reply here.
-EOF
+export EDITOR=cat
+himalaya template write \
+  -H "To: recipient@example.com" \
+  -H "Subject: Email Subject" \
+  "Email body content" | himalaya template send
 ```
 
-Reply-all (interactive — needs $EDITOR, use template approach above instead):
+**Send with multiple headers:**
 
 ```bash
-himalaya message reply 42 --all
+export EDITOR=cat
+himalaya template write \
+  -H "To: recipient@example.com" \
+  -H "Cc: cc@example.com" \
+  -H "Subject: Email Subject" \
+  "Email body content" | himalaya template send
 ```
 
-### Forward an Email
+**Send with attachments (using Python):**
+
+For emails with attachments, use Python's `smtplib` and `email.mime` modules:
+
+```python
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.base import MIMEBase
+from email import encoders
+
+msg = MIMEMultipart()
+msg['From'] = 'sender@163.com'
+msg['To'] = 'recipient@example.com'
+msg['Subject'] = 'Email with attachment'
+
+msg.attach(MIMEText('Email body', 'plain'))
+
+# Add attachment
+with open('/path/to/file.pdf', 'rb') as f:
+    part = MIMEBase('application', 'octet-stream')
+    part.set_payload(f.read())
+    encoders.encode_base64(part)
+    part.add_header('Content-Disposition', 'attachment; filename=\"file.pdf\"')
+    msg.attach(part)
+
+server = smtplib.SMTP_SSL('smtp.163.com', 465)
+server.login('sender@163.com', 'password')
+server.send_message(msg)
+server.quit()
+```
+
+**⚠️ MML attachment limitations:** The `template send` command with MML format may fail with "cannot parse MML message: empty body" when using multipart/attachments. This is a known issue in himalaya v1.1.0. Use Python approach for attachments.
+
+**⚠️ Avoid `message write` for automation:** The `himalaya message write` command requires interactive TUI selection (Edit/Discard/Quit) and will hang in non-interactive environments.
+
+**⚠️ `message send` limitations:** Direct `himalaya message send <raw_email>` may fail with "cannot send message without a recipient" due to header parsing issues. Use `template send` instead.
+
+**Configuration requirement:** Ensure `message.send.save-to-folder` is set in config.toml to avoid "Folder not exist" errors:
+
+```toml
+[accounts.163]
+# ... other config ...
+message.send.save-to-folder = "Sent"
+```
+
+For 163 mail accounts, create the Sent folder first if it doesn't exist:
 
 ```bash
-# Get forward template and pipe with modifications
-himalaya template forward 42 | sed 's/^To:.*/To: newrecipient@example.com/' | himalaya template send
+himalaya folder create Sent
 ```
 
-### Write a New Email
-
-**Non-interactive (use this from Hermes)** — pipe the message via stdin:
-
-```bash
-cat << 'EOF' | himalaya template send
-From: you@example.com
-To: recipient@example.com
-Subject: Test Message
-
-Hello from Himalaya!
-EOF
-```
-
-Or with headers flag:
-
-```bash
-himalaya message write -H "To:recipient@example.com" -H "Subject:Test" "Message body here"
-```
-
-Note: `himalaya message write` without piped input opens `$EDITOR`. This works with `pty=true` + background mode, but piping is simpler and more reliable.
-
-### Move/Copy Emails
+### 步骤 6: 管理邮件（移动/复制/删除/标记）
 
 Move to folder:
 
@@ -199,13 +240,11 @@ Copy to folder:
 himalaya message copy 42 "Important"
 ```
 
-### Delete an Email
+Delete an email:
 
 ```bash
 himalaya message delete 42
 ```
-
-### Manage Flags
 
 Add flag:
 
@@ -256,59 +295,6 @@ himalaya envelope list --output json
 himalaya envelope list --output plain
 ```
 
-## 异常处理与故障排查
-
-### 认证失败
-
-| 错误现象 | 原因 | 解决方案 |
-|----------|------|----------|
-| `authentication failed` | 密码错误或 auth.cmd 返回为空 | 检查 `auth.cmd` 命令能否正确输出密码；手动运行 `pass show email/imap` 验证 |
-| `connection refused` | IMAP/SMTP 服务不可达 | 检查网络连通性 `nc -zv imap.example.com 993`；确认 host/port 配置正确 |
-| `TLS handshake failed` | 证书问题或加密类型不匹配 | 临时设置 `backend.encryption.type = "none"` 排查；或检查证书链 |
-
-### 发送失败
-
-| 错误现象 | 原因 | 解决方案 |
-|----------|------|----------|
-| `server refused to accept` | SMTP 服务器拒绝收件人地址 | 检查收件人邮箱格式；部分服务商禁止发送给外部地址 |
-| `message too large` | 附件超出 SMTP 限制 | 一般限制 25MB，改用云存储链接替代附件 |
-| `template send: no recipients` | MML 模板缺少 To/CC/BCC 头 | 确保模板至少包含一个 `To:` 头 |
-
-### 超时处理
-
-- IMAP 默认超时约 30 秒，大文件夹操作可能超时。可添加环境变量延长：`HIMALAYA_IMAP_TIMEOUT=60`
-- 发送大量邮件时建议分批发送，每批间隔 5-10 秒避免触发速率限制
-- 如果 `envelope list` 返回空但文件夹有邮件，可能是索引未更新，尝试 `himalaya folder refresh`
-
-### 常见坑点
-
-- **Message ID 是相对当前文件夹的**：切换文件夹后 ID 可能指向不同邮件，每次操作前重新确认
-- **非 ASCII 字符编码**：中文邮件主题/正文可能出现乱码，确保 `--output json` 解析时正确处理 UTF-8
-- **`auth.cmd` 必须只输出密码**：如果命令输出了额外文本（如 prompt），会导致认证失败，用 `pass show -q` 避免换行符
-- **删除操作不可逆**：`message delete` 直接删除邮件，建议先用 `message move` 移到 Trash 目录
-
-### 诊断命令
-
-```bash
-# 快速验证连接
-himalaya account list
-
-# 详细调试日志
-RUST_LOG=debug himalaya envelope list
-
-# 完整追踪（含堆栈）
-RUST_LOG=trace RUST_BACKTRACE=1 himalaya envelope list
-
-# 验证配置语法
-cat ~/.config/himalaya/config.toml | python3 -c "import sys, tomllib; tomllib.load(sys.stdin); print('OK')" 2>/dev/null || echo "配置有误"
-```
-
-### 降级方案
-
-- 如果 himalaya CLI 不可用，可回退到 Python `imaplib` + `smtplib` 直接操作
-- 如果 IMAP 连接失败，尝试切换加密模式：`tls` → `start-tls` → `none`（仅排查用）
-- 对于不支持 OAuth2 的账户，可考虑使用应用专用密码替代主密码
-
 ## Debugging
 
 Enable debug logging:
@@ -323,9 +309,76 @@ Full trace with backtrace:
 RUST_LOG=trace RUST_BACKTRACE=1 himalaya envelope list
 ```
 
+## Troubleshooting Quick Reference
+
+| Symptom | Root Cause | Fix |
+|---------|-----------|-----|
+| `connection refused` / `timeout` | Wrong IMAP/SMTP host or port | Verify host/port: IMAP TLS=993, SMTP TLS=465, SMTP STARTTLS=587 |
+| `LOGIN failed` | Wrong password or needs app-specific password | Gmail/163/QQ require app-specific passwords, not account passwords |
+| `TLS handshake failed` | Non-standard TLS (common with Chinese providers) | Last resort: add `backend.extensions.insecure = true` (warn user about security) |
+| `config file not found` | No config at `~/.config/himalaya/config.toml` | Run `himalaya account configure default` or create manually |
+| `Folder not exist` | `message.send.save-to-folder` not set or folder missing | Set in config; run `himalaya folder create Sent` for 163 mail |
+| `message not found` | Message ID expired (folder-scoped + session-scoped) | Re-run `envelope list` to refresh IDs |
+| `cannot send message without a recipient` | Header parsing issue in `message send` | Use `template write \| template send` pipeline instead |
+| `cannot parse MML message: empty body` | MML multipart bug in v1.1.0 | Use Python smtplib for attachments |
+| SMTP 550 | Recipient address rejected by receiving server | Not a himalaya issue; verify recipient address |
+| SMTP 421/451 | Temporary server overload | Retry after 30s, max 3 retries |
+| `envelope list` very slow | Large mailbox (>10K emails) | Always use `--page` and `--page-size` |
+| `folder list` empty/hangs | Server LIST command not fully supported | Try `himalaya folder list --output json` |
+| Commands work intermittently | IMAP server rate-limiting | Add 2-3s delay between consecutive himalaya commands |
+| TOML syntax error / cryptic failure | Invalid config.toml | Validate: `python3 -c "import tomllib; tomllib.load(open('~/.config/himalaya/config.toml', 'rb'))"` |
+
+## 注意 / Pitfalls
+
+- **注意**: Message IDs are folder-scoped and session-scoped. Always re-run `envelope list` before operating on a message ID.
+- **注意**: 163 mail accounts need `backend.extensions.id.send-after-auth = true` in config.
+- **注意**: Avoid `message write` in automation — it requires interactive TUI and will hang.
+- **注意**: Use English folder names (e.g., "Sent" not "已发送") for better IMAP compatibility.
+- **注意**: For large mailboxes (>10K emails), always use `--page` and `--page-size` to avoid timeout.
+- **坑**: MML attachment sending fails in v1.1.0 — use Python smtplib as fallback.
+- **坑**: `message send` may fail with "cannot send message without a recipient" — use `template send` as fallback.
+
 ## Tips
 
 - Use `himalaya --help` or `himalaya <command> --help` for detailed usage.
 - Message IDs are relative to the current folder; re-list after folder changes.
 - For composing rich emails with attachments, use MML syntax (see `references/message-composition.md`).
 - Store passwords securely using `pass`, system keyring, or a command that outputs the password.
+- **For automation:** Always use `template write | template send` pipeline with `export EDITOR=cat`.
+- **163 Mail users:** Set `backend.extensions.id.send-after-auth = true` and `message.send.save-to-folder = "Sent"` in config.
+- **Folder names:** Use English folder names (e.g., "Sent" instead of "已发送") for better compatibility.
+
+## Exception handling & troubleshooting
+
+**Connection & authentication failures:**
+- If `himalaya envelope list` fails with "connection refused" or "timeout" → verify IMAP/SMTP host and port. Common ports: IMAP TLS=993, SMTP TLS=465, SMTP STARTTLS=587.
+- If authentication fails with "LOGIN failed" → check if the mail provider requires an app-specific password (Gmail, 163 mail, QQ mail all require this). Regular account passwords will not work.
+- If TLS handshake fails → some providers (especially Chinese ones) use non-standard TLS. Try adding `backend.extensions.insecure = true` as a last resort, but warn the user about security implications.
+
+**IMAP server compatibility:**
+- If commands work intermittently → the IMAP server may be rate-limiting. Add a 2-3 second delay between consecutive himalaya commands in automation scripts.
+- If `folder list` returns empty or hangs → the server may not support the LIST command properly. Try `himalaya folder list --output json` as an alternative format.
+- If mailbox is very large (>10K emails) → `envelope list` without pagination will be extremely slow. Always use `--page` and `--page-size` for large mailboxes.
+
+**Message ID staleness:**
+- Message IDs are folder-scoped and session-scoped. If you switch folders or the IMAP session refreshes, old IDs become invalid. Always re-run `envelope list` before operating on a message ID.
+- If `message read 42` returns "message not found" → the message may have been moved/deleted by another client, or the folder was re-synced. Re-list the folder to get current IDs.
+
+**Send failures beyond known issues:**
+- If `template send` fails with SMTP error 550 → the recipient address was rejected by the receiving server. This is not a himalaya issue; verify the recipient address.
+- If `template send` fails with SMTP error 421/451 → temporary server overload. Retry after 30 seconds. Max 3 retries.
+- If `template send` succeeds but the email doesn't appear in Sent folder → check `message.send.save-to-folder` config. Some providers use different folder names ("Sent Items" vs "Sent" vs "已发送").
+
+**Config file issues:**
+- If himalaya reports "config file not found" → run `himalaya account configure default` to generate one, or create `~/.config/himalaya/config.toml` manually.
+- If config file has TOML syntax errors → himalaya will fail silently or with cryptic errors. Validate TOML syntax before using: `python3 -c "import tomllib; tomllib.load(open('~/.config/himalaya/config.toml', 'rb'))"`.
+- If switching providers (e.g. from 163 to Gmail) → back up the old config first: `cp ~/.config/himalaya/config.toml ~/.config/himalaya/config.toml.bak`.
+
+**Debugging checklist (when things go wrong):**
+1. `himalaya --version` — verify version (recommended: v1.2.0+)
+2. `himalaya account list` — verify accounts are loaded
+3. `himalaya folder list` — verify IMAP connection works
+4. `RUST_LOG=debug himalaya envelope list` — enable debug output
+5. `RUST_LOG=trace RUST_BACKTRACE=1 himalaya envelope list` — full trace for deep debugging
+6. Check `~/.config/himalaya/config.toml` for typos or missing fields
+7. Verify the auth command works independently: `pass show email/imap` (or whatever auth.cmd is set to)
