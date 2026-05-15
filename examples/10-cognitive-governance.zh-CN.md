@@ -416,6 +416,17 @@ L5 日记应该遵守：
 14. **测试检索。** 下一个 agent 在需要它的时候找得到吗？
 15. **闭环。** 记录反馈如何修正 Purpose、Knowledge、行动策略、滋养方式或真实行为节奏。
 
+## GA/Hermes 运行时模式
+
+当前 GA/Hermes 的落地方式应该使用 pending 准入库：
+
+- 候选持久认知由模型写在隐藏的 `<cognitive_admission>{"items":[...]}</cognitive_admission>` 块里。
+- 频道前端从可见回复中移除这个块，并把它保存成 pending 证据。
+- 只有后续收到用户明确确认，才把最近的 pending 条目提升到 `fact`、`knowledge`、`procedure`、`identity` 或 `nourishment`。
+- 后续对话只注入已准入认知作为高优先级上下文。
+
+这样“懂我”不会变成失控记忆。agent 可以提出它学到了什么，但什么真正进入持久认知底座，必须由用户决定。
+
 ## 可复制 prompt
 
 ```text

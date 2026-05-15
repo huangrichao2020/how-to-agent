@@ -514,6 +514,22 @@ When adding or changing agent memory, run this sequence:
 15. **Close the loop.** Record how feedback should revise Purpose, Knowledge,
     action strategy, nourishment style, or real-behavior rhythm.
 
+## GA/Hermes Runtime Pattern
+
+The current GA/Hermes implementation should use a pending admission store:
+
+- Candidate durable cognition is emitted in a hidden
+  `<cognitive_admission>{"items":[...]}</cognitive_admission>` block.
+- The channel frontend strips the block from visible replies and stores it as
+  pending evidence.
+- A later explicit user confirmation promotes the latest pending items into
+  `fact`, `knowledge`, `procedure`, `identity`, or `nourishment`.
+- Future turns receive only admitted cognition as high-priority context.
+
+This keeps "understand me" from becoming uncontrolled memory. The agent can
+propose what it learned, but the user decides what becomes part of the durable
+cognitive substrate.
+
 ## Copyable Prompt
 
 ```text

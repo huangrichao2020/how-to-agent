@@ -127,6 +127,31 @@ Before promoting anything into fact, knowledge, procedure, or identity, ask:
 
 If the answer is unclear, keep it as a claim or episode, not a fact.
 
+## Runtime Admission Store
+
+For GA/Hermes-style runtimes, implement admission as a two-step protocol:
+
+1. The agent may propose durable cognition by appending a hidden machine block
+   to its final response:
+   `<cognitive_admission>{"items":[...]}</cognitive_admission>`.
+2. The UI layer strips that block from user-visible output and writes the items
+   to a pending admission store.
+3. Only after the user explicitly says something like "confirm these
+   cognitions", "allow admission", "沉淀", or "全部可以" may the runtime promote
+   pending items into durable surfaces.
+
+Use these durable surfaces:
+
+- `fact` for current accepted claims with scope and freshness.
+- `knowledge` for transferable models.
+- `procedure` for repeatable workflows or skills.
+- `identity` for slow-changing agent behavior, tone, or policy.
+- `nourishment` for "understand me, know me, receive me, resolve me, nourish
+  me" principles that should improve future interaction quality.
+
+Never write raw private diary text into these surfaces. Raw L5 material stays
+local evidence; only user-approved summaries can be admitted.
+
 ## Feedback Handling
 
 Treat feedback as a signal, not an automatic update.
