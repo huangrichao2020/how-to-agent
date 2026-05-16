@@ -170,7 +170,9 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 │   ├── 09-excellent-agent-architecture.md
 │   ├── 09-excellent-agent-architecture.zh-CN.md
 │   ├── 10-cognitive-governance.md
-│   └── 10-cognitive-governance.zh-CN.md
+│   ├── 10-cognitive-governance.zh-CN.md
+│   ├── 11-learning-asset-gate.md
+│   └── 11-learning-asset-gate.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -212,6 +214,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 融合外部精华到本地架构 | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
 | 优秀 Agent 架构 | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
 | 认知治理 | [10-cognitive-governance.md](examples/10-cognitive-governance.md) | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md) |
+| 学习资产化讨论门 | [11-learning-asset-gate.md](examples/11-learning-asset-gate.md) | [11-learning-asset-gate.zh-CN.md](examples/11-learning-asset-gate.zh-CN.md) |
 
 ## Skill 包
 

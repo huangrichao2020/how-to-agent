@@ -189,7 +189,9 @@ next agent can continue without rediscovering the plan.
 │   ├── 09-excellent-agent-architecture.md
 │   ├── 09-excellent-agent-architecture.zh-CN.md
 │   ├── 10-cognitive-governance.md
-│   └── 10-cognitive-governance.zh-CN.md
+│   ├── 10-cognitive-governance.zh-CN.md
+│   ├── 11-learning-asset-gate.md
+│   └── 11-learning-asset-gate.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -231,6 +233,7 @@ next agent can continue without rediscovering the plan.
 | Fuse external精华 into local architecture | [08-fuse-external-into-local-architecture.md](examples/08-fuse-external-into-local-architecture.md) | — |
 | Excellent agent architecture | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
 | Cognitive governance | [10-cognitive-governance.md](examples/10-cognitive-governance.md) | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md) |
+| Learning asset gate | [11-learning-asset-gate.md](examples/11-learning-asset-gate.md) | [11-learning-asset-gate.zh-CN.md](examples/11-learning-asset-gate.zh-CN.md) |
 
 ## Skill package
 
