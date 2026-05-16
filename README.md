@@ -239,6 +239,13 @@ next agent can continue without rediscovering the plan.
 
 This repo also includes portable skills:
 
+> **Core Principle: Signal over Noise**
+>
+> **Only high-frequency, proven, and architecturally significant skills belong here.**
+> This is not a skill graveyard. If a skill is rarely used, domain-specific, or
+> redundant, it gets archived elsewhere. Every file in `skills/` must pass the
+> "is this core to agent evolution or daily runtime?" test.
+
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with consent gates
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a governed cognition loop
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
