@@ -5,6 +5,7 @@
 {"name": "apple", "description": "", "triggers": ["apple"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "autonomous-ai-agents", "description": "", "triggers": ["autonomous-ai-agents", "autonomous ai agents"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "browser-spa-data-extraction", "description": "", "triggers": ["browser spa data extraction", "browser-spa-data-extraction"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "cognitive-governance", "description": "Design or debug a living agent cognition loop across memory, facts, knowledge, feedback, Dream, L5, Feishu history, scheduled jobs, and learning assets.", "triggers": ["cognitive-governance", "cognitive governance", "认知治理", "认知架构"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "copaw-imported", "description": "", "triggers": ["copaw imported", "copaw-imported"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "creative", "description": "", "triggers": ["creative"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "data-science", "description": "", "triggers": ["data science", "data-science"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
@@ -18,6 +19,7 @@
 {"name": "horizontal-vertical-analysis", "description": "", "triggers": ["horizontal vertical analysis", "horizontal-vertical-analysis"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "huashu-design", "description": "", "triggers": ["huashu-design", "huashu design"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "knowledge-sync", "description": "", "triggers": ["knowledge-sync", "knowledge sync"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "l5-diary-capture", "description": "Receive diary, voice notes, daily reflection, or lived-experience input as the L5 human real behavior layer.", "triggers": ["l5-diary-capture", "l5 diary capture", "L5 日记", "人类真实行为层"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "lark-approval", "description": "", "triggers": ["lark-approval", "lark approval"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "lark-attendance", "description": "", "triggers": ["lark-attendance", "lark attendance"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "lark-base", "description": "", "triggers": ["lark-base", "lark base"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}

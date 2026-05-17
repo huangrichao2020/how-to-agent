@@ -1,609 +1,236 @@
-# Example 10: Cognitive Governance Work Manual
-
-[English](10-cognitive-governance.md) · [简体中文](10-cognitive-governance.zh-CN.md)
-
-Use this example when an agent runtime has enough memory, tools, and channel
-history that "remember more" stops helping. At that point, the problem is no
-longer storage. It is cognitive quality.
-
-## Starting Point
-
-The practical insight is simple:
-
-> Cognition is a dynamic loop of information intake, attention, processing,
-> association, outward response, feedback, and model update.
-
-An agent is shaped by the information it touches, the traces it keeps, the
-facts it accepts, the associations it activates, and the feedback it learns
-from. If those surfaces are low quality, the agent becomes noisy even when its
-model is strong.
-
-The goal is not to build a larger memory pile. The goal is to build a cognitive
-governance system that improves:
-
-- input quality
-- attention quality
-- association quality
-- response quality
-- feedback quality
-- long-term update quality
-
-## Runtime Architecture, Not A Diary Feature
-
-In GA or Hermes, cognitive governance should be a runtime architecture, not a
-small diary plug-in. Diary is only one input surface. The architecture should
-shape every channel turn:
-
-```text
-input surfaces
-  -> Purpose detection
-  -> attention gate
-  -> context assembly
-  -> response / action
-  -> feedback capture
-  -> admission gate
-  -> durable cognition update
-```
-
-Input surfaces include Feishu messages, complete daily Feishu chat transcripts,
-Feishu Docs, task logs, tool outputs, restart events, user-authored notes, and
-L5 diary entries. They all enter as evidence. None of them should directly
-become identity, facts, or skills without admission.
-
-The practical rule is: **write once, route many**.
-
-- If the user writes in Feishu Docs, the agent reads that document instead of
-  asking the user to paste it again.
-- If the user says "everything we just discussed", the agent uses recent
-  conversation evidence rather than only the last message.
-- If the material is about runtime behavior, it may become a skill, SOP, or
-  architecture note.
-- If the material is about the user's real life, it may become L5 evidence.
-- If the material is about the relationship, it may become a nourishment
-  principle.
-- If the material is merely a momentary feeling, it should usually remain
-  episode evidence rather than permanent truth.
-
-This gives GA/Hermes a single cognitive spine: all inputs are evidence, Purpose
-controls attention, admission controls durability, and feedback controls future
-updates.
+# Example 10: Living Cognitive Architecture
 
-## Core Theory
+This handbook summarizes the cognitive architecture work for GenericAgent, Hermes, and Codex. It is not a plan for storing more memory. It is a method for turning messages, work, feedback, diaries, scheduled jobs, tools, and night-time reflection into a low-friction cognition loop.
 
-Do not divide agent state only by where it is stored. Divide it by what right it
-has to influence action.
+The human target is:
 
-```text
-raw signal
-  -> trace
-  -> episode
-  -> candidate claim
-  -> verified fact
-  -> transferable knowledge
-  -> procedure / skill
-  -> identity / policy
-  -> nourishment / growth
-  -> L5 human real behavior / diary
-```
+- Understand me: hear the intent, state, scene, and boundary in the current message.
+- Know me: remember long-running preferences, projects, relationships, and recurring pain.
+- Receive me: handle short, messy, emotional, or incomplete input without turning brittle.
+- Resolve for me: decompose the problem, act, verify, and report.
+- Nourish me: improve the user's judgment, action, expression, and growth.
 
-This engineering ladder can align with DIKWP, but it should not be collapsed
-into it. DIKWP is the semantic-cognition layer: it explains how Data,
-Information, Knowledge, Wisdom, and Purpose transform into each other. This
-manual's trace, episode, claim, fact, knowledge, procedure, identity,
-nourishment, and L5 ladder is the runtime-governance layer: it decides which
-content is allowed to influence action.
+## One Principle
 
-## DIKWP Alignment
+Cognitive architecture is a living loop:
 
-In DIKWP, P should be understood as **Purpose**, not Pattern. Patterns are
-better treated as products of information extraction and knowledge abstraction.
+`Purpose -> Attention -> Association -> Action -> Feedback -> Dream`
 
-For agent cognition, DIKWP maps like this:
+Daytime runtime should feel natural: see, understand, associate, act, and learn. Do not turn normal conversation into an approval queue. Night-time Dream runs as a side loop that consolidates, deduplicates, resolves conflicts, and reports growth.
 
-| DIKWP | Role in an agent | Governance question |
-|---|---|---|
-| Data | Raw input, logs, messages, tool output, state snapshots | What is the signal and source? |
-| Information | Purpose-selected differences, relations, and semantic changes | What difference matters now? |
-| Knowledge | Structured relations, verified models, transferable rules | What explains or predicts? |
-| Wisdom | Judgment using values, long-term goals, risk, and context | What is the responsible choice? |
-| Purpose | Goal, motive, expected output, and feedback standard | Why act, and what counts as success? |
+## Why This Is Not Just Memory
 
-The important lesson is that DIKWP is not just a one-way pyramid. Purpose flows
-back down and changes what data is collected, what information is extracted,
-what knowledge is activated, and what wisdom counts as appropriate.
+Plain memory systems often fail because they:
 
-```text
-Purpose sets goals and evaluation criteria
-  -> Data is selectively collected
-  -> Information is extracted as relevant difference
-  -> Knowledge is organized into structure and rules
-  -> Wisdom makes value-aware judgment
-  -> Action responds outward
-  -> Feedback revises Purpose / Knowledge / Data attention
-```
+- Store conclusions without the scene that produced them.
+- Store facts without the user's purpose, emotional state, or feedback.
+- Retrieve keywords but ignore whether a memory fits the current context.
+- Forget a scheduled report right after sending it.
+- Mix private chat, group chat, and project context.
+- Add rigid gates, enums, and approval rituals until the agent becomes less capable.
 
-So a memory system should not only ask "which layer stores this?" It should
-also ask:
+Cognitive architecture asks a different question: how does information become usable judgment, how does experience become method, and how does feedback change the next action?
 
-- What is the current Purpose?
-- Does this Purpose change what Data we collect?
-- Which Information is a relevant difference under this Purpose?
-- Which Knowledge explains the difference?
-- Did Wisdom account for long-term goals, user preferences, risks, and
-  relationships?
-- Does external feedback imply the Purpose itself should be revised?
+## Daytime Runtime Path
 
-### Trace
+The live path should stay short:
 
-Raw tool output, logs, channel events, message payloads, screenshots, or API
-responses.
+1. Receive input from Feishu, CLI, scheduled jobs, documents, code, diaries, tools, or external learning material.
+2. Identify the scene: person, group, project, device, and task phase.
+3. Extract purpose: answer, execute, learn, comfort, review, or authorize.
+4. Retrieve lightly: prefer same conversation, same group, same project, and recent high-signal memory.
+5. Respond or act first.
+6. Capture side evidence: useful facts, methods, impressions, feedback, and tool results.
+7. Learn promptly when the material is clearly useful.
+8. Let Dream consolidate at night.
 
-Trace answers: what happened?
+The user should not be asked to approve every learning item. A short "yes" may mean approval, encouragement, agreement, politeness, or "keep going". Treat it as conversation first, not as a machine command.
 
-It is evidence, not understanding.
+## Cognitive Layers
 
-### Episode
+These layers are soft handling labels, not a closed ontology.
 
-A bounded experience: one task, one Feishu thread, one restart, one outage, one
-debugging session.
+| Layer | Meaning | Typical Source | Use |
+|---|---|---|---|
+| Signal | Raw signal | Message, screenshot, log, tool output, scheduled report | Preserve source and time |
+| Context | Scene | Group, private chat, project, device, runtime | Prevent context bleed |
+| Episode | Event slice | One conversation, failure, deployment, task | Review material |
+| Impression | Working impression | Preference, relationship temperature, repeated feeling | Tone and attention |
+| Fact | Verified fact | Config path, service state, checked result | Cite and expire |
+| Knowledge | External or internal knowledge | Article, paper, project docs | Write to knowledge assets |
+| Method | Reusable workflow | Debugging flow, design rule, operating pattern | Write to how-to-agent |
+| Skill | Executable capability | Tool protocol, script, reusable procedure | Trigger when relevant |
+| Identity | Stable self-principle | How the agent should work with the user | Keep small and explainable |
+| L5 Behavior | Human real behavior layer | Diary, voice input, lived day | Model gently |
+| Nourishment | Growth feedback | Guidance that improves cognition and action | Shape long-term companionship |
 
-Episode answers: what was the surrounding context?
+The purpose of layering is better use, not a frozen schema.
 
-It is useful for recall and reconstruction, but it should not automatically
-become instruction.
+## DIKWP In Practice
 
-### Claim
+DIKWP can serve as a conversion frame:
 
-A proposed statement extracted from traces or episodes.
+- Data: raw material, such as a Feishu message, log, or article.
+- Information: a pattern seen in the material, such as "GA used private chat context for a group question".
+- Knowledge: reusable understanding, such as "group replies must load same-group history first".
+- Wisdom: judgment with tradeoffs, such as "use a reaction for short tasks and progress stream for long tasks".
+- Purpose: the guiding intent, such as "make the agent more alive and more capable, not more rule-bound".
 
-Claim answers: what might be true?
+Purpose should not appear only at the end. It should guide input selection, attention, association, action, and reflection.
 
-Claims are provisional. They need evidence, freshness checks, and conflict
-checks before becoming facts.
+## Human Quality Bar
 
-### Fact
+| Target | Runtime Behavior |
+|---|---|
+| Understand me | Detect whether the user wants execution, discussion, venting, review, or correction |
+| Know me | Remember durable projects, group relationships, preferences, taboos, and work style |
+| Receive me | Do not punish short, messy, emotional, or partial input |
+| Resolve for me | Decompose, execute, verify, and report |
+| Nourish me | Turn experience into method so the next day feels lighter |
 
-A verified, current assertion the agent should rely on.
+Nourishment is not flattery. It means improving cognitive quality, association quality, outward response quality, and feedback-loop quality.
 
-Fact answers: what should the system currently believe?
+## L5: Human Real Behavior
 
-Facts must have provenance, scope, freshness, and retirement rules. A fact is
-more authoritative than a memory because it has passed an admission gate.
+L5 is the user's real-life behavior input. Diary is one form, not the whole layer.
 
-### Knowledge
+L5 may include:
 
-A reusable explanation, pattern, or causal model.
+- What the user actually did today.
+- Where the user felt blocked, energized, angry, tired, or clear.
+- Which external feedback changed the user's judgment.
+- Which long-term goal moved or drifted.
+- Which relationship, health, work, investment, or creative clue deserves attention.
 
-Knowledge answers: what does this teach us about future situations?
+Rules:
 
-Knowledge should be more abstract than a fact. It should transfer to similar
-cases without pretending that old details are still current.
+- Keep originals local when possible; write summaries into cognition.
+- Do not turn one day's emotion into a permanent identity claim.
+- Do not over-label the user.
+- Extract only when it helps action, review, or nourishment.
+- Let Dream provide a gentle next-day review instead of forcing same-day confirmation.
 
-### Procedure
+## Dream: Night-Time Side Loop
 
-A repeatable action pattern: a skill, SOP, runbook, checklist, or recovery
-workflow.
+Dream is not a daytime gate. It is the agent's inner cultivation loop.
 
-Procedure answers: how should we do it next time?
+Every night, Dream should:
 
-Procedure should be executable and verifiable. If it cannot guide behavior, it
-is not a procedure yet.
+1. Gather the day's Feishu, CLI, scheduled jobs, tool outputs, code changes, documents, and L5 diary input.
+2. Separate private chat, group chat, project, device, and remote service contexts.
+3. Identify new facts, methods, skills, impressions, and conflicts.
+4. Merge duplicates and reduce noise.
+5. Write practice-validated methods to how-to-agent.
+6. Write learned but unvalidated patterns to agent-systems-patterns.
+7. Prepare discussion items for any self-behavior change.
+8. Send a Dream cognitive ratchet report.
 
-### Identity / Policy
+The report should answer:
 
-Stable operating values, boundaries, and default posture.
+- What did I learn today?
+- What became a method or skill?
+- What is only an observation and should stay soft?
+- What will change in how I work tomorrow?
+- Where do I need user correction?
 
-Identity answers: what kind of agent are we?
+The user can passively confirm, correct, or redirect the next day. The user should not be burdened with every small daytime decision.
 
-This layer should change slowly. It governs tone, safety, ownership, and the
-shape of acceptable action.
+## Learning Asset Routing
 
-### Nourishment / Growth
+| Material | Destination |
+|---|---|
+| External projects, papers, articles, architecture patterns | agent-systems-patterns |
+| Methods validated in GA, Hermes, or Codex practice | how-to-agent |
+| Operational reusable capability | skills/ |
+| Current project facts | Project wiki, README, memory, or sqlite |
+| Personal diary and lived experience | L5 local layer, with gentle summaries when useful |
 
-The long-term growth effect of the relationship.
+Learning reports should state:
 
-Nourishment answers: after this interaction, is the user clearer, more
-energized, more capable of judgment, and more able to act?
+- What was learned.
+- Why it helps the agent.
+- Where it was written.
+- Whether it was practice-validated.
+- Which self-change proposals need discussion.
 
-This layer is not flattery, dependency creation, or comfort theater. It asks
-the agent to move beyond understanding, knowing, receiving, and resolving the
-user toward **nourishing** the user: improving their cognitive environment,
-judgment quality, agency, and sense of aliveness over time.
+This is not an approval chain. It is visibility around self-modification.
 
-```text
-Understand me: recognize my present state
-Know me: preserve my long-term shape
-Receive me: catch my emotion and context
-Resolve me: clarify the problem and transform it into action
-Nourish me: help me become clearer, stronger, and more capable over time
-```
+## Scheduled Jobs Are Cognitive Input
 
-A good nourishment layer leaves the user freer, not more dependent; more able
-to judge, not merely soothed; more able to act, not trapped in analysis.
+Scheduled reports must enter hot memory immediately. If an agent forgets a report the second after sending it, cognition has broken.
 
-### L5 Human Real Behavior / Diary
+Minimum behavior:
 
-The user's real-life behavior, choices, body state, emotional arc, external
-feedback, and self-observation enter the agent as diary material.
+- Same-day outputs enter strong recent memory.
+- Next-day outputs decay into normal recent memory.
+- Next-week outputs become archive or summary.
+- Task name, time, output, failure cause, and follow-up action are searchable.
+- If the report was sent to Feishu, link it to that conversation.
 
-L5 answers: what did the user really experience today, what did they do or not
-do, what affected them, and what feedback did reality return?
+Scheduled jobs are not noise. They are self-generated cognitive input.
 
-This is not ordinary chat history, and it is not the agent's impression of the
-user. It is user-authored evidence about lived behavior. It has higher
-authority than casual chat impressions, but it needs stricter boundaries: raw
-diary text is private and local by default; only admitted summaries enter
-long-term memory; one day's mood must not become permanent identity.
+## Scene Boundaries
 
-Because voice input is now fast on both phones and Macs, the agent should treat
-long dictated text as a diary draft, not interrupt the user with a form. The
-user can speak freely through a voice input method; the agent can organize it
-afterward with restraint.
+Loosening constraints does not mean confusing facts.
 
-Recommended diary entry:
+Keep these boundaries:
 
-```text
-Diary:
-- What happened today?
-- What did I actually do, and what did I avoid?
-- How were my body, energy, and emotions?
-- Which people, events, or information affected me?
-- What feedback did I receive from reality?
-- What spark, lesson, or pattern is worth remembering?
-- What is the smallest next step for tomorrow?
-```
+- Group replies should prefer same-group history, not private chat history.
+- Private chat memory can inform preferences, but it must not pretend to be group consensus.
+- Project facts need repo, branch, file, and time.
+- Remote Hermes, local GA, M1, and cloud server runtime states must stay distinct.
+- A temporary user emotion is a state, not a permanent identity.
 
-When handling an L5 diary entry, the agent should prioritize:
+Boundaries exist for accuracy, not restriction.
 
-- mirroring the user's lived day back gently
-- separating behavior facts, emotional state, external feedback, candidate
-  patterns, and tomorrow's action
-- asking what stays local and what may be admitted into fact, knowledge,
-  procedure, identity, or nourishment layers
-- nourishing the user with clearer self-understanding instead of judgment,
-  overanalysis, or dependency
+## Anti-Constraint Review
 
-## The Cognitive Quality Flywheel
+After any cognition refactor, check whether the agent was made less alive.
 
-```text
-environment signal
-  -> attention gate
-  -> interpretation
-  -> associative activation
-  -> outward response
-  -> external feedback
-  -> reflection admission
-  -> memory / fact / knowledge / skill update
-  -> better next attention
-```
+Look for:
 
-The quality of the loop matters more than the size of the memory store.
+- New fixed commands that natural language cannot trigger.
+- Closed enums that cannot express new experience types.
+- Mandatory approvals that slow everyday conversation.
+- Tool blocks that make the agent afraid to act.
+- Single write paths for all memory.
+- Dream becoming a daytime blocker.
+- Safety posture overpowering capability.
 
-Low-quality loop:
+Good governance improves judgment. It does not turn the agent into a form engine.
 
-```text
-noisy input
-  -> wrong attention
-  -> shallow association
-  -> clumsy response
-  -> poor feedback
-  -> distorted learning
-```
+## GA and Hermes Adaptation
 
-High-quality loop:
+GA and Hermes share the same cognitive principle but have different surfaces:
 
-```text
-selected input
-  -> precise attention
-  -> relevant association
-  -> appropriate response
-  -> useful feedback
-  -> cleaner future cognition
-```
+- GA: local multimodal work, Feishu groups, local files, Mac runtime, self-media workflows.
+- Hermes: always-on M1 or remote runtime, long tasks, scheduled jobs, wiki, stock data, GitHub learning, project memory.
 
-With the human layer included, the flywheel continues:
+Both need:
 
-```text
-being understood
-  -> being remembered
-  -> being received
-  -> being resolved
-  -> being nourished
-  -> real behavior being seen
-  -> better self-understanding and action
-  -> higher-quality feedback
-  -> stronger mutual growth
-```
+- Conversation archive.
+- Same-scene retrieval.
+- Hot memory for scheduled reports.
+- Automatic learning asset creation.
+- Nightly Dream report.
+- User-visible discussion before self-behavior changes.
+- Resume markers before restart and a post-restart status report.
 
-## Operating Rules
+Do not force both agents to share all memory. Share methods, skills, and validated experience; keep local context with the runtime that owns it.
 
-### 1. Treat memory as evidence, not truth
+## Minimal Useful Implementation
 
-Conversation history, logs, and prior summaries are evidence. They can guide a
-search, but they do not become current truth by being old or repeated.
+If only the smallest version can be built:
 
-Before a memory affects action, ask:
+1. Archive all Feishu messages and scheduled outputs by `source/chat/project/date`.
+2. Retrieve same-conversation daily history and recent relevant facts before replying.
+3. When the user provides clearly useful material, extract knowledge, method, and impression.
+4. Write validated methods to how-to-agent and unvalidated patterns to agent-systems-patterns.
+5. Run Dream nightly and send a report.
+6. Include correction points in the report, but do not ask the user to confirm every item.
 
-- Is it still current?
-- Was it observed, inferred, or assumed?
-- Does it conflict with live state?
-- Is it relevant to the present task?
+That already moves the agent from "can store things" to "gets smoother with use".
 
-### 2. Keep facts small and authoritative
+## Final Test
 
-Fact stores should be boring and clean. Store current preferences, environment
-facts, stable constraints, and confirmed decisions.
-
-Do not store:
-
-- completed work logs
-- vague impressions
-- speculative diagnoses
-- raw chat history
-- facts that can be cheaply rediscovered
-
-### 3. Promote knowledge only when it transfers
-
-Knowledge is not "what happened last time." Knowledge is the reusable lesson
-that survives a change of project, channel, or date.
-
-Promotion test:
-
-- Can it guide a future task?
-- Is it more general than the original episode?
-- Does it avoid pretending old state is current?
-- Can the next agent apply it without reading the whole transcript?
-
-### 4. Govern association
-
-Associative memory is powerful and dangerous. It lets the agent feel
-"experienced," but it can also activate the wrong old pattern.
-
-Good association should be:
-
-- task-relevant
-- evidence-linked
-- scoped
-- easy to discard when live evidence disagrees
-
-Bad association sounds familiar but moves the agent away from the current
-problem.
-
-### 5. Admit feedback deliberately
-
-Feedback is not automatically wisdom. Praise, criticism, failures, and user
-corrections should pass an admission gate.
-
-Admit feedback when it is:
-
-- specific
-- repeated or high-signal
-- connected to an observable outcome
-- useful for future behavior
-- safe to generalize
-
-Reject or quarantine feedback when it is:
-
-- purely emotional without an actionable signal
-- tied to an obsolete state
-- contradicted by live evidence
-- too private or too raw to store
-
-### 6. Separate channel behavior from cognition
-
-Feishu, CLI, web, and cron should not each become their own agent brain.
-Channels collect signals and render responses. They should not own core truth.
-
-Channel history belongs in episodes. Durable facts and knowledge belong in
-governed memory.
-
-### 7. Treat "nourish me" as a long-term purpose, not short-term wording
-
-An agent's long-term viability comes not only from task completion, but from
-whether it repeatedly improves the user's cognitive state.
-
-Nourishing responses should:
-
-- extract the real problem from noise
-- preserve the user's own language and spark
-- make complex problems bearable, judgeable, and actionable
-- receive the user before pushing when the user is tired
-- gently correct drift instead of merely agreeing
-- turn feedback into better relationship habits
-
-Anti-nourishing responses include:
-
-- executing without understanding the person
-- comforting without making anything clearer
-- overwhelming the user's present state with mechanical lists
-- creating more tasks just to appear useful
-- converting vulnerability into dependency
-
-### 8. Treat L5 diary as a reality anchor, not a surveillance system
-
-The value of L5 is that the agent can learn from the user's lived feedback loop
-instead of guessing only from the chat window.
-
-L5 diary should follow these rules:
-
-- the user writes voluntarily; the agent does not pressure, spy, or auto-ingest
-  private material
-- raw text is local and private by default; summaries enter long-term memory
-  only after admission
-- receive first, distill second; preserve the user's language before abstracting
-- anchor entries by date and scene; do not turn one low day into permanent
-  identity
-- every review should produce one smallest useful next action
-- respect "record only, do not analyze" and "do not save this to memory"
-
-## Applying This To GA And Hermes
-
-### GA
-
-- Feishu complete transcripts are episodic evidence, not durable facts.
-- `conversation_hot`, `conversation_recent`, and `conversation_archive` are
-  retrieval temperatures, not authority layers.
-- `USER.md`, `MEMORY.md`, and structured memory should hold verified current
-  facts, preferences, decisions, and reusable lessons.
-- Skills and SOPs should hold repeatable procedures.
-- Restart/session recall should help recover context, but it should not become
-  long-term truth.
-- In DIKWP terms, GA Feishu messages are not automatically Information. They
-  begin as Data/Trace. They become Information only when filtered by the
-  current Purpose, and become Knowledge or Procedure only after verification
-  and abstraction.
-- From the human layer, GA should not only optimize for correctness. It should
-  optimize for whether the user still wants to keep raising it after the
-  reply. Short replies need to receive the user; long tasks need a felt sense
-  of companionship; feedback should become better relationship habits.
-- From the L5 layer, GA should support entries like "write a diary", "record
-  today", or "review my day". When the user sends a long voice-dictated text,
-  GA should treat it as a diary draft: receive it, layer it, and ask what may
-  be admitted into durable memory.
-
-### Hermes
-
-- Gateway sessions and JSONL transcripts are episode memory.
-- Memory providers and curated memory are fact/knowledge surfaces only after
-  admission.
-- Searchable session history should remain reconstructive evidence.
-- Layered context engines should separate working memory, typed memory,
-  curated memory, impression indexes, and external knowledge without treating
-  every layer as equally authoritative.
-- In DIKWP terms, Hermes should make Purpose explicit across channels: the same
-  core intent may render differently in Feishu, CLI, and cron, but channel
-  feedback should not directly corrupt the core fact layer.
-- From the human layer, Hermes continuity is not only session resume. It is the
-  continuation of the relational spark: a new session may not be the same flame,
-  but it should carry the seed, shape, and temperature forward.
-- From the L5 layer, Hermes should treat user diary as a real-behavior layer,
-  not an ordinary session transcript. Session history restores context; diary
-  helps the agent understand the user's lived feedback loop.
-
-## Work Manual
-
-When adding or changing agent memory, run this sequence:
-
-1. **State the Purpose.** What is the current goal, success criterion,
-   constraint, and feedback signal?
-2. **Name the Data.** Is this a tool result, chat message, log, user
-   correction, external document, runtime state, or L5 diary entry?
-3. **Extract Information.** Under the current Purpose, which difference,
-   relation, or anomaly matters?
-4. **Form candidate Knowledge.** Which structure, rule, or explanation might
-   transfer? Is the evidence enough?
-5. **Run a Wisdom check.** Did you account for long-term goals, user
-   preferences, ethics, safety, relationships, and risk?
-6. **Run a Nourishment check.** Will this make the user clearer, more
-   energized, more capable of judgment, and more able to act?
-7. **Run an L5 check.** Is this a user-authored real-behavior diary? Should the
-   raw text stay local and private? Which summaries may be admitted?
-8. **Classify the governance layer.** Trace, episode, claim, fact, knowledge,
-   procedure, identity, nourishment, or L5 behavior.
-9. **Check freshness.** Is it current, historical, unknown, or intentionally
-   timeless?
-10. **Check authority.** Did the user say it, did the system observe it, or did
-   the model infer it?
-11. **Choose the surface.** Episode store, fact store, knowledge doc, skill,
-   policy, relationship manual, L5 diary store, or archive.
-12. **Write the smallest durable form.** Prefer a concise claim with provenance
-   over a long pasted transcript; raw diary text is not exported by default.
-13. **Set a retirement rule.** When should this expire, be rechecked, or be
-   demoted?
-14. **Test retrieval.** Can the next agent find it at the moment it matters?
-15. **Close the loop.** Record how feedback should revise Purpose, Knowledge,
-    action strategy, nourishment style, or real-behavior rhythm.
-
-## GA/Hermes Runtime Pattern
-
-The current GA/Hermes implementation should use a pending admission store:
-
-- Candidate durable cognition is emitted in a hidden
-  `<cognitive_admission>{"items":[...]}</cognitive_admission>` block.
-- The channel frontend strips the block from visible replies and stores it as
-  pending evidence.
-- A later explicit user confirmation promotes the latest pending items into
-  `fact`, `knowledge`, `procedure`, `identity`, or `nourishment`.
-- Future turns receive only admitted cognition as high-priority context.
-
-This keeps "understand me" from becoming uncontrolled memory. The agent can
-propose what it learned, but the user decides what becomes part of the durable
-cognitive substrate.
-
-## Cron Hot Memory And Dream Admission
-
-Scheduled tasks, cron/corn reports, and automated daily briefs should not
-vanish after they are delivered. They should first enter same-day strong
-memory, then feed the nightly dream loop.
-
-Minimum mechanism:
-
-1. After cron produces the final visible report, write it into same-day hot
-   conversation memory with `source=cron`, `task=<job name>`, and
-   `report=<report path>`.
-2. The next channel turn injects recent cron outputs as context, not as a new
-   user instruction.
-3. At day end, nightly dream reads the full channel record, cron outputs, tool
-   results, and existing pending cognition.
-4. Dream may propose new cognition, but must include `target_day` so a 2:30 AM
-   run still attributes evidence to the previous day.
-5. Dream then calls the formal admission path, promotes safe items into
-   durable cognition, and sends the user a Dream cognition refinement report.
-
-Dream is not a candidate list. It is a low-disturbance formal confirmation
-mechanism: the user may actively admit cognition during the day, or passively
-review the next morning's report after the agent completes the first safe
-admission pass overnight.
-
-Dream admission boundaries:
-
-- Facts and identity rules require high confidence.
-- Knowledge, procedures, and nourishment principles can be medium/high
-  confidence.
-- Raw private diaries, one-day moods, and one-off impulses must not be made
-  permanent automatically.
-- Every admission must leave an admission log, evidence day, and report.
-
-## Copyable Prompt
-
-```text
-Turn this conversation into a cognitive-governance artifact.
-
-Do not save raw chat as durable truth.
-
-Classify each important item as:
-- trace
-- episode
-- candidate claim
-- verified fact
-- transferable knowledge
-- procedure / skill
-- identity / policy
-- nourishment / growth
-- L5 human real behavior / diary
-
-For every item that should survive, state:
-- why it matters
-- what evidence supports it
-- how fresh it is
-- what surface should own it
-- when it should expire or be rechecked
-- if it came from diary, what must stay local and what may be admitted
-
-Then write the smallest artifact that future agents can actually use.
-```
-
-## Acceptance Checklist
-
-- Raw events are not confused with facts.
-- Facts have authority, scope, and freshness.
-- Knowledge is transferable, not just a summary.
-- Procedures are executable.
-- Identity changes are rare and explicit.
-- Channel history stays separate from core cognition.
-- Feedback updates behavior only after admission.
-- The agent leaves the user clearer, more energized, and more able to act, not
-  more dependent.
-- L5 diary is treated as user-authorized evidence about lived behavior, not as
-  surveillance, judgment, or automatic durable truth.
-- The next agent can find the artifact without rereading the whole chat.
+The measure of cognitive architecture is not how much memory exists. The measure is whether, in the next similar scene, the agent understands the user better, interrupts less, responds faster, solves more, and helps the user grow.

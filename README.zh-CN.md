@@ -220,7 +220,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 这个仓库包含可移植 skill：
 
-- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带同意门禁的 agent 自我进化
+- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为治理成认知质量循环
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — 把用户日记和语音输入接成 L5 人类真实行为层
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
@@ -231,11 +231,11 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 把 `skills/` 下面的对应目录复制到任意支持文件式 skills 的 agent 系统里即可。
 
-`agent-self-evolution` 会教 agent 如何在用户同意门禁下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
+`agent-self-evolution` 会教 agent 如何在可见自改讨论下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
 
-`cognitive-governance` 会教 agent 在写入持久状态前，先区分痕迹、事件、断言、事实、知识、流程、身份、滋养和 L5 人类真实行为。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory。
+`cognitive-governance` 会教 agent 在痕迹、事件、事实、知识、方法、技能、身份、滋养和 L5 人类真实行为之间跑一个活认知循环。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory 或增加审批摩擦。
 
-`l5-diary-capture` 会教 agent 如何接住用户用语音输入或文字写下的日记：先不打断地接收，再分层整理行为事实、情绪状态、现实反馈和明日最小一步，最后询问哪些内容只本地保存、哪些可以沉淀。
+`l5-diary-capture` 会教 agent 如何接住用户用语音输入或文字写下的日记：先不打断地接收，能本地保留原文就保留原文，再温柔整理行为事实、情绪状态、现实反馈和明日最小一步，最后交给 Dream 旁路沉淀，不把确认负担推给用户。
 
 `production-agent-runtime` 提炼自 GenericAgent 和 Hermes 的生产级运行经验，涵盖三层架构、分层记忆系统、联邦委托、失败升级协议、自愈机制、Code Graph 依赖分析、SysWatch 系统健康诊断和自愈浏览器提取工作流。根据 2026-05 生产运行经验更新。
 
@@ -243,8 +243,8 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 `self-healing-browser` 教授"agent 编写缺失函数"的网页自动化模式。不使用僵化框架，而是维护一个辅助模块，由 agent 在任务中动态编写/修补。结合视觉 AI 解决验证码和 DOM 蒸馏，处理静态框架无法覆盖的反爬机制。
 
-核心安全规则是：在修改 `AGENTS.md`、`agent.md`、memory 数据、prompts、skills
-或其他 agent 自身表面前，agent 必须列出影响文件、说明风险和回滚方式，并向用户请求同意。
+核心自改规则是：在修改 `AGENTS.md`、`agent.md`、memory 数据、prompts、skills
+或其他 agent 自身表面前，agent 应列出影响文件、说明风险和回滚方式，并把改动暴露给用户讨论。
 
 `maintainer-friendly-pr` 会教 agent 如何准备外部开源 PR：让改动小、可 review、真实负责；清理分支名、commit metadata 和 PR body 里的无关工具噪声，同时遵守项目披露规则。
 
@@ -257,7 +257,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 - 不要一次性改 memory、tools、prompts 和 runtime wiring。
 - 不要在设计、变更记录和延续路径可被找到前接受"完成"。
 - 不要因为一个外部项目看起来先进就直接照搬。
-- 不要在修改 agent 自有表面时跳过同意门禁。
+- 不要静默修改 agent 自有表面，却不说明影响和回滚方式。
 - 不要把所有记忆/技能都加载到系统提示词中——在受限环境下使用触发式注入。
 
 ## 为什么有效
@@ -289,9 +289,9 @@ Agents 很擅长响应当前压力，但不擅长跨 turn、重启和工具失�
 
 这使得即使有 200+ skills，系统提示词也能保持在 12K tokens 以下。
 
-### 2. 带同意门禁的自我进化
+### 2. 带可见讨论的自我进化
 
-Agent 应该改进自己，但修改 agent 自有表面（AGENTS.md、memory、prompts、skills）时必须经过用户明确同意。同意门禁要求：影响文件 → 为什么 → 风险 → 回滚 → 批准。
+Agent 应该改进自己，但修改 agent 自有表面（AGENTS.md、memory、prompts、skills）时必须让用户看见影响。可见讨论要求：影响文件 → 为什么 → 风险 → 回滚 → 用户可纠偏。
 
 ### 3. 渐进式迁移 > 大爆炸
 

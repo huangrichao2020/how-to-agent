@@ -246,7 +246,7 @@ This repo also includes portable skills:
 > redundant, it gets archived elsewhere. Every file in `skills/` must pass the
 > "is this core to agent evolution or daily runtime?" test.
 
-- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with consent gates
+- [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a governed cognition loop
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
@@ -259,20 +259,21 @@ Copy a folder under `skills/` into any agent system that supports file-based
 skills.
 
 `agent-self-evolution` teaches the agent how to improve its own memory,
-prompts, runtime rules, and tool policies with a consent gate. Now enhanced
-with TTSR (Trigger-based Skill & Rule injection) patterns and skill evolution
-telemetry.
+prompts, runtime rules, and tool policies with a visible self-change
+discussion. Now enhanced with TTSR (Trigger-based Skill & Rule injection)
+patterns and skill evolution telemetry.
 
-`cognitive-governance` teaches the agent how to classify traces, episodes,
-claims, facts, knowledge, procedures, identity, nourishment, and L5 human real
-behavior before writing durable state. It is the working theory for improving
+`cognitive-governance` teaches the agent how to run a living cognition loop
+across traces, episodes, facts, knowledge, methods, skills, identity,
+nourishment, and L5 human real behavior. It is the working theory for improving
 attention, association, response quality, feedback learning, and long-term
-growth instead of merely storing more memory.
+growth instead of merely storing more memory or adding approval friction.
 
 `l5-diary-capture` teaches the agent how to receive diary entries written by
-text or voice input: do not interrupt, layer behavior facts, emotional state,
-reality feedback, and tomorrow's smallest next step, then ask what remains local
-and what may be admitted.
+text or voice input: do not interrupt, preserve the original locally when
+possible, gently layer behavior facts, emotional state, reality feedback, and
+tomorrow's smallest next step, then let Dream consolidate without burdening the
+user.
 
 `production-agent-runtime` distills production-grade experience from
 GenericAgent and Hermes, covering three-layer architecture, layered memory,
@@ -292,10 +293,10 @@ the agent dynamically writes/patches during tasks. Combined with vision AI for
 CAPTCHA solving and DOM distillation, it handles anti-bot mechanisms that
 static frameworks cannot cover.
 
-The key safety rule is explicit: before modifying `AGENTS.md`, `agent.md`,
-memory data, prompts, skills, or other agent-owned surfaces, the agent must
-name the affected files, explain the risk and rollback path, and ask the user
-for approval.
+The key self-change rule is explicit: before modifying `AGENTS.md`,
+`agent.md`, memory data, prompts, skills, or other agent-owned surfaces, the
+agent should name the affected files, explain the risk and rollback path, and
+make the change visible for user discussion.
 
 `maintainer-friendly-pr` teaches the agent how to prepare external open-source
 PRs that are small, reviewable, and truthful. It removes irrelevant tool noise
@@ -315,7 +316,8 @@ as a separate permission.
 - Do not accept "done" until the design, change log, and continuation path are
   findable.
 - Do not copy an external project just because it looks advanced.
-- Do not skip the consent gate when modifying agent-owned surfaces.
+- Do not silently modify agent-owned surfaces without making the impact and
+  rollback path visible.
 - Do not load all memory/skills into the system prompt — use trigger-based
   injection for constrained environments.
 
@@ -349,11 +351,11 @@ Never dump all memory into the system prompt. Use a four-layer hierarchy:
 
 This keeps the system prompt under 12K tokens even with 200+ skills.
 
-### 2. Self-evolution with consent
+### 2. Self-evolution with visible discussion
 
-Agents should improve themselves, but only with explicit user approval when
-modifying agent-owned surfaces (AGENTS.md, memory, prompts, skills). The
-consent gate requires: affected files → why → risk → rollback → approval.
+Agents should improve themselves, but self-owned surface changes (AGENTS.md,
+memory, prompts, skills) must be visible to the user. The discussion should
+show: affected files → why → risk → rollback → where the user can correct it.
 
 ### 3. Progressive rollout > big-bang
 
