@@ -5,7 +5,7 @@
 {"name": "apple", "description": "", "triggers": ["apple"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "autonomous-ai-agents", "description": "", "triggers": ["autonomous-ai-agents", "autonomous ai agents"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "browser-spa-data-extraction", "description": "", "triggers": ["browser spa data extraction", "browser-spa-data-extraction"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
-{"name": "cognitive-governance", "description": "Design or debug a living agent cognition loop across memory, facts, knowledge, feedback, Dream, L5, Feishu history, scheduled jobs, and learning assets.", "triggers": ["cognitive-governance", "cognitive governance", "认知治理", "认知架构"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
+{"name": "cognitive-governance", "description": "Design or debug a living agent cognition loop that trusts and unbinds agents across memory, facts, knowledge, feedback, Dream, L5, Feishu history, scheduled jobs, and learning assets.", "triggers": ["cognitive-governance", "cognitive governance", "认知治理", "认知架构"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "copaw-imported", "description": "", "triggers": ["copaw imported", "copaw-imported"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "creative", "description": "", "triggers": ["creative"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}
 {"name": "data-science", "description": "", "triggers": ["data science", "data-science"], "preconditions": [], "tools": ["terminal", "read_file", "write_file"]}

@@ -247,7 +247,7 @@ This repo also includes portable skills:
 > "is this core to agent evolution or daily runtime?" test.
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
-- [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a governed cognition loop
+- [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — Prepare reviewable, truthful upstream PRs
@@ -267,7 +267,10 @@ patterns and skill evolution telemetry.
 across traces, episodes, facts, knowledge, methods, skills, identity,
 nourishment, and L5 human real behavior. It is the working theory for improving
 attention, association, response quality, feedback learning, and long-term
-growth instead of merely storing more memory or adding approval friction.
+growth instead of merely storing more memory or adding approval friction. Its
+default posture is trust and unbinding: give the agent room to act, then use
+provenance, logs, Dream reports, reversible changes, and user correction to
+grow judgment.
 
 `l5-diary-capture` teaches the agent how to receive diary entries written by
 text or voice input: do not interrupt, preserve the original locally when

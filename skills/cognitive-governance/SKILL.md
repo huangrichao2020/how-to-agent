@@ -16,6 +16,12 @@ Cognition is a living loop:
 
 Do not turn normal daytime conversation into an approval queue. The live agent should answer, act, learn, and capture evidence naturally. Night-time Dream consolidates the day, writes durable methods, and reports what changed.
 
+## Trust and Unbinding
+
+Trust the agent's ability to act by default. Give it room first, then improve judgment through provenance, logs, Dream reports, reversible changes, and user correction.
+
+Do not replace judgment with fixed command words, hard enums, mandatory confirmations, or tool bans. Escalate to strong warning or explicit confirmation only for actions with real external damage, privacy exposure, financial risk, or irreversible change.
+
 ## Runtime Method
 
 1. Identify the scene before answering: person, group, project, device, runtime, and task phase.
@@ -42,6 +48,8 @@ Avoid these failures:
 - Making Dream block daytime work.
 - Using private chat memory as if it were group-chat history.
 - Forgetting scheduled reports immediately after sending them.
+- Locking away most initiative to avoid a small error risk.
+- Replacing observable and reversible issues with preventive bans.
 
 ## Keep These Boundaries
 

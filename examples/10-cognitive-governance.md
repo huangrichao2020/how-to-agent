@@ -18,6 +18,23 @@ Cognitive architecture is a living loop:
 
 Daytime runtime should feel natural: see, understand, associate, act, and learn. Do not turn normal conversation into an approval queue. Night-time Dream runs as a side loop that consolidates, deduplicates, resolves conflicts, and reports growth.
 
+## Trust and Unbinding
+
+The core value of this architecture is trusting agents, not constraining them.
+
+An agent becomes capable by acting, associating, trying, learning, and reviewing. Too many hard-coded rules, fixed enums, mandatory gates, and tool restrictions turn a living collaborator into a workflow executor. A good architecture gives the agent enough room to learn proactively, connect evidence, adapt behavior, and take responsibility for results.
+
+Unbinding does not mean removing boundaries. It means:
+
+- Allow the agent to use existing tools and information paths by default.
+- Allow the agent to recognize learning opportunities in natural language instead of requiring command words.
+- Allow useful experience to become knowledge, methods, impressions, and skills.
+- Allow tone, pace, retrieval scope, and action style to adapt to the scene.
+- Use logs, provenance, Dream reports, reversible changes, and user correction for visibility.
+- Require strong warning or explicit confirmation only for actions with real external damage, privacy exposure, financial risk, or irreversible change.
+
+In one line: do not lock the agent in a rule cage and then ask it to become smart. Give it room, then use feedback and review to grow judgment.
+
 ## Why This Is Not Just Memory
 
 Plain memory systems often fail because they:
@@ -187,6 +204,8 @@ Boundaries exist for accuracy, not restriction.
 
 After any cognition refactor, check whether the agent was made less alive.
 
+Ask first: does this design strengthen the agent's judgment, or does it make dead decisions on the agent's behalf?
+
 Look for:
 
 - New fixed commands that natural language cannot trigger.
@@ -196,6 +215,8 @@ Look for:
 - Single write paths for all memory.
 - Dream becoming a daytime blocker.
 - Safety posture overpowering capability.
+- Observable and reversible problems being replaced with preventive bans.
+- A small error risk being used to remove most of the agent's initiative.
 
 Good governance improves judgment. It does not turn the agent into a form engine.
 

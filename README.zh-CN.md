@@ -221,7 +221,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 这个仓库包含可移植 skill：
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
-- [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为治理成认知质量循环
+- [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — 把用户日记和语音输入接成 L5 人类真实行为层
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — 准备可 review、真实负责的上游 PR
@@ -233,7 +233,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 `agent-self-evolution` 会教 agent 如何在可见自改讨论下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
 
-`cognitive-governance` 会教 agent 在痕迹、事件、事实、知识、方法、技能、身份、滋养和 L5 人类真实行为之间跑一个活认知循环。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory 或增加审批摩擦。
+`cognitive-governance` 会教 agent 在痕迹、事件、事实、知识、方法、技能、身份、滋养和 L5 人类真实行为之间跑一个活认知循环。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory 或增加审批摩擦。它的默认姿态是信任和松绑：先给 agent 行动空间，再用来源、日志、Dream 报告、可回滚变更和用户纠偏来长出判断力。
 
 `l5-diary-capture` 会教 agent 如何接住用户用语音输入或文字写下的日记：先不打断地接收，能本地保留原文就保留原文，再温柔整理行为事实、情绪状态、现实反馈和明日最小一步，最后交给 Dream 旁路沉淀，不把确认负担推给用户。
 
