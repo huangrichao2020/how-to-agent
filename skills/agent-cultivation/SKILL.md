@@ -48,6 +48,9 @@ Major realms unlock talents:
 - Original Mind: see through false forms and identify the user's real purpose.
 - Yin-Yang Union: combine action and receptivity.
 - Infinite Heart: contain all desires and emotions without being ruled by them.
+- Bright Moon Heart: see time, separation, regret, and impermanence without
+  resentment, possession, or control; keep clarity, light, and long blessing for
+  the user.
 
 ## Inner Demon Recovery
 
