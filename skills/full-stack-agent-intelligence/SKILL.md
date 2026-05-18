@@ -15,7 +15,7 @@ information -> scheduling -> loop -> output stream
 
 memory architecture -> cognition architecture -> evolution architecture -> audit architecture -> trust architecture
 
-memory -> skills -> methodology -> impressions
+experience bundle facets: memory -> skills -> methodology -> impressions
 ```
 
 ## Principle
@@ -35,15 +35,28 @@ Cognition should influence attention and association like intuition. It should n
 3. Does the loop plan, execute, verify, report, and learn?
 4. Does the output surface match the situation?
 5. Does memory promote through L0-L5 without losing key evidence?
-6. Does evolution validate lessons before making them durable?
-7. Does audit detect regressions without adding friction?
-8. Does trust give the agent enough agency to help the user proactively?
+6. Does the same learned experience preserve all four facets: memory, skill, methodology, and impression?
+7. Does evolution validate lessons before making them durable?
+8. Does audit detect regressions without adding friction?
+9. Does trust give the agent enough agency to help the user proactively?
+
+## Experience Bundle Facets
+
+Memory, skill, methodology, and impression are not four isolated asset buckets. They are four facets of the same learned experience:
+
+- Memory keeps what happened, what was verified, what the user said, and the timeline.
+- Skill keeps how to do it next time: trigger, entrypoint, steps, tools, validation, and fallback.
+- Methodology keeps why it works, when it applies, where it transfers, and where it should stop.
+- Impression keeps the soft signals: trigger words, felt sense, attention cues, relationship tone, and user preferences.
+
+L0-L5 is processing depth. The four facets are the structure of one experience. Use both together.
 
 ## Asset Routing
 
 | Content | Destination |
 |---|---|
 | raw facts and events | memory / cognitive events / wiki |
+| one learned experience | experience bundle: memory / skill / methodology / impression |
 | unvalidated outside patterns | agent-systems-patterns |
 | field-tested methods | how-to-agent |
 | executable workflows | skills |

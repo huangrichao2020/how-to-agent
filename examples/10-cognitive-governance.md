@@ -73,11 +73,14 @@ user message -> scene detection -> lightweight context -> agent loop -> tools ->
 
 What cognition should own and maintain:
 
+- Experience bundle facets: memory, skill, methodology, and impression for the same learned thing.
 - Memory: facts, episodes, conversations, scheduled outputs, tool results, and project state.
-- Methods: practice-validated ways of working.
 - Skills: reusable, triggerable, portable capabilities.
+- Methods: practice-validated ways of working.
 - Impressions: soft understanding of user preferences, relationship temperature, and project rhythm.
 - Identity: a small set of stable work principles, tone, and responsibility.
+
+Memory, skills, methods, and impressions are not mutually exclusive buckets. They are four facets of one experience: memory says what happened, skill says how to do it next time, methodology says why and when it transfers, and impression says what felt-sense or attention cue remains. L0-L5 is processing depth; the four facets are experience structure.
 
 It should not wrap every reply in admission, pending queues, approval rituals, closed enums, or mandatory meta-commands. The stronger the cognitive layer becomes, the more it should feel like intuition: shaping attention, association, and action without standing between the user and the agent.
 

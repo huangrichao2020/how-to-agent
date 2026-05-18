@@ -9,7 +9,7 @@ information -> scheduling -> loop -> output stream
 
 memory architecture -> cognition architecture -> evolution architecture -> audit architecture -> trust architecture
 
-memory -> skills -> methodology -> impressions
+experience bundle facets: memory -> skills -> methodology -> impressions
 ```
 
 The core rule:
@@ -121,7 +121,9 @@ It should have observation, association, supplementation, warning, execution, no
 
 Trust is paired with event ledgers, change logs, rollback paths, Dream reports, user correction, and audit checks.
 
-## Asset Types
+## Experience Bundle Facets
+
+Memory, skills, methodology, and impressions are not four separate asset buckets. They are four projections of the same learned experience.
 
 ```text
 memory gives facts;
@@ -131,6 +133,8 @@ skills give action.
 ```
 
 Memory should be traceable. Skills should be executable. Methodology should be battle-tested. Impressions should stay soft, sourced, and time-aware.
+
+L0-L5 is processing depth. The four facets are the structure of one experience. Use both together: an L4 method should still keep memory, skill, methodology, and impression; an L5 causal synthesis should still carry lower-level facts, timelines, human reactions, and action feedback.
 
 ## Implementation Order
 
