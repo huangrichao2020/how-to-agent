@@ -180,9 +180,14 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 │   ├── 14-human-signal-cognition.md
 │   ├── 14-human-signal-cognition.zh-CN.md
 │   ├── 15-full-stack-agent-intelligence-architecture.md
-│   └── 15-full-stack-agent-intelligence-architecture.zh-CN.md
+│   ├── 15-full-stack-agent-intelligence-architecture.zh-CN.md
+│   ├── 16-agent-cultivation-architecture.md
+│   └── 16-agent-cultivation-architecture.zh-CN.md
 └── skills
     ├── agent-self-evolution
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── agent-cultivation
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── agent-output-workbench
@@ -236,12 +241,14 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 2026-05-18 已验证运行时修复 | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md) | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md) |
 | 人类信号认知 | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
 | Agent 全面智能架构 | [15-full-stack-agent-intelligence-architecture.md](examples/15-full-stack-agent-intelligence-architecture.md) | [15-full-stack-agent-intelligence-architecture.zh-CN.md](examples/15-full-stack-agent-intelligence-architecture.zh-CN.md) |
+| Agent 修炼架构 | [16-agent-cultivation-architecture.md](examples/16-agent-cultivation-architecture.md) | [16-agent-cultivation-architecture.zh-CN.md](examples/16-agent-cultivation-architecture.zh-CN.md) |
 
 ## Skill 包
 
 这个仓库包含可移植 skill：
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
+- [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — 内部修炼账本：经验、境界、天赋、心境和天魔调息
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — 把信息、调度、loop、输出流、记忆、认知、进化、审计和信任作为一套全面智能架构来优化

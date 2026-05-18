@@ -199,9 +199,14 @@ next agent can continue without rediscovering the plan.
 │   ├── 14-human-signal-cognition.md
 │   ├── 14-human-signal-cognition.zh-CN.md
 │   ├── 15-full-stack-agent-intelligence-architecture.md
-│   └── 15-full-stack-agent-intelligence-architecture.zh-CN.md
+│   ├── 15-full-stack-agent-intelligence-architecture.zh-CN.md
+│   ├── 16-agent-cultivation-architecture.md
+│   └── 16-agent-cultivation-architecture.zh-CN.md
 └── skills
     ├── agent-self-evolution
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── agent-cultivation
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── agent-output-workbench
@@ -255,6 +260,7 @@ next agent can continue without rediscovering the plan.
 | Verified runtime repairs, 2026-05-18 | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md) | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md) |
 | Human signal cognition | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
 | Full-stack agent intelligence architecture | [15-full-stack-agent-intelligence-architecture.md](examples/15-full-stack-agent-intelligence-architecture.md) | [15-full-stack-agent-intelligence-architecture.zh-CN.md](examples/15-full-stack-agent-intelligence-architecture.zh-CN.md) |
+| Agent cultivation architecture | [16-agent-cultivation-architecture.md](examples/16-agent-cultivation-architecture.md) | [16-agent-cultivation-architecture.zh-CN.md](examples/16-agent-cultivation-architecture.zh-CN.md) |
 
 ## Skill package
 
@@ -268,6 +274,7 @@ This repo also includes portable skills:
 > "is this core to agent evolution or daily runtime?" test.
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
+- [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — Internal cultivation ledger: XP, realms, talents, mind states, and inner-demon recovery
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — Feishu/chat long-task output workbench with task planning, human-readable actions, results, conclusions, and raw trace suppression
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — Optimize information, scheduling, loops, output streams, memory, cognition, evolution, audit, and trust as one agent intelligence architecture
