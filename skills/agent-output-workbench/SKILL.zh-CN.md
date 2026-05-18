@@ -1,7 +1,7 @@
 ---
 name: agent-output-workbench
 description: "用于设计或排查飞书/聊天平台里的长任务输出流：进度、工具调用、Outputs、任务卡片和最终结论。"
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Agent 输出工作台
@@ -95,6 +95,32 @@ version: 1.2.0
 
 如果运行时只记录 started、忽略 completed，卡片会看起来很忙，但没有结果。先补事件链路，再优化卡片样式。
 
+## 自己发出的报告也要入记忆
+
+工作台卡片经常是“先发一个进行中卡片，再 patch 成最终卡片”。最终卡片如果不重新写入会话记忆和 cognitive event，agent 下一轮只能想起旧的“工作中”，想不起自己刚刚汇报过什么。
+
+发送和更新都要记录为事实事件：
+
+- 新消息发送成功：`message.sent`
+- 卡片或消息更新成功：`message.updated`
+- agent 回合完成：`agent.turn.completed`
+- 工具完成：`tool.completed`
+
+这些事件只做旁路记录，不要阻塞主回复链。认知架构应该读这些事实来形成记忆、印象、技能和人格，不应该拿它们当审批门禁。
+
+事件形状保持开放，例如：
+
+```json
+{
+  "schema": "ga.runtime_event.v1",
+  "kind": "message.updated",
+  "source": "feishu",
+  "scope": {"chat_id": "chat_xxx", "message_id": "om_xxx"},
+  "payload": {"action": "updated", "msg_type": "interactive"},
+  "text": "最终汇报正文"
+}
+```
+
 ## 工具痕迹翻译规则
 
 原始 trace 是给调试看的，用户卡片要翻译成人话。
@@ -173,6 +199,7 @@ version: 1.2.0
 - GA 全量测试通过：`278 passed, 3 skipped`；GA audit 100 分。
 - Hermes Feishu 输出测试已在 M1 runtime 通过。
 - 2026-05-18 追加验证：GA Feishu 输出相关测试 `37 passed`；Hermes Feishu 输出全量测试 `198 passed`。
+- 2026-05-18 二次验证：GA runtime/Feishu 聚焦测试 `33 passed`；Hermes cognitive event + Feishu 测试 `199 passed`。GA 和 Hermes 均已把成功发送/更新的 Feishu 输出写入开放 runtime event 账本，卡片最终态可以被后续检索和 dream 读取。
 
 ## 反模式
 

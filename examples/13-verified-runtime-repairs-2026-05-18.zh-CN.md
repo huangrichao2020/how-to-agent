@@ -127,6 +127,34 @@ M1 事实: hostname tingchi-m1, macOS, arm64, 8GB RAM
 当前运行时事实，高于历史环境记忆。
 ```
 
+## 已验证修复 5：输出报告进入事实账本
+
+问题：
+
+- GA/Hermes 会在飞书里发重启报告、定时报告、工作台最终卡片。
+- 但最终卡片常常是通过 `patch/update` 改出来的，旧链路只记住了发送动作，没记住更新后的最终内容。
+- agent 下一轮问起“刚才报告说了什么”时，就像失忆一样。
+
+修复：
+
+- GA 把 Feishu 新消息发送写成 `message.sent`，把卡片更新写成 `message.updated`。
+- Hermes 把 Feishu 普通发送、mentions 发送、消息/卡片更新都写入 `cognitive_events`。
+- 底层 runtime event 使用开放协议 `ga.runtime_event.v1`，不固定死 `kind` 枚举。
+- agent loop 回合结束写入 `agent.turn.completed`，让工具结果和最终摘要可以被后续检索、dream 和记忆分层消费。
+
+验证：
+
+```text
+GA focused tests: 33 passed
+Hermes cognitive event + Feishu tests: 199 passed
+```
+
+可复用规则：
+
+```text
+agent 自己发出去的内容也是事实输入。发送和更新都要进入旁路事件账本，不能只依赖聊天平台 UI。
+```
+
 ## 共同教训
 
 这些修复指向同一条架构规则：
@@ -136,6 +164,7 @@ M1 事实: hostname tingchi-m1, macOS, arm64, 8GB RAM
 认知架构维护记忆、方法、技能、印象和人格。
 输出渲染层翻译工具痕迹。
 运行时身份必须真实且当前。
+agent 自己发出的报告也必须进入事实账本。
 ```
 
 不要用更多审批仪式、pending 队列或认知包装层解决体感变差的问题。如果一次“认知升级”之后 agent 反而更不好用，要优先检查是不是新增包装层挡在了用户输入和有效行动之间。

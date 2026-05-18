@@ -1,7 +1,7 @@
 ---
 name: agent-output-workbench
 description: "Use when designing or debugging Feishu/chat output streams for long agent tasks: progress, tool calls, outputs, task cards, and final conclusions."
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Agent Output Workbench
@@ -95,6 +95,32 @@ At minimum, capture:
 
 If the runtime only records starts and ignores completions, the card will look busy but empty. Fix the event path first, then improve card rendering.
 
+## Remember Outgoing Reports
+
+Workbench cards are often sent as a running card and then patched into a final card. If the final patch is not written back to conversation memory and cognitive events, the agent may remember only the stale "working" card and forget the report it just sent.
+
+Record both sends and updates as factual events:
+
+- successful new message: `message.sent`
+- successful message/card update: `message.updated`
+- agent turn finished: `agent.turn.completed`
+- tool finished: `tool.completed`
+
+These events are sidecar facts. They should not block the main reply path. Cognition should read them to shape memory, impressions, skills, and persona, not turn them into an approval gate.
+
+Keep the event shape open:
+
+```json
+{
+  "schema": "ga.runtime_event.v1",
+  "kind": "message.updated",
+  "source": "feishu",
+  "scope": {"chat_id": "chat_xxx", "message_id": "om_xxx"},
+  "payload": {"action": "updated", "msg_type": "interactive"},
+  "text": "final report body"
+}
+```
+
 ## Trace Translation Rule
 
 Raw traces are for debugging. User-facing cards should translate them.
@@ -179,6 +205,10 @@ Validated production repair, 2026-05-18:
 - Hermes Feishu output tests passed on the M1 runtime.
 - Additional 2026-05-18 check: GA Feishu output tests passed `37 passed`;
   Hermes Feishu output suite passed `198 passed`.
+- Second 2026-05-18 check: GA runtime/Feishu focused tests passed `33 passed`;
+  Hermes cognitive event + Feishu tests passed `199 passed`. Both GA and
+  Hermes now record successful Feishu sends/updates into the open runtime
+  event ledger so final card state can be retrieved later.
 
 ## Anti-Pattern
 

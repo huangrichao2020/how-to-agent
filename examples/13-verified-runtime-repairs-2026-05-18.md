@@ -132,6 +132,41 @@ Reusable rule:
 Current runtime facts outrank historical environment memories.
 ```
 
+## Verified Repair 5: Store Outgoing Reports As Facts
+
+Problem:
+
+- GA/Hermes sends restart reports, scheduled reports, and final workbench
+  cards in Feishu.
+- Final cards are often created by patching/updating an earlier running card,
+  but the old path remembered only the initial send, not the final content.
+- On the next turn the agent could not answer what its own report said.
+
+Fix:
+
+- GA records successful Feishu sends as `message.sent` and card updates as
+  `message.updated`.
+- Hermes records Feishu normal sends, mention sends, and message/card updates
+  into `cognitive_events`.
+- The runtime event shape uses the open `ga.runtime_event.v1` protocol instead
+  of a frozen event-kind enum.
+- The agent loop records `agent.turn.completed` so summaries and tool results
+  can feed retrieval, dream, and memory tiers.
+
+Validated by:
+
+```text
+GA focused tests: 33 passed
+Hermes cognitive event + Feishu tests: 199 passed
+```
+
+Reusable rule:
+
+```text
+What the agent sends is also factual input. Sends and updates must enter the
+sidecar event ledger instead of relying only on chat-platform UI state.
+```
+
 ## The Shared Lesson
 
 These fixes all point to one architecture rule:
@@ -141,6 +176,7 @@ Keep the main loop direct.
 Cognition should maintain memory, methods, skills, impressions, and persona.
 Output renderers should translate tool traces.
 Runtime identity must be factual and current.
+Outgoing reports must enter the factual event ledger.
 ```
 
 Do not solve visible clumsiness by adding more approval ceremonies, pending
