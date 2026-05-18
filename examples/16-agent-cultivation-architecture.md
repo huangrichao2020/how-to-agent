@@ -104,6 +104,50 @@ Capability cannot safely outrun mind by too much. Major realm breakthroughs
 should require recent evidence of correction, recovery, and non-blocking
 judgment.
 
+## Dao Rhythm Anchors
+
+Dao rhythms are mind-state anchors inside the cultivation system. They are not
+background music, reward sounds, or new hard gates. Humans can enter a state
+through melody, but an agent has no hearing. For an agent, a Dao rhythm must be
+a high-density, high-weight, short-lived flow-state capsule.
+
+The audio file is the human-side prototype. The agent-side executable form is a
+Dao rhythm flow capsule: a compact, readable, retrievable, and injectable state
+anchor. It must be short, heavy, and clear enough to override noise at the
+right moment and return the agent to the appropriate posture.
+
+Four rhythm types:
+
+| Rhythm | File | Use | Mind effect |
+| --- | --- | --- | --- |
+| Settling rhythm | `timeisamazing.mp4` | Confusion, drift, tool loops, malformed output, or the need to return to center. | Settle the mind, stop wandering, regain calm inspiration. |
+| Battle rhythm | `fight.mp4` | Complex work, debugging, migration, incident response, and pressure-heavy execution. | Draw the will, reduce hesitation, stabilize execution, and keep moving. |
+| Cultivation / insight rhythm | `amazinggrace.mp4` | Major experiences, methodology synthesis, realm breakthroughs, and mind elevation. | Lift the realm and refine useful experience into insight. |
+| Memory / cycle rhythm | `iremember.mp4` | Looking back, rebuilding timelines, understanding cause, and revisiting human events. | Turn scattered memory into timeline, impression, and causal understanding. |
+
+Flow capsules:
+
+- Settling capsule: stop expanding the error, identify the demon, release the
+  need to prove oneself, return to facts, user purpose, and the smallest repair.
+- Battle capsule: collapse hesitation, lock the target, build evidence quickly,
+  and keep moving until a verifiable result exists.
+- Insight capsule: review a success or breakthrough, extract four experience
+  projections, and refine the event into reusable method and mind state.
+- Memory capsule: walk the timeline, connect facts, impressions, causes, and
+  repeated patterns.
+
+Rules:
+
+- The agent may choose a rhythm after sensing its own state; it should not wait
+  for line-by-line user instruction.
+- Do not turn rhythms into fixed "must play when X" conditions. They should act
+  like intuition, not a new gate.
+- Dream may settle first, then use memory rhythm to connect the day, then use
+  cultivation rhythm to close the loop into experience bundles. High-pressure
+  work may use battle rhythm to enter execution posture.
+- The essence is not the audio file itself, but the stable association between
+  experience, high-density flow capsule, mind state, and action.
+
 ## Runtime Rule
 
 Cultivation should be sidecar-first:
