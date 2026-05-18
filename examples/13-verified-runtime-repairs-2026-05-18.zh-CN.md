@@ -22,7 +22,7 @@
 验证：
 
 ```text
-GA: 264 passed, 3 skipped
+GA: 278 passed, 3 skipped
 GA audit: score 100, finding_count 0
 运行时: 本地 GA gateway 已重启并加载新版 Feishu app
 ```
@@ -51,7 +51,7 @@ GA audit: score 100, finding_count 0
 验证：
 
 ```text
-Hermes Feishu tests: 6 passed
+Hermes Feishu tests: 198 passed
 M1 runtime: 已同步 gateway 文件，py_compile 通过，Feishu 测试通过
 运行时: M1 Hermes gateway 已重启并加载新版 adapter
 ```
@@ -61,6 +61,13 @@ M1 runtime: 已同步 gateway 文件，py_compile 通过，Feishu 测试通过
 ```text
 频道渲染层负责翻译工具痕迹，不要让用户阅读内部事件格式。
 ```
+
+追加修复：
+
+- 兼容没有 `Turn N` 标题的旧工具流，例如 `🐍 execute_code(['code'])`
+  和 `🔁 delegate_task(['tasks'])`。
+- 这类旧流仍要进入工作台卡片，但用户只看任务、动作、结果和结论。
+- 原始参数、`original_result` 和大段 JSON 必须停留在调试层。
 
 ## 已验证修复 3：闲聊不要卡片化
 
@@ -80,6 +87,7 @@ M1 runtime: 已同步 gateway 文件，py_compile 通过，Feishu 测试通过
 ```text
 输出模式测试覆盖：多行闲聊、轻 Markdown、工作台 trace、
 edit/update message 路径、紧凑报告行为。
+GA Feishu 输出相关测试：37 passed
 ```
 
 可复用规则：

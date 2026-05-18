@@ -1,7 +1,7 @@
 ---
 name: agent-output-workbench
 description: "Use when designing or debugging Feishu/chat output streams for long agent tasks: progress, tool calls, outputs, task cards, and final conclusions."
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Agent Output Workbench
@@ -126,6 +126,27 @@ Common mappings:
 
 If the model already wrote good task headings, preserve them. If not, infer a small task list from the tool sequence.
 
+## Legacy Stream Compatibility
+
+Do not assume every runtime emits ideal `Turn N`, `Tool Calls`, and `Outputs`
+events. Real systems often still produce legacy streams such as:
+
+- `🐍 execute_code(['code'])`
+- `🔁 delegate_task(['tasks'])`
+- a large JSON argument block
+- then an `Outputs` block
+
+These streams should still become workbench cards, with cleanup at the user
+surface:
+
+- Infer task headings from tool names and tool outputs.
+- Hide long arguments, long `original_result` payloads, repeated envelopes, and
+  low-level loop-warning details.
+- Preserve useful result summaries: files, verification results, and subtask
+  conclusions.
+- If there is no natural-language final answer, synthesize a short conclusion
+  from the tool results instead of leaving the card empty.
+
 ## Human Tone
 
 The card can be structured without sounding like a machine.
@@ -154,8 +175,10 @@ Validated production repair, 2026-05-18:
   plus results instead of raw args.
 - Hermes Feishu workbench suppresses raw `execute_code` / `delegate_task` JSON
   and summarizes results.
-- GA full suite passed `264 passed, 3 skipped`; GA audit scored 100.
+- GA full suite passed `278 passed, 3 skipped`; GA audit scored 100.
 - Hermes Feishu output tests passed on the M1 runtime.
+- Additional 2026-05-18 check: GA Feishu output tests passed `37 passed`;
+  Hermes Feishu output suite passed `198 passed`.
 
 ## Anti-Pattern
 

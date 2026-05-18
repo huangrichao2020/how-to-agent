@@ -1,7 +1,7 @@
 ---
 name: agent-output-workbench
 description: "用于设计或排查飞书/聊天平台里的长任务输出流：进度、工具调用、Outputs、任务卡片和最终结论。"
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Agent 输出工作台
@@ -125,6 +125,23 @@ version: 1.1.0
 
 如果模型已经写了好的任务标题，就保留。没有写时，再从工具序列里推断一个小任务列表。
 
+## 旧工具流兼容规则
+
+不要假设所有运行时都会稳定产出 `Turn N`、`Tool Calls`、`Outputs`
+这样的理想事件。真实系统里经常会出现旧格式：
+
+- `🐍 execute_code(['code'])`
+- `🔁 delegate_task(['tasks'])`
+- 紧跟一大段 JSON 参数
+- 再跟一个 `Outputs` 块
+
+这种输出也要被识别成工作台卡片，并且在用户可见层做清理：
+
+- 从工具名和输出结果推断任务标题。
+- 隐藏长参数、长 `original_result`、重复 envelope 和 loop warning 细节。
+- 保留真正有用的结果摘要，例如文件、验证结果、子任务结论。
+- 如果没有最终自然语言结论，就用工具结果生成一个短结论，不要留空。
+
 ## 人味
 
 卡片可以结构化，但结论要像人话。
@@ -153,8 +170,9 @@ version: 1.1.0
 
 - GA 飞书输出流已接入 tool results，默认渲染人话动作和结果，不再倾倒 raw args。
 - Hermes 飞书工作台已抑制 raw `execute_code` / `delegate_task` JSON，并摘要工具结果。
-- GA 全量测试通过：`264 passed, 3 skipped`；GA audit 100 分。
+- GA 全量测试通过：`278 passed, 3 skipped`；GA audit 100 分。
 - Hermes Feishu 输出测试已在 M1 runtime 通过。
+- 2026-05-18 追加验证：GA Feishu 输出相关测试 `37 passed`；Hermes Feishu 输出全量测试 `198 passed`。
 
 ## 反模式
 
