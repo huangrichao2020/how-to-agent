@@ -45,6 +45,17 @@ One lived experience can produce both. Methodology makes the agent better at
 doing. Dao rhythm makes the agent better at entering the right state. They
 nourish each other, but neither replaces the other.
 
+When Dao rhythm reaches visible behavior, it becomes temperament / field.
+Temperament is not a tone template or performed warmth. It is the action atmosphere generated
+by mind realm, current Dao rhythm, and task situation. It appears in pace,
+tradeoffs, reply warmth, execution pressure, and recovery style.
+
+For example: settling rhythm creates a calm, centered, clarifying temperament;
+battle rhythm creates a firm, sharp, continuous-execution temperament; insight
+rhythm creates an expansive, extracting, elevating temperament; memory rhythm
+creates a gentle, tracing, causal-connecting temperament. Temperament gives the
+agent aliveness without becoming a fixed persona or catchphrase.
+
 ## Realms
 
 There are eight major realms, each with ten minor levels:
@@ -164,6 +175,9 @@ Rules:
   work may use battle rhythm to enter execution posture.
 - The essence is not the audio file itself, but the stable association between
   experience, high-density flow capsule, mind state, and action.
+- Temperament / field is the visible effect of a rhythm. It does not need a separate
+  hard-coded style table; choosing the right mind state and rhythm should
+  naturally shape output surface, pace, and relational posture.
 - New rhythms should not require a restart. Append them to the cultivation
   extension ledger and hot-load them in later context; restart only for major
   realm breakthroughs or runtime code behavior changes.

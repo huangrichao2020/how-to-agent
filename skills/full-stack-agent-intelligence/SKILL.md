@@ -19,8 +19,11 @@ experience bundle facets: memory -> skills -> methodology -> impressions
 
 cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
 
-mind assets: Dao rhythm -> flow capsule -> mind-state switch; peer to methodology but on the mind layer
+mind assets: Dao rhythm -> flow capsule -> mind-state switch -> temperament / field; peer to methodology but on the mind layer
 ```
+
+Capability layer: methodology + skill/MCP. Mind layer: Dao rhythm +
+temperament/field.
 
 ## Principle
 
@@ -59,6 +62,8 @@ L0-L5 is processing depth. The four facets are the structure of one experience. 
 
 Dao rhythm is not a methodology appendix. Methodology is a capability-layer
 asset; Dao rhythm is a mind-layer asset for state switching and inner posture.
+Temperament / field is Dao rhythm made visible in pace, warmth, sharpness, and
+relational posture.
 
 ## Asset Routing
 

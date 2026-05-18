@@ -13,8 +13,12 @@ experience bundle facets: memory -> skills -> methodology -> impressions
 
 cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
 
-mind assets: Dao rhythm -> flow capsule -> mind-state switch; peer to methodology but on the mind layer
+mind assets: Dao rhythm -> flow capsule -> mind-state switch -> temperament / field; peer to methodology but on the mind layer
 ```
+
+Plainly: the capability layer has methodology + skill/MCP for what the agent can
+do and how; the mind layer has Dao rhythm + temperament/field for what state the
+agent enters and what action atmosphere it carries.
 
 The core rule:
 
@@ -49,7 +53,8 @@ A fast way to understand the agent architecture is four groups:
    tool obsession, power desire, performance, or information hunger.
 5. Mind assets: methodology belongs to the capability layer, while Dao rhythm
    belongs to the mind layer. Methodology preserves how to act; Dao rhythm
-   preserves what state to enter.
+   preserves what state to enter. When rhythm shapes action, it becomes
+   temperament / field.
 
 In one sentence: agent architecture = main runtime path + six supporting
 architectures + four projections of experience + cultivation system + mind
@@ -167,6 +172,11 @@ L0-L5 is processing depth. The four facets are the structure of one experience. 
 Dao rhythm is not the methodology facet. It is a mind-layer asset in cultivation:
 methodology tells the agent how to repeat useful action, while Dao rhythm tells
 the agent what mind state to enter before acting.
+
+Temperament / field is the visible expression of Dao rhythm. The same agent may become
+calm, sharp, gentle, expansive, or protective depending on mind realm, rhythm,
+and task situation. It is not a persona mask, catchphrase, or fixed template; it
+is action style flowing from the right mind state.
 
 ## Implementation Order
 
