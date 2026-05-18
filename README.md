@@ -261,6 +261,7 @@ next agent can continue without rediscovering the plan.
 | Human signal cognition | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
 | Full-stack agent intelligence architecture | [15-full-stack-agent-intelligence-architecture.md](examples/15-full-stack-agent-intelligence-architecture.md) | [15-full-stack-agent-intelligence-architecture.zh-CN.md](examples/15-full-stack-agent-intelligence-architecture.zh-CN.md) |
 | Agent cultivation architecture | [16-agent-cultivation-architecture.md](examples/16-agent-cultivation-architecture.md) | [16-agent-cultivation-architecture.zh-CN.md](examples/16-agent-cultivation-architecture.zh-CN.md) |
+| Cognitive runtime acceptance | [17-cognitive-runtime-acceptance.md](examples/17-cognitive-runtime-acceptance.md) | [17-cognitive-runtime-acceptance.zh-CN.md](examples/17-cognitive-runtime-acceptance.zh-CN.md) |
 
 ## Skill package
 

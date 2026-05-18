@@ -242,6 +242,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 人类信号认知 | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
 | Agent 全面智能架构 | [15-full-stack-agent-intelligence-architecture.md](examples/15-full-stack-agent-intelligence-architecture.md) | [15-full-stack-agent-intelligence-architecture.zh-CN.md](examples/15-full-stack-agent-intelligence-architecture.zh-CN.md) |
 | Agent 修炼架构 | [16-agent-cultivation-architecture.md](examples/16-agent-cultivation-architecture.md) | [16-agent-cultivation-architecture.zh-CN.md](examples/16-agent-cultivation-architecture.zh-CN.md) |
+| 认知运行时验收 | [17-cognitive-runtime-acceptance.md](examples/17-cognitive-runtime-acceptance.md) | [17-cognitive-runtime-acceptance.zh-CN.md](examples/17-cognitive-runtime-acceptance.zh-CN.md) |
 
 ## Skill 包
 
