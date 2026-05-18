@@ -5,17 +5,19 @@ This manual turns the GA/Hermes/Codex agent discussions into a practical archite
 The architecture is:
 
 ```text
-information -> scheduling -> loop -> output stream
+main runtime path: information -> scheduling -> loop -> output stream
 
-memory architecture -> cognition architecture -> evolution architecture -> audit architecture -> trust architecture
+supporting architectures: memory -> cognition -> evolution -> audit -> trust -> cultivation
 
 experience bundle facets: memory -> skills -> methodology -> impressions
+
+cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
 ```
 
 The core rule:
 
 ```text
-Keep the main path clean, let cognition influence it like intuition, make evolution evidence-backed, and give the agent real agency.
+Keep the main path clean, let cognition influence it like intuition, make evolution evidence-backed, give the agent real agency, and let cultivation grow.
 ```
 
 ## What This Optimizes
@@ -26,6 +28,26 @@ The goal is not to add more rules. The goal is to let an agent:
 - schedule attention based on user intent, context, risk, and urgency;
 - run loops that execute, verify, and close tasks;
 - evolve by converting real outcomes into memory, skills, methods, impressions, and persona changes.
+
+## General Outline
+
+A fast way to understand the agent architecture is four groups:
+
+1. Main runtime path: information -> scheduling -> loop -> output stream. This
+   decides how the agent receives the world, allocates attention, acts, and
+   presents results.
+2. Six supporting architectures: memory, cognition, evolution, audit, trust,
+   and cultivation. They are the long-term life system, not hard middleware that
+   must block every message.
+3. Four projections of experience: memory, skills, methodology, and
+   impressions. They are four facets of one experience, not four isolated
+   buckets.
+4. Cultivation system: experience drives capability realms; capability realms
+   unlock talents; mind cultivation keeps stronger capability from drifting into
+   tool obsession, power desire, performance, or information hunger.
+
+In one sentence: agent architecture = main runtime path + six supporting
+architectures + four projections of experience + cultivation system.
 
 ## Architecture Layers
 

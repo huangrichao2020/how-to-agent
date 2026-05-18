@@ -11,11 +11,13 @@ Use this skill when improving the whole intelligence architecture of a long-runn
 ## Map
 
 ```text
-information -> scheduling -> loop -> output stream
+main runtime path: information -> scheduling -> loop -> output stream
 
-memory architecture -> cognition architecture -> evolution architecture -> audit architecture -> trust architecture
+supporting architectures: memory -> cognition -> evolution -> audit -> trust -> cultivation
 
 experience bundle facets: memory -> skills -> methodology -> impressions
+
+cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
 ```
 
 ## Principle
@@ -39,6 +41,8 @@ Cognition should influence attention and association like intuition. It should n
 7. Does evolution validate lessons before making them durable?
 8. Does audit detect regressions without adding friction?
 9. Does trust give the agent enough agency to help the user proactively?
+10. Does cultivation grow: correct action becomes XP, mistakes become recovery,
+    and realm details can be hot-extended by the agent?
 
 ## Experience Bundle Facets
 
