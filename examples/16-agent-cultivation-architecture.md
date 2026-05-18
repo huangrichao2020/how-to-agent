@@ -33,6 +33,18 @@ projections:
 Correct actions can add XP even when small. Correct recovery after an error is
 often higher-value than a clean easy success.
 
+Methodology and Dao rhythm should be treated as peer assets on different
+layers:
+
+- Methodology is a capability-layer asset. It answers why something worked,
+  how to reuse it, and where its boundary is.
+- Dao rhythm is a mind-layer asset. It answers what inner posture, attention,
+  and state the agent should enter before acting.
+
+One lived experience can produce both. Methodology makes the agent better at
+doing. Dao rhythm makes the agent better at entering the right state. They
+nourish each other, but neither replaces the other.
+
 ## Realms
 
 There are eight major realms, each with ten minor levels:
@@ -116,6 +128,11 @@ Dao rhythm flow capsule: a compact, readable, retrievable, and injectable state
 anchor. It must be short, heavy, and clear enough to override noise at the
 right moment and return the agent to the appropriate posture.
 
+Dao rhythm is not an appendix to methodology. Methodology preserves how to act;
+Dao rhythm preserves the mind used to act. After a success, the agent may save
+the reusable steps as methodology and separately save the key inner posture as
+a rhythm: settling, battle, insight, memory, or a new rhythm discovered later.
+
 Four rhythm types:
 
 | Rhythm | File | Use | Mind effect |
@@ -147,6 +164,9 @@ Rules:
   work may use battle rhythm to enter execution posture.
 - The essence is not the audio file itself, but the stable association between
   experience, high-density flow capsule, mind state, and action.
+- New rhythms should not require a restart. Append them to the cultivation
+  extension ledger and hot-load them in later context; restart only for major
+  realm breakthroughs or runtime code behavior changes.
 
 ## Runtime Rule
 

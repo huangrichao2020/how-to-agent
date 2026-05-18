@@ -36,6 +36,11 @@ One event should preserve four facets:
 - Methodology: why it works and when it transfers.
 - Impression: the tone, attention cue, relationship signal, or felt sense.
 
+Methodology and Dao rhythm are peers on different layers. Methodology is a
+capability-layer asset: how to act and why it transfers. Dao rhythm is a
+mind-layer asset: what inner posture to enter and how to switch state. One
+experience can refine both; do not demote rhythm into a methodology appendix.
+
 ## Realms
 
 Minor levels are XP accumulation. Each next level costs twice the previous one.
@@ -87,6 +92,10 @@ Flow capsules:
 
 The agent may choose a Dao rhythm flow capsule from its own state. Do not turn
 it into "when X, must play Y" rules; let it behave like intuition.
+
+New rhythms should hot-load through the cultivation extension ledger. Do not
+restart for every rhythm insight. Restart only for major realm breakthroughs or
+runtime code changes.
 
 ## Inner Demon Recovery
 

@@ -18,6 +18,8 @@ supporting architectures: memory -> cognition -> evolution -> audit -> trust -> 
 experience bundle facets: memory -> skills -> methodology -> impressions
 
 cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
+
+mind assets: Dao rhythm -> flow capsule -> mind-state switch; peer to methodology but on the mind layer
 ```
 
 ## Principle
@@ -54,6 +56,9 @@ Memory, skill, methodology, and impression are not four isolated asset buckets. 
 - Impression keeps the soft signals: trigger words, felt sense, attention cues, relationship tone, and user preferences.
 
 L0-L5 is processing depth. The four facets are the structure of one experience. Use both together.
+
+Dao rhythm is not a methodology appendix. Methodology is a capability-layer
+asset; Dao rhythm is a mind-layer asset for state switching and inner posture.
 
 ## Asset Routing
 

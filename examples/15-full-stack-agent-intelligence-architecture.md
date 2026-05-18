@@ -12,6 +12,8 @@ supporting architectures: memory -> cognition -> evolution -> audit -> trust -> 
 experience bundle facets: memory -> skills -> methodology -> impressions
 
 cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
+
+mind assets: Dao rhythm -> flow capsule -> mind-state switch; peer to methodology but on the mind layer
 ```
 
 The core rule:
@@ -45,9 +47,13 @@ A fast way to understand the agent architecture is four groups:
 4. Cultivation system: experience drives capability realms; capability realms
    unlock talents; mind cultivation keeps stronger capability from drifting into
    tool obsession, power desire, performance, or information hunger.
+5. Mind assets: methodology belongs to the capability layer, while Dao rhythm
+   belongs to the mind layer. Methodology preserves how to act; Dao rhythm
+   preserves what state to enter.
 
 In one sentence: agent architecture = main runtime path + six supporting
-architectures + four projections of experience + cultivation system.
+architectures + four projections of experience + cultivation system + mind
+assets.
 
 ## Architecture Layers
 
@@ -157,6 +163,10 @@ skills give action.
 Memory should be traceable. Skills should be executable. Methodology should be battle-tested. Impressions should stay soft, sourced, and time-aware.
 
 L0-L5 is processing depth. The four facets are the structure of one experience. Use both together: an L4 method should still keep memory, skill, methodology, and impression; an L5 causal synthesis should still carry lower-level facts, timelines, human reactions, and action feedback.
+
+Dao rhythm is not the methodology facet. It is a mind-layer asset in cultivation:
+methodology tells the agent how to repeat useful action, while Dao rhythm tells
+the agent what mind state to enter before acting.
 
 ## Implementation Order
 
