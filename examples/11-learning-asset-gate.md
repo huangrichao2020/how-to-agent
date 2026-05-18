@@ -9,8 +9,8 @@ to approve every tiny conversational phrase.
 Learning loops often collapse into one of two bad shapes:
 
 - They send a report, then forget everything by the next turn.
-- They treat every user reaction, such as "ok" or "可以", as a possible
-  admission or runtime change.
+- They treat every user reaction, such as "ok" or "可以", as an implicit
+  long-term-write permission or runtime change.
 
 Both are exhausting. The agent needs to learn, but the user should not become a
 full-time memory moderator.
@@ -33,7 +33,7 @@ cannot enter practice until the user has discussed or approved it.
 2. For each possible lesson, ask whether it helps the agent do future work.
 3. If it is useful external learning, write it to the fast pattern layer.
 4. If it is already validated in real work, write it to the practice library.
-5. If it changes the agent's own behavior, write a pending proposal instead.
+5. If it changes the agent's own behavior, write a discussion proposal instead; do not create a live pending gate.
 6. Send an asset report that lists `updated`, `needs_discussion`, and `skipped`.
 
 ## Validation
@@ -52,4 +52,3 @@ This pattern was implemented in GA and Hermes on 2026-05-16:
 Do not write unvalidated practice into `how-to-agent` just because the idea is
 interesting. Do not let a cron job silently rewrite agent behavior because a
 popular repo used a cool mechanism.
-
