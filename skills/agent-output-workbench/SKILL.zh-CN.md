@@ -108,6 +108,14 @@ version: 1.3.0
 
 这些事件只做旁路记录，不要阻塞主回复链。认知架构应该读这些事实来形成记忆、印象、技能和人格，不应该拿它们当审批门禁。
 
+Rust 底座可以承接事件事实，但不能接管认知判断：
+
+- 适合放在 Rust：锁恢复、生命周期、事件追加/查询、payload 压缩、ledger 统计。
+- 不适合放在 Rust：学习准入、人格语气、用户画像、方法论抽取、dream 报告判断。
+- 事件协议保持开放：`ga.runtime_event.v1` 的 `kind/source/scope/payload/text/tags` 不用枚举写死。
+- Python/agent loop 仍然是脑，Rust 只提供稳定、可查、低噪音的事实层。
+- Rust 健康检查必须理解真实运行设备：Linux 走 systemd，macOS/M1 走 launchctl。
+
 事件形状保持开放，例如：
 
 ```json

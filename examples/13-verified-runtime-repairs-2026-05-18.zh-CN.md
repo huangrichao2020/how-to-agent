@@ -147,6 +147,8 @@ M1 事实: hostname tingchi-m1, macOS, arm64, 8GB RAM
 ```text
 GA focused tests: 33 passed
 Hermes cognitive event + Feishu tests: 199 passed
+GA Rust runtime contracts: 6 passed
+Hermes hermesd Rust tests: 27 passed
 ```
 
 可复用规则：
@@ -154,6 +156,15 @@ Hermes cognitive event + Feishu tests: 199 passed
 ```text
 agent 自己发出去的内容也是事实输入。发送和更新都要进入旁路事件账本，不能只依赖聊天平台 UI。
 ```
+
+底层 Rust 的边界：
+
+- Rust 适合维护事实底座：runtime lock、进程生命周期、开放事件追加/检索、payload 压缩、状态统计。
+- Rust 不应该维护认知策略：不写死 `kind` 枚举，不做准入门禁，不把学习、人格、方法论、印象和 dream 流程塞进底层。
+- GA 的 `ga-runtime` 提供 `runtime_event_append/query/recent` 作为 `cognitive_event_*` 的同义入口，统一事件协议为 `ga.runtime_event.v1`。
+- Hermes 的 `hermesd` 提供 `cognitive-emit/cognitive-events`，让 Python 优先走 Rust 追加/查询，失败时仍保留 Python fallback。
+- stale lock 清理要静默、可恢复、只清理自己认领的锁；不要把系统命令噪音喷进 agent 的可见报告里。
+- 运行设备要被底层正确理解：Linux 读 systemd，macOS/M1 读 launchctl。不能让 M1 上健康运行的 Hermes 被 Rust 误报成 `service unknown`。
 
 ## 共同教训
 
