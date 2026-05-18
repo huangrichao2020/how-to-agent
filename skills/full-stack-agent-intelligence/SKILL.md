@@ -22,6 +22,8 @@ cultivation meta-system: experience -> talent -> realm
 capability cultivation: methodology -> skill/MCP -> memory -> impression
 
 mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
+
+lifecycle: hot reload -> partial restart -> full restart
 ```
 
 Capability layer: methodology + skill/MCP. Mind layer: Dao rhythm +
@@ -74,6 +76,21 @@ relational posture.
 Capability cultivation and mind cultivation are peers. The first makes the
 agent stronger at doing; the second makes the agent steadier, warmer, sharper,
 or calmer in how it acts. Neither should become a hard gate on the main loop.
+
+## Lifecycle Layers
+
+Small changes should not restart the whole agent. Treat lifecycle as three
+layers:
+
+| Layer | Use for | User experience |
+|---|---|---|
+| Hot reload | prompts, memory, methodology, Dao rhythm, temperament, output templates, tool schemas | Effective next turn, no disconnect |
+| Partial restart | one connector, MCP server, renderer, gbrain sidecar, websocket channel | Main agent stays alive or briefly degrades |
+| Full restart | Python/Rust binaries, dependencies, core loop, startup config, major realm breakthrough | Save resume state, restart, then report |
+
+Prefer hot reload over restart, and partial restart over full restart. Before a
+full restart, preserve the current session, unfinished task, recent outputs, and
+resume clues; after restart, report what changed.
 
 ## Asset Routing
 

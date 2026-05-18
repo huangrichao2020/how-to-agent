@@ -16,6 +16,8 @@ cultivation meta-system: experience -> talent -> realm
 capability cultivation: methodology -> skill/MCP -> memory -> impression
 
 mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
+
+lifecycle: hot reload -> partial restart -> full restart
 ```
 
 Plainly: the capability layer has methodology + skill/MCP for what the agent can
@@ -67,6 +69,12 @@ A fast way to understand the agent architecture is four groups:
 In one sentence: agent architecture = main runtime path + seven supporting
 architectures + four projections of experience + cultivation meta-system +
 capability cultivation chain + mind cultivation chain.
+
+Runtime lifecycle is part of that architecture. Soft assets such as prompts,
+memory, methods, Dao rhythm, temperament, and output templates should hot-load;
+one broken connector, MCP server, renderer, or sidecar should restart locally;
+only dependency, binary, core-loop, startup-config, or major realm-breakthrough
+changes should trigger a full restart.
 
 ## Architecture Layers
 
@@ -194,6 +202,19 @@ is action style flowing from the right mind state.
 4. Add an evolution ledger for learning assets.
 5. Add a concise daily audit pack.
 6. Keep removing gates that make the agent slower, more rigid, or less helpful.
+7. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
+
+## Lifecycle Layers
+
+| Layer | Applies to | Behavior |
+|---|---|---|
+| Hot reload | prompts, memory, methods, skill indexes, cognition sidecars, Dao rhythm, temperament, output templates, tool schemas | scan file fingerprints at turn start or via meta tool, clear caches, rebuild context |
+| Partial restart | Feishu/WebSocket, Weixin poller, MCP server, gbrain, card renderer, external connector | restart only the affected component while the main loop survives or degrades briefly |
+| Full restart | Rust/Python binaries, dependency installs, core loop, startup config, major realm breakthrough | persist resume state, exit under supervisor, then report after startup |
+
+The rule is simple: do not use full restart as a generic refresh button. Hot-load
+soft assets, restart local components locally, and make full restarts
+recoverable, explainable, and reported.
 
 ## Done Standard
 
