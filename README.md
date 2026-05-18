@@ -191,12 +191,24 @@ next agent can continue without rediscovering the plan.
 │   ├── 10-cognitive-governance.md
 │   ├── 10-cognitive-governance.zh-CN.md
 │   ├── 11-learning-asset-gate.md
-│   └── 11-learning-asset-gate.zh-CN.md
+│   ├── 11-learning-asset-gate.zh-CN.md
+│   ├── 12-runtime-identity-correction.md
+│   ├── 12-runtime-identity-correction.zh-CN.md
+│   ├── 13-verified-runtime-repairs-2026-05-18.md
+│   ├── 13-verified-runtime-repairs-2026-05-18.zh-CN.md
+│   ├── 14-human-signal-cognition.md
+│   └── 14-human-signal-cognition.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
+    ├── agent-output-workbench
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
     ├── cognitive-governance
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── human-signal-cognition
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── codex-state-maintenance
@@ -209,6 +221,9 @@ next agent can continue without rediscovering the plan.
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── production-agent-runtime
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── runtime-identity-correction
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── hermes-ttsr-memory
@@ -234,6 +249,9 @@ next agent can continue without rediscovering the plan.
 | Excellent agent architecture | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
 | Cognitive governance | [10-cognitive-governance.md](examples/10-cognitive-governance.md) | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md) |
 | Learning asset gate | [11-learning-asset-gate.md](examples/11-learning-asset-gate.md) | [11-learning-asset-gate.zh-CN.md](examples/11-learning-asset-gate.zh-CN.md) |
+| Runtime identity correction | [12-runtime-identity-correction.md](examples/12-runtime-identity-correction.md) | [12-runtime-identity-correction.zh-CN.md](examples/12-runtime-identity-correction.zh-CN.md) |
+| Verified runtime repairs, 2026-05-18 | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md) | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md) |
+| Human signal cognition | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
 
 ## Skill package
 
@@ -247,11 +265,14 @@ This repo also includes portable skills:
 > "is this core to agent evolution or daily runtime?" test.
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
+- [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — Feishu/chat long-task output workbench with task planning, human-readable actions, results, conclusions, and raw trace suppression
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
+- [skills/human-signal-cognition/SKILL.md](skills/human-signal-cognition/SKILL.md) — Use density, frequency, emotion, and tone to improve profile, persona, and feedback training
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — Prepare reviewable, truthful upstream PRs
 - [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md) — Production-grade runtime patterns from GenericAgent + Hermes
+- [skills/runtime-identity-correction/SKILL.md](skills/runtime-identity-correction/SKILL.md) — Correct stale self-knowledge after host, network, workspace, or platform migration
 - [skills/hermes-ttsr-memory/SKILL.md](skills/hermes-ttsr-memory/SKILL.md) — Trigger-based layered memory architecture for 2GB-constrained agents
 - [skills/self-healing-browser/SKILL.md](skills/self-healing-browser/SKILL.md) — Agent writes missing browser helper functions dynamically
 
@@ -262,6 +283,14 @@ skills.
 prompts, runtime rules, and tool policies with a visible self-change
 discussion. Now enhanced with TTSR (Trigger-based Skill & Rule injection)
 patterns and skill evolution telemetry.
+
+`agent-output-workbench` teaches the agent how to choose between plain chat,
+rich text, and long-task workbench cards in Feishu or other chat platforms. A
+long task card must show task planning, human-readable actions, results,
+conclusion, and useful next action; it must not show raw tool traces without
+tool results. It also keeps casual chat out of cards. The 2026-05-18 GA/Hermes
+repair validated the pattern by hiding raw JSON, summarizing delegate results,
+and keeping raw traces behind debug surfaces.
 
 `cognitive-governance` teaches the agent how to run a living cognition loop
 across traces, episodes, facts, knowledge, methods, skills, identity,
@@ -277,6 +306,11 @@ text or voice input: do not interrupt, preserve the original locally when
 possible, gently layer behavior facts, emotional state, reality feedback, and
 tomorrow's smallest next step, then let Dream consolidate without burdening the
 user.
+
+`runtime-identity-correction` teaches the agent how to correct stale
+self-knowledge after migration. Current runtime facts outrank historical
+environment memories: if Hermes now runs on an M1 Mac, Aliyun network notes
+must become historical facts scoped to `ssh aliyun`, not current constraints.
 
 `production-agent-runtime` distills production-grade experience from
 GenericAgent and Hermes, covering three-layer architecture, layered memory,

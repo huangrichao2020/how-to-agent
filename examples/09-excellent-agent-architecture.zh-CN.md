@@ -73,6 +73,32 @@ agent 写流水账，而是让 agent 写出下一个 agent 可以继承的判断
 
 超长任务还应该有 append-only event trail 或 artifact。把每一次思考都编辑进同一条富文本消息，迟早会撞上平台限制，也会让任务恢复变脆。
 
+2026-05 的 GA/Hermes 实战补充了一条更具体的规则：长任务卡片不能只是把原始 trace 包进一个框里。它必须把任务、工具调用和工具输出分开。
+
+推荐结构：
+
+```text
+状态
+任务 1：获取资料
+任务 2：阅读核心结构
+任务 3：形成结论
+
+Turn 1
+Tool Calls
+Outputs
+
+Turn 2
+Tool Calls
+Outputs
+
+结论
+下一步
+```
+
+`Tool Calls` 说明 agent 做了什么，`Outputs` 说明工具产出了什么。只有 Tool Calls 没有 Outputs，会让用户感觉 agent 很忙但没有结果。实现上要保证 `tool.completed` 事件带出结果摘要，而不是只记录 `tool.started`。
+
+普通闲聊不要卡片化。短消息用自然文本，轻结构用富文本，长工具任务才用工作台卡片。输出流的现代化，不是每句话都变成卡片，而是让复杂工作有清晰的任务面板。
+
 ### 2. 分离权威来源
 
 memory 本身不等于权威。

@@ -84,6 +84,39 @@ For very long tasks, add an append-only event trail or artifact. Editing one
 rich-text message for every thought eventually hits platform limits and makes
 the work brittle.
 
+The 2026-05 GA/Hermes output-stream work adds a more concrete rule: a long-task
+card must not simply wrap the raw trace in a box. It should separate tasks,
+tool calls, and tool outputs.
+
+Recommended shape:
+
+```text
+Status
+Task 1: gather source material
+Task 2: inspect core structure
+Task 3: produce conclusion
+
+Turn 1
+Tool Calls
+Outputs
+
+Turn 2
+Tool Calls
+Outputs
+
+Conclusion
+Next action
+```
+
+`Tool Calls` says what the agent did. `Outputs` says what the tool produced.
+A card with only Tool Calls and no Outputs feels busy but empty. The runtime
+must carry `tool.completed` result previews, not only `tool.started` events.
+
+Do not card-ify casual chat. Short replies should remain natural text, light
+structure can use rich text, and long tool-heavy work should use a workbench
+card. Modern output is not "everything is a card"; it is giving complex work a
+clear task surface.
+
 ### 2. Separate Authority
 
 Memory is not authority by itself.

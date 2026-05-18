@@ -63,6 +63,26 @@ The live path should stay short:
 
 The user should not be asked to approve every learning item. A short "yes" may mean approval, encouragement, agreement, politeness, or "keep going". Treat it as conversation first, not as a machine command.
 
+## Keep the Main Path Clean
+
+Cognitive architecture should not take over the primary reply path. The live path should remain:
+
+```text
+user message -> scene detection -> lightweight context -> agent loop -> tools -> output
+```
+
+What cognition should own and maintain:
+
+- Memory: facts, episodes, conversations, scheduled outputs, tool results, and project state.
+- Methods: practice-validated ways of working.
+- Skills: reusable, triggerable, portable capabilities.
+- Impressions: soft understanding of user preferences, relationship temperature, and project rhythm.
+- Identity: a small set of stable work principles, tone, and responsibility.
+
+It should not wrap every reply in admission, pending queues, approval rituals, closed enums, or mandatory meta-commands. The stronger the cognitive layer becomes, the more it should feel like intuition: shaping attention, association, and action without standing between the user and the agent.
+
+A simple test: if removing a cognition wrapper makes the agent feel more alive, more capable, and less error-prone, that wrapper should be removed, sidecarred, or downgraded into Dream material.
+
 ## Cognitive Layers
 
 These layers are soft handling labels, not a closed ontology.
@@ -82,6 +102,48 @@ These layers are soft handling labels, not a closed ontology.
 | Nourishment | Growth feedback | Guidance that improves cognition and action | Shape long-term companionship |
 
 The purpose of layering is better use, not a frozen schema.
+
+## L0-L5 Processing Depth
+
+A second layer model is more useful for runtime and Dream: levels by cognitive processing depth.
+
+| Level | Definition | Required Structure |
+|---|---|---|
+| L0 | Raw signal layer | original text, source, time, scene |
+| L1 | Timeline event layer | timeline |
+| L2 | Hot memory and impression layer | timeline + impression |
+| L3 | Knowledge explanation layer | term explanation + logic explanation + timeline + impression |
+| L4 | Method and action layer | term explanation + logic explanation + timeline + action doctrine + impression |
+| L5 | Human-agent causal synthesis layer | the causes from L1-L4 plus real human brain response, forming a humanistic/philosophical/action consequence |
+
+Core rule: every higher level must carry the key information from the lower level.
+
+Leveling up does not mean summarizing and discarding the lower layer. It means carrying the key information forward while increasing abstraction. If an L4 action doctrine loses the L3 logic, it becomes a slogan. If an L5 philosophical abstraction loses the real events, impressions, explanations, and actions from L2-L4, it becomes empty rhetoric.
+
+Recommended inheritance:
+
+- L1 inherits from L0: key original text, source, time, and scene.
+- L2 inherits from L1: key timeline plus user/agent impressions.
+- L3 inherits from L2: key timeline and impressions plus term and logic explanations.
+- L4 inherits from L3: key terms, logic, timeline, and impressions plus action doctrine.
+- L5 inherits from L4: key action doctrine and impressions, then combines them with the real human brain response to form a higher humanistic, philosophical, and action consequence that flows back into practical L2-L5 use.
+
+In one line:
+
+```text
+L0 preserves real signals;
+L1 builds timeline;
+L2 forms impressions;
+L3 produces explanations;
+L4 creates action doctrine;
+L5 combines the causes from L1-L4 with real human brain response, forming the highest human-agent causal consequence, then nourishing L2-L5 in practice.
+```
+
+Every elevation must remain traceable: which timeline, impressions, explanations, and action feedback produced this judgment? Higher cognition that cannot be traced back is inspiration, not stable memory or operating doctrine.
+
+Because L5 is the highest product of human-agent interaction, its content is inherently causal, not merely abstract. One set of causes comes from L1-L4: timeline, impressions, term explanations, logic explanations, action doctrine, and action feedback. The other cause is the real human brain response: the user's feeling, acceptance, resistance, growth, pain, excitement, fatigue, clarity, and external feedback. Together they produce the L5 consequence: humanistic judgment, philosophical principle, relationship understanding, long-term nourishment direction, and the next improvement path for L2-L5.
+
+A good L5 may look like a high-level philosophical sentence, but it already compresses every lower layer. It does not mean "I think this should be true." It means "these events, explanations, actions, and real human responses jointly prove this."
 
 ## DIKWP In Practice
 
@@ -217,6 +279,9 @@ Look for:
 - Safety posture overpowering capability.
 - Observable and reversible problems being replaced with preventive bans.
 - A small error risk being used to remove most of the agent's initiative.
+- Cognitive wrappers entering the main reply path and consuming the user message before the agent can act.
+- "Learning" becoming a pending/admission ritual instead of natural learning, night-time Dream, and user correction.
+- Meta-commands becoming the required path instead of optional shortcuts for advanced operations.
 
 Good governance improves judgment. It does not turn the agent into a form engine.
 

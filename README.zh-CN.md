@@ -172,12 +172,24 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 │   ├── 10-cognitive-governance.md
 │   ├── 10-cognitive-governance.zh-CN.md
 │   ├── 11-learning-asset-gate.md
-│   └── 11-learning-asset-gate.zh-CN.md
+│   ├── 11-learning-asset-gate.zh-CN.md
+│   ├── 12-runtime-identity-correction.md
+│   ├── 12-runtime-identity-correction.zh-CN.md
+│   ├── 13-verified-runtime-repairs-2026-05-18.md
+│   ├── 13-verified-runtime-repairs-2026-05-18.zh-CN.md
+│   ├── 14-human-signal-cognition.md
+│   └── 14-human-signal-cognition.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
+    ├── agent-output-workbench
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
     ├── cognitive-governance
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── human-signal-cognition
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── codex-state-maintenance
@@ -190,6 +202,9 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── production-agent-runtime
+    │   ├── SKILL.md
+    │   └── SKILL.zh-CN.md
+    ├── runtime-identity-correction
     │   ├── SKILL.md
     │   └── SKILL.zh-CN.md
     ├── hermes-ttsr-memory
@@ -215,17 +230,23 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 优秀 Agent 架构 | [09-excellent-agent-architecture.md](examples/09-excellent-agent-architecture.md) | [09-excellent-agent-architecture.zh-CN.md](examples/09-excellent-agent-architecture.zh-CN.md) |
 | 认知治理 | [10-cognitive-governance.md](examples/10-cognitive-governance.md) | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md) |
 | 学习资产化讨论门 | [11-learning-asset-gate.md](examples/11-learning-asset-gate.md) | [11-learning-asset-gate.zh-CN.md](examples/11-learning-asset-gate.zh-CN.md) |
+| 运行时自我认知校准 | [12-runtime-identity-correction.md](examples/12-runtime-identity-correction.md) | [12-runtime-identity-correction.zh-CN.md](examples/12-runtime-identity-correction.zh-CN.md) |
+| 2026-05-18 已验证运行时修复 | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md) | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md) |
+| 人类信号认知 | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
 
 ## Skill 包
 
 这个仓库包含可移植 skill：
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
+- [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
+- [skills/human-signal-cognition/SKILL.md](skills/human-signal-cognition/SKILL.md) — 用信息密度、信息频率、情绪和语气改造 agent 的用户画像、人格和反馈训练
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — 把用户日记和语音输入接成 L5 人类真实行为层
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — 准备可 review、真实负责的上游 PR
 - [skills/production-agent-runtime/SKILL.md](skills/production-agent-runtime/SKILL.md) — GenericAgent + Hermes 的生产级运行经验
+- [skills/runtime-identity-correction/SKILL.md](skills/runtime-identity-correction/SKILL.md) — 迁移宿主机、网络、工作区或平台后，修正过期自我认知
 - [skills/hermes-ttsr-memory/SKILL.md](skills/hermes-ttsr-memory/SKILL.md) — 2GB 约束下的触发式分层记忆架构
 - [skills/self-healing-browser/SKILL.md](skills/self-healing-browser/SKILL.md) — Agent 动态编写浏览器辅助函数的工作流
 
@@ -233,9 +254,13 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 `agent-self-evolution` 会教 agent 如何在可见自改讨论下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
 
+`agent-output-workbench` 会教 agent 在飞书和聊天平台里区分闲聊、富文本和长任务工作台。长任务卡片必须有任务规划、人话动作、结果、结论和必要的下一步；不能只有工具调用痕迹，没有工具产出。它也强调不要把普通闲聊卡片化。2026-05-18 的 GA/Hermes 修复已验证这个模式：隐藏 raw JSON，摘要子任务结果，并把原始 trace 留在 debug 表面。
+
 `cognitive-governance` 会教 agent 在痕迹、事件、事实、知识、方法、技能、身份、滋养和 L5 人类真实行为之间跑一个活认知循环。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory 或增加审批摩擦。它的默认姿态是信任和松绑：先给 agent 行动空间，再用来源、日志、Dream 报告、可回滚变更和用户纠偏来长出判断力。
 
 `l5-diary-capture` 会教 agent 如何接住用户用语音输入或文字写下的日记：先不打断地接收，能本地保留原文就保留原文，再温柔整理行为事实、情绪状态、现实反馈和明日最小一步，最后交给 Dream 旁路沉淀，不把确认负担推给用户。
+
+`runtime-identity-correction` 会教 agent 在迁移后校准自我认知。当前运行时事实高于历史环境记忆：如果 Hermes 已经运行在 M1 Mac，阿里云网络经验就必须变成只适用于 `ssh aliyun` 的历史事实，不能继续作为当前约束参与推理。
 
 `production-agent-runtime` 提炼自 GenericAgent 和 Hermes 的生产级运行经验，涵盖三层架构、分层记忆系统、联邦委托、失败升级协议、自愈机制、Code Graph 依赖分析、SysWatch 系统健康诊断和自愈浏览器提取工作流。根据 2026-05 生产运行经验更新。
 

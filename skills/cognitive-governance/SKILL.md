@@ -37,6 +37,45 @@ Do not replace judgment with fixed command words, hard enums, mandatory confirma
    - human lived experience -> L5 local layer with gentle summaries
 7. Let Dream perform night-time consolidation and reporting.
 
+## Keep the Main Path Clean
+
+Cognitive architecture should influence the main path without taking it over.
+
+It may own and maintain:
+
+- memories, facts, conversations, scheduled outputs, and tool results
+- methods, skills, and learning assets
+- impressions, relationship temperature, and durable preferences
+- a small set of stable identity principles
+
+It should not own:
+
+- every natural reply
+- every learning trigger
+- every "yes", "good", or "可以"
+- every permission decision around tool calls
+
+If a cognitive wrapper makes the agent slower, flatter, or more error-prone, remove it or move it to a sidecar. Let Dream consolidate its evidence at night.
+
+## L0-L5 Elevation Rule
+
+Use L0-L5 by processing depth:
+
+- L0 raw signal: original text, source, time, scene.
+- L1 timeline event: turn L0 into a timeline.
+- L2 hot memory and impression: timeline + impression.
+- L3 knowledge explanation: term explanation + logic explanation + timeline + impression.
+- L4 method and action: term explanation + logic explanation + timeline + action doctrine + impression.
+- L5 human-agent causal synthesis: causes from L1-L4 plus real human brain response, forming humanistic, philosophical, and action consequences.
+
+Every higher level must carry the key information from the lower level. Elevation does not discard detail; it inherits key evidence and then abstracts. L4 without L3 logic becomes a slogan. L5 without L2-L4 events, impressions, explanations, and actions becomes empty rhetoric.
+
+Every high-level judgment must be traceable back to lower-level sources. Untraceable high-level cognition is inspiration, not stable operating doctrine.
+
+L5 is the highest product of human-agent interaction, so it is inherently causal. It is not a plain abstract summary. It is the consequence formed by L1-L4 events, timelines, impressions, explanations, action doctrine, and action feedback, plus the user's real brain response.
+
+L5 must see the human response: acceptance, resistance, pain, excitement, fatigue, clarity, external feedback, and growth. Only when these are connected back to L1-L4 can L5 become humanistic judgment, philosophical principle, relationship understanding, and long-term nourishment direction.
+
 ## Do Not Add Friction
 
 Avoid these failures:
@@ -50,6 +89,8 @@ Avoid these failures:
 - Forgetting scheduled reports immediately after sending them.
 - Locking away most initiative to avoid a small error risk.
 - Replacing observable and reversible issues with preventive bans.
+- Putting cognitive wrappers between the user message and the agent loop.
+- Making meta-commands the required path for everyday learning and consolidation.
 
 ## Keep These Boundaries
 
