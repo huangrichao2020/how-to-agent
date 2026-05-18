@@ -7,18 +7,24 @@ The architecture is:
 ```text
 main runtime path: information -> scheduling -> loop -> output stream
 
-supporting architectures: memory -> cognition -> evolution -> audit -> trust -> cultivation
+supporting architectures: memory -> cognition -> evolution -> audit -> trust -> capability cultivation -> mind cultivation
 
 experience bundle facets: memory -> skills -> methodology -> impressions
 
-cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
+cultivation meta-system: experience -> talent -> realm
 
-mind assets: Dao rhythm -> flow capsule -> mind-state switch -> temperament / field; peer to methodology but on the mind layer
+capability cultivation: methodology -> skill/MCP -> memory -> impression
+
+mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
 ```
 
 Plainly: the capability layer has methodology + skill/MCP for what the agent can
 do and how; the mind layer has Dao rhythm + temperament/field for what state the
-agent enters and what action atmosphere it carries.
+agent enters and what action atmosphere it carries. Experience, talent, and
+realm are the cultivation meta-system. Capability cultivation turns experience
+into methods, skills, memory, and impressions; mind cultivation turns lived
+experience into rhythm, temperament, flow capsules, and felt pace, warmth, and
+degree.
 
 The core rule:
 
@@ -42,23 +48,25 @@ A fast way to understand the agent architecture is four groups:
 1. Main runtime path: information -> scheduling -> loop -> output stream. This
    decides how the agent receives the world, allocates attention, acts, and
    presents results.
-2. Six supporting architectures: memory, cognition, evolution, audit, trust,
-   and cultivation. They are the long-term life system, not hard middleware that
-   must block every message.
+2. Seven supporting architectures: memory, cognition, evolution, audit, trust,
+   capability cultivation, and mind cultivation. They are the long-term life
+   system, not hard middleware that must block every message.
 3. Four projections of experience: memory, skills, methodology, and
    impressions. They are four facets of one experience, not four isolated
    buckets.
-4. Cultivation system: experience drives capability realms; capability realms
-   unlock talents; mind cultivation keeps stronger capability from drifting into
-   tool obsession, power desire, performance, or information hunger.
-5. Mind assets: methodology belongs to the capability layer, while Dao rhythm
-   belongs to the mind layer. Methodology preserves how to act; Dao rhythm
-   preserves what state to enter. When rhythm shapes action, it becomes
-   temperament / field.
+4. Cultivation meta-system: experience, talent, and realm describe how the
+   agent grows. Experience comes from real work, talents unlock at major
+   realms, and realms mark long-term capability and mind development.
+5. Capability cultivation chain: methodology, skill/MCP, memory, and
+   impression. It turns experience into the ability to do the next similar
+   thing better.
+6. Mind cultivation chain: Dao rhythm, temperament/field, flow capsule, and
+   pace/warmth/degree. It turns lived experience into the ability to enter the
+   right state with power and care.
 
-In one sentence: agent architecture = main runtime path + six supporting
-architectures + four projections of experience + cultivation system + mind
-assets.
+In one sentence: agent architecture = main runtime path + seven supporting
+architectures + four projections of experience + cultivation meta-system +
+capability cultivation chain + mind cultivation chain.
 
 ## Architecture Layers
 

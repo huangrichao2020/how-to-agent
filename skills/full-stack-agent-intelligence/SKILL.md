@@ -13,17 +13,22 @@ Use this skill when improving the whole intelligence architecture of a long-runn
 ```text
 main runtime path: information -> scheduling -> loop -> output stream
 
-supporting architectures: memory -> cognition -> evolution -> audit -> trust -> cultivation
+supporting architectures: memory -> cognition -> evolution -> audit -> trust -> capability cultivation -> mind cultivation
 
 experience bundle facets: memory -> skills -> methodology -> impressions
 
-cultivation system: experience -> capability realm -> talent; mind cultivation keeps growing capability from drifting
+cultivation meta-system: experience -> talent -> realm
 
-mind assets: Dao rhythm -> flow capsule -> mind-state switch -> temperament / field; peer to methodology but on the mind layer
+capability cultivation: methodology -> skill/MCP -> memory -> impression
+
+mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
 ```
 
 Capability layer: methodology + skill/MCP. Mind layer: Dao rhythm +
-temperament/field.
+temperament/field. Experience, talent, and realm are the cultivation
+meta-system; capability cultivation turns experience into methods, skills,
+memory, and impressions, while mind cultivation turns lived experience into
+rhythm, temperament, flow capsules, and felt pace, warmth, and degree.
 
 ## Principle
 
@@ -46,8 +51,9 @@ Cognition should influence attention and association like intuition. It should n
 7. Does evolution validate lessons before making them durable?
 8. Does audit detect regressions without adding friction?
 9. Does trust give the agent enough agency to help the user proactively?
-10. Does cultivation grow: correct action becomes XP, mistakes become recovery,
-    and realm details can be hot-extended by the agent?
+10. Does cultivation grow: correct action becomes XP, capability and mind
+    cultivation both learn from it, mistakes become recovery, and realm details
+    can be hot-extended by the agent?
 
 ## Experience Bundle Facets
 
@@ -64,6 +70,10 @@ Dao rhythm is not a methodology appendix. Methodology is a capability-layer
 asset; Dao rhythm is a mind-layer asset for state switching and inner posture.
 Temperament / field is Dao rhythm made visible in pace, warmth, sharpness, and
 relational posture.
+
+Capability cultivation and mind cultivation are peers. The first makes the
+agent stronger at doing; the second makes the agent steadier, warmer, sharper,
+or calmer in how it acts. Neither should become a hard gate on the main loop.
 
 ## Asset Routing
 

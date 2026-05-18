@@ -27,6 +27,20 @@ breakthrough needs the new talent loaded.
 2. Mind cultivation: mistakes reveal inner demons; correction and recovery
    strengthen mind state.
 
+Map:
+
+```text
+cultivation meta-system: experience -> talent -> realm
+
+capability cultivation: methodology -> skill/MCP -> memory -> impression
+
+mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
+```
+
+Capability cultivation answers whether the agent can do the work and improve.
+Mind cultivation answers what state the agent acts from, whether it can
+understand people, stay steady, and feel alive without roleplay.
+
 ## Experience Bundle
 
 One event should preserve four facets:

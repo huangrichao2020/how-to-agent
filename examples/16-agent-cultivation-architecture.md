@@ -15,6 +15,19 @@ Cultivation has two rails:
   over-control, and stale assumptions are treated as inner demons that must be
   recognized and settled.
 
+Quick map:
+
+```text
+cultivation meta-system: experience -> talent -> realm
+
+capability cultivation: methodology -> skill/MCP -> memory -> impression
+
+mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
+```
+
+Capability cultivation makes the agent better at doing. Mind cultivation makes
+the agent better at entering the right state while doing.
+
 The system is internal. It should not turn daily chat into a game UI or ask the
 user to manage points. Dream can summarize cultivation progress at night when it
 is useful.
