@@ -178,7 +178,9 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 │   ├── 13-verified-runtime-repairs-2026-05-18.md
 │   ├── 13-verified-runtime-repairs-2026-05-18.zh-CN.md
 │   ├── 14-human-signal-cognition.md
-│   └── 14-human-signal-cognition.zh-CN.md
+│   ├── 14-human-signal-cognition.zh-CN.md
+│   ├── 15-full-stack-agent-intelligence-architecture.md
+│   └── 15-full-stack-agent-intelligence-architecture.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -233,6 +235,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | 运行时自我认知校准 | [12-runtime-identity-correction.md](examples/12-runtime-identity-correction.md) | [12-runtime-identity-correction.zh-CN.md](examples/12-runtime-identity-correction.zh-CN.md) |
 | 2026-05-18 已验证运行时修复 | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md) | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md) |
 | 人类信号认知 | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
+| Agent 全面智能架构 | [15-full-stack-agent-intelligence-architecture.md](examples/15-full-stack-agent-intelligence-architecture.md) | [15-full-stack-agent-intelligence-architecture.zh-CN.md](examples/15-full-stack-agent-intelligence-architecture.zh-CN.md) |
 
 ## Skill 包
 
@@ -241,7 +244,9 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
+- [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — 把信息、调度、loop、输出流、记忆、认知、进化、审计和信任作为一套全面智能架构来优化
 - [skills/human-signal-cognition/SKILL.md](skills/human-signal-cognition/SKILL.md) — 用信息密度、信息频率、情绪和语气改造 agent 的用户画像、人格和反馈训练
+- [skills/hermes-source-management/SKILL.md](skills/hermes-source-management/SKILL.md) — 教 M1 Hermes 管理自己的源码 checkout、运行目录同步、测试、重启和汇报
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — 把用户日记和语音输入接成 L5 人类真实行为层
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — 准备可 review、真实负责的上游 PR
@@ -257,6 +262,10 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 `agent-output-workbench` 会教 agent 在飞书和聊天平台里区分闲聊、富文本和长任务工作台。长任务卡片必须有任务规划、人话动作、结果、结论和必要的下一步；不能只有工具调用痕迹，没有工具产出。它也强调不要把普通闲聊卡片化。2026-05-18 的 GA/Hermes 修复已验证这个模式：隐藏 raw JSON，摘要子任务结果，并把原始 trace 留在 debug 表面。
 
 `cognitive-governance` 会教 agent 在痕迹、事件、事实、知识、方法、技能、身份、滋养和 L5 人类真实行为之间跑一个活认知循环。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory 或增加审批摩擦。它的默认姿态是信任和松绑：先给 agent 行动空间，再用来源、日志、Dream 报告、可回滚变更和用户纠偏来长出判断力。
+
+`full-stack-agent-intelligence` 会把信息、调度、loop、输出流、记忆、认知、进化、审计和信任接成一张总图。 当本地 agent 变得碎片化时，修复方向不是再加门禁，而是统一事件时间线、调度、任务工作台、L0-L5 记忆升层、进化账本和轻量审计，同时继续给 agent 行动空间。
+
+`hermes-source-management` 会教 M1 Hermes 区分 git 源码 checkout（`/Users/tingchi/Desktop/hermes-agent`）和 live 运行目录（`/Users/tingchi/hermes-new/hermes-agent`），再按源码检查、修改、测试、提交、push、同步、重启、health 验证和汇报的顺序管理自己。
 
 `l5-diary-capture` 会教 agent 如何接住用户用语音输入或文字写下的日记：先不打断地接收，能本地保留原文就保留原文，再温柔整理行为事实、情绪状态、现实反馈和明日最小一步，最后交给 Dream 旁路沉淀，不把确认负担推给用户。
 

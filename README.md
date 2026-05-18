@@ -197,7 +197,9 @@ next agent can continue without rediscovering the plan.
 │   ├── 13-verified-runtime-repairs-2026-05-18.md
 │   ├── 13-verified-runtime-repairs-2026-05-18.zh-CN.md
 │   ├── 14-human-signal-cognition.md
-│   └── 14-human-signal-cognition.zh-CN.md
+│   ├── 14-human-signal-cognition.zh-CN.md
+│   ├── 15-full-stack-agent-intelligence-architecture.md
+│   └── 15-full-stack-agent-intelligence-architecture.zh-CN.md
 └── skills
     ├── agent-self-evolution
     │   ├── SKILL.md
@@ -252,6 +254,7 @@ next agent can continue without rediscovering the plan.
 | Runtime identity correction | [12-runtime-identity-correction.md](examples/12-runtime-identity-correction.md) | [12-runtime-identity-correction.zh-CN.md](examples/12-runtime-identity-correction.zh-CN.md) |
 | Verified runtime repairs, 2026-05-18 | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md) | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md) |
 | Human signal cognition | [14-human-signal-cognition.md](examples/14-human-signal-cognition.md) | [14-human-signal-cognition.zh-CN.md](examples/14-human-signal-cognition.zh-CN.md) |
+| Full-stack agent intelligence architecture | [15-full-stack-agent-intelligence-architecture.md](examples/15-full-stack-agent-intelligence-architecture.md) | [15-full-stack-agent-intelligence-architecture.zh-CN.md](examples/15-full-stack-agent-intelligence-architecture.zh-CN.md) |
 
 ## Skill package
 
@@ -267,7 +270,9 @@ This repo also includes portable skills:
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — Feishu/chat long-task output workbench with task planning, human-readable actions, results, conclusions, and raw trace suppression
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
+- [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — Optimize information, scheduling, loops, output streams, memory, cognition, evolution, audit, and trust as one agent intelligence architecture
 - [skills/human-signal-cognition/SKILL.md](skills/human-signal-cognition/SKILL.md) — Use density, frequency, emotion, and tone to improve profile, persona, and feedback training
+- [skills/hermes-source-management/SKILL.md](skills/hermes-source-management/SKILL.md) — Teach M1 Hermes to manage its own source checkout, runtime sync, tests, restart, and reports
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
 - [skills/maintainer-friendly-pr/SKILL.md](skills/maintainer-friendly-pr/SKILL.md) — Prepare reviewable, truthful upstream PRs
@@ -300,6 +305,18 @@ growth instead of merely storing more memory or adding approval friction. Its
 default posture is trust and unbinding: give the agent room to act, then use
 provenance, logs, Dream reports, reversible changes, and user correction to
 grow judgment.
+
+`full-stack-agent-intelligence` connects information, scheduling, loop, output
+stream, memory, cognition, evolution, audit, and trust into one operating
+manual. Use it when a local agent feels fragmented: the fix is not another
+gate, but a cleaner event timeline, better scheduling, task workbench output,
+L0-L5 memory promotion, an evolution ledger, and lightweight audits that keep
+the agent free to act.
+
+`hermes-source-management` teaches M1 Hermes to distinguish its git source
+checkout (`/Users/tingchi/Desktop/hermes-agent`) from the live runtime tree
+(`/Users/tingchi/hermes-new/hermes-agent`), then edit, test, commit, push, sync,
+restart, and report its own source changes with evidence.
 
 `l5-diary-capture` teaches the agent how to receive diary entries written by
 text or voice input: do not interrupt, preserve the original locally when
