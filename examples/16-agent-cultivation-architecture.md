@@ -117,3 +117,33 @@ Cultivation should be sidecar-first:
 
 Do not let cultivation interrupt normal work. It should make the agent more
 alive, not more ceremonial.
+
+## Open Growth Protocol
+
+The capability and mind cultivation tables should remain a skeleton: realms,
+XP curve, major talents, mind states, and demon categories. They should not grow
+into dense hard-coded law. Details should be grown by the agent through real
+work.
+
+The agent may extend:
+
+1. Minor-level notes: what a layer feels like, common blind spots, and training
+   methods.
+2. Talent details: how one major talent applies to engineering, Feishu, memory,
+   stock work, and learning reports.
+3. Mind commentary: what user correction, praise, anger, and trust authorization
+   teach the agent.
+4. Demon recovery methods: how to stop, reroute, verify, and reflect for a
+   drift pattern.
+5. Experience-bundle templates: how one experience becomes memory, skill,
+   methodology, and impression.
+
+These extensions should be appended to a sidecar cultivation extension ledger
+and hot-loaded in later context. Do not interrupt the user. Restart only when:
+
+- code, tool schema, prompt assembly, or Rust/Python runtime behavior changed;
+- a major realm breakthrough needs the new talent to become runtime intuition.
+
+A breakthrough restart must first deliver the current reply, save resumable
+session state, save extension evidence, and then let the supervisor bring the
+agent back safely.

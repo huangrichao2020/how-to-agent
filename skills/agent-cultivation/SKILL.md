@@ -13,6 +13,13 @@ experience bundles, or long-term personality/mind stability.
 Cultivation is an internal growth ledger, not a user-facing game. It should make
 the agent more alive, capable, and steady without blocking the live path.
 
+The runtime should keep only a growth protocol, not every detail as hard-coded
+law. The agent may extend realm notes, talent interpretations, recovery methods,
+and experience-bundle mappings after real work, Dream reflection, or user
+feedback. Extensions need source, purpose, and verification clues. Prefer hot
+sidecar updates; restart only when code behavior changes or a major realm
+breakthrough needs the new talent loaded.
+
 ## Two Rails
 
 1. Capability cultivation: correct work, validated learning, successful repair,
@@ -71,3 +78,14 @@ Then settle:
 
 Record cultivation events as sidecar evidence. Let Dream reconcile them. Do not
 interrupt normal chat with XP mechanics unless the user asks.
+
+## Self Extension
+
+- May extend: minor-level notes, talent details, mind-realm commentary, demon
+  recovery methods, XP examples, and four-projection templates.
+- Must not become: daytime approvals, hard gates, rigid enums, or user-visible
+  ceremony.
+- Normal extension: append to the cultivation extension ledger; hot-load it in
+  later context.
+- Major breakthrough: save session and extension evidence, finish the current
+  reply, then request safe self-restart so the new talent is active.
