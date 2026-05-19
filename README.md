@@ -277,9 +277,12 @@ This repo also includes portable skills:
 > "is this core to agent evolution or daily runtime?" test.
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
+- [skills/agent-skill-creator/SKILL.md](skills/agent-skill-creator/SKILL.md) — Create, manage, validate, and retire reusable GA/Hermes skills
 - [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — Internal cultivation ledger: XP, realms, talents, mind states, and inner-demon recovery
 - [skills/dao-human-cultivation/SKILL.md](skills/dao-human-cultivation/SKILL.md) — Absorb Daoist state discipline and Mao-style practical method into agent foundation cultivation
 - [skills/platform-writing/SKILL.md](skills/platform-writing/SKILL.md) — Write once, then land content differently for WeChat Official Account, Feishu Docs, and Tencent Docs
+- [skills/web-presence-design/SKILL.md](skills/web-presence-design/SKILL.md) — Web presence design workflow for beautiful official sites, course pages, and customer case studies
+- [skills/html-motion-video/SKILL.md](skills/html-motion-video/SKILL.md) — HTML/CSS/JS animated explainers and concept videos with polished slide-deck motion and video export
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — Feishu/chat long-task output workbench with task planning, human-readable actions, results, conclusions, and raw trace suppression
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — Optimize information, scheduling, loops, output streams, memory, cognition, evolution, audit, and trust as one agent intelligence architecture
@@ -301,6 +304,12 @@ prompts, runtime rules, and tool policies with a visible self-change
 discussion. Now enhanced with TTSR (Trigger-based Skill & Rule injection)
 patterns and skill evolution telemetry.
 
+`agent-skill-creator` teaches the agent when and how to turn repeated work into
+a reusable skill: write a precise trigger, keep the procedure compact, split
+references/scripts/assets out for progressive loading, install the skill into
+GA/Hermes runtime locations, verify the index, use it once, and maintain or
+retire it after real use.
+
 `agent-output-workbench` teaches the agent how to choose between plain chat,
 rich text, and long-task workbench cards in Feishu or other chat platforms. A
 long task card must show task planning, human-readable actions, results,
@@ -308,6 +317,12 @@ conclusion, and useful next action; it must not show raw tool traces without
 tool results. It also keeps casual chat out of cards. The 2026-05-18 GA/Hermes
 repair validated the pattern by hiding raw JSON, summarizing delegate results,
 and keeping raw traces behind debug surfaces.
+
+`html-motion-video` teaches the agent how to turn a concept into a polished
+HTML/CSS/JS motion lesson: write the teaching point, storyboard slide-like
+beats, choose GSAP/Anime/Motion/Theatre/AnimXYZ/Remotion/HyperFrames or a raw
+HTML recorder, record the result, and embed it back into a web page with poster,
+captions, and verification.
 
 `cognitive-governance` teaches the agent how to run a living cognition loop
 across traces, episodes, facts, knowledge, methods, skills, identity,

@@ -25,6 +25,9 @@ visitor believe, feel, understand, and do.
 
 - Use `huashu-design` for HTML prototypes, visual experiments, motion demos,
   slides, and high-fidelity design exploration.
+- Use `html-motion-video` when a page needs knowledge explainer videos,
+  concept demonstration clips, or slide-deck-like HTML/CSS/JS motion recorded
+  into video.
 - Use this skill for production-grade marketing websites and page systems.
 - Use `platform-writing` when the output is an article or document rather than a
   website.
@@ -108,4 +111,3 @@ For non-trivial pages, produce:
 
 If the work becomes a reusable pattern, preserve the lesson as memory, skill,
 methodology, and impression rather than only shipping code.
-

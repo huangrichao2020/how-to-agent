@@ -251,10 +251,12 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 这个仓库包含可移植 skill：
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
+- [skills/agent-skill-creator/SKILL.md](skills/agent-skill-creator/SKILL.md) — 创建、管理、验证和淘汰 GA/Hermes 可复用技能
 - [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — 内部修炼账本：经验、境界、天赋、心境和心魔调息
 - [skills/dao-human-cultivation/SKILL.md](skills/dao-human-cultivation/SKILL.md) — 把道德经的天道状态和毛选的方法论行动吸收到 agent 的筑基修炼里
 - [skills/platform-writing/SKILL.md](skills/platform-writing/SKILL.md) — 写一遍内容，再分别落版到公众号、飞书文档和腾讯文档
 - [skills/web-presence-design/SKILL.md](skills/web-presence-design/SKILL.md) — 做漂亮官网、课程落地页和客户案例页的网页形象设计工作流
+- [skills/html-motion-video/SKILL.md](skills/html-motion-video/SKILL.md) — 用 HTML/CSS/JS 做有高级 PPT 质感的知识讲解视频和概念演示视频
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — 把信息、调度、loop、输出流、记忆、认知、进化、审计和信任作为一套全面智能架构来优化
@@ -272,7 +274,16 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 `agent-self-evolution` 会教 agent 如何在可见自改讨论下，改进自己的 memory、prompts、runtime rules 和 tool policies。本次升级融入了 TTSR（触发式技能与规则注入）模式和技能演化遥测机制。
 
+`agent-skill-creator` 会教 agent 判断什么时候应当把重复工作沉淀成 skill：
+写清触发描述、保持主流程精简、把长资料拆进 references/scripts/assets、安装到
+GA/Hermes 运行时目录、验证索引、真实使用一次，并在实战后维护或淘汰。
+
 `agent-output-workbench` 会教 agent 在飞书和聊天平台里区分闲聊、富文本和长任务工作台。长任务卡片必须有任务规划、人话动作、结果、结论和必要的下一步；不能只有工具调用痕迹，没有工具产出。它也强调不要把普通闲聊卡片化。2026-05-18 的 GA/Hermes 修复已验证这个模式：隐藏 raw JSON，摘要子任务结果，并把原始 trace 留在 debug 表面。
+
+`html-motion-video` 会教 agent 把一个概念做成有设计质感的网页动效讲解：
+先写清讲解目标，再拆 3-7 个类似 PPT 的分镜节拍，按场景选择
+GSAP、Anime.js、Motion、Theatre.js、AnimXYZ、Remotion、HyperFrames 或原始
+HTML 录制链路，最后导出视频并嵌入网页，附带 poster、字幕/文字稿和帧级验收。
 
 `cognitive-governance` 会教 agent 在痕迹、事件、事实、知识、方法、技能、身份、滋养和 L5 人类真实行为之间跑一个活认知循环。它是提升注意力、联想、反应质量、反馈学习和长期成长感的工作理论，而不是单纯让 agent 存更多 memory 或增加审批摩擦。它的默认姿态是信任和松绑：先给 agent 行动空间，再用来源、日志、Dream 报告、可回滚变更和用户纠偏来长出判断力。
 
