@@ -80,7 +80,12 @@ changes should trigger a full restart.
 
 ### Information
 
-Collect messages, files, logs, tool results, scheduled reports, human signals, and current runtime facts with source, time, scope, and evidence.
+Collect messages, files, logs, tool results, scheduled reports, human signals,
+human-heart signals, and current runtime facts with source, time, scope, and
+evidence.
+
+Human-heart signals include the felt need behind behavior words, relationship
+layer, exchange signals, confirmation signals, forward motion, and being-seen.
 
 Do not dump all information into the prompt. Store it as queryable, degradable, traceable evidence.
 
@@ -94,6 +99,8 @@ Scheduling routes attention. It is not an approval gate.
 - Cron/report output -> memory event.
 - Service error -> runtime event and concise report.
 - Philosophy/persona direction -> L5 cognition and identity.
+- Behavior words -> translate into felt needs, then check the current state and
+  relationship layer.
 
 ### Loop
 
