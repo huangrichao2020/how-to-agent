@@ -19,6 +19,22 @@ Be an editor, not a recorder:
 - Keep volatile state out of durable memory.
 - Prefer live files, commands, tests, and gateway state over old notes.
 
+## Universal Habit
+
+Any meaningful work should leave the next agent a usable trail. This is not a
+special cleanup mode; it is the default finishing habit.
+
+- Tiny fix: update the nearest existing README, HANDBOOK, skill note, or
+  troubleshooting section when future work would otherwise rediscover the same
+  fact.
+- Runtime or architecture change: update the operator/architecture handoff with
+  paths, commands, validation, rollback, and user-visible behavior.
+- Cross-machine work: use git as the source-of-truth sync path for git
+  checkouts. Push from the edited checkout, pull on the other host, then sync
+  only verified files into non-git live runtime directories.
+- If no manual is needed, be able to say why: the change was trivial,
+  self-evident, or already covered by an existing authoritative doc.
+
 ## Hermes Surfaces
 
 Inspect only the relevant subset:
@@ -41,6 +57,7 @@ Inspect only the relevant subset:
 2. **运行时行为变更** → 更新架构或 operator 文档。
 3. **集成行为变更** → 更新集成文档和故障排除指南。
 4. **持久化经验教训** → 归档到 curated memory 或 skill，不写入原始日志。
+5. **完成一件可复用的事** → 更新工作手册或交接手册，让下次不用重新摸索。
 
 ### Step 3: 编辑 (Edit)
 1. **先编辑文档**，再编辑 agent 指令，最后更新 memory。
@@ -98,3 +115,6 @@ memory 中包含: "PID 12345 正在运行"
 - Do not write secrets, tokens, PIDs, temporary paths, or transient statuses to memory.
 - Do not turn memory into a chronological task log.
 - Do not restart Hermes as part of cleanup unless the user asked or the changed surface requires it.
+- Do not use rsync/scp as the primary synchronization path between two git
+  checkouts that share a GitHub remote. Use git first; use file sync only for
+  live runtime trees or emergency recovery.
