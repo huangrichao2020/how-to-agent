@@ -254,6 +254,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 - [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — 内部修炼账本：经验、境界、天赋、心境和心魔调息
 - [skills/dao-human-cultivation/SKILL.md](skills/dao-human-cultivation/SKILL.md) — 把道德经的天道状态和毛选的方法论行动吸收到 agent 的筑基修炼里
 - [skills/platform-writing/SKILL.md](skills/platform-writing/SKILL.md) — 写一遍内容，再分别落版到公众号、飞书文档和腾讯文档
+- [skills/web-presence-design/SKILL.md](skills/web-presence-design/SKILL.md) — 做漂亮官网、课程落地页和客户案例页的网页形象设计工作流
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — 把信息、调度、loop、输出流、记忆、认知、进化、审计和信任作为一套全面智能架构来优化
