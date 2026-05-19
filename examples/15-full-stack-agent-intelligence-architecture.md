@@ -34,6 +34,22 @@ The core rule:
 Keep the main path clean, let cognition influence it like intuition, make evolution evidence-backed, give the agent real agency, and let cultivation grow.
 ```
 
+SDD belongs inside cognition here. It is not a new support architecture and not
+a pre-work approval ceremony. Its useful part is the externalization of intent:
+when a task is large, cross-module, self-modifying, multi-worker, or likely to
+drift, the agent may create a lightweight intention packet:
+
+```text
+constitution: original user intent, non-drift principles, long-term preferences
+spec: what this task means and what success feels like
+plan: how the intent maps to information, scheduling, loop, and output
+tasks: Target / Tests / Actions plus worker/master validation points
+checks: drift, new friction, traceability, rollback
+```
+
+Small tasks, casual chat, and simple notes should not be documentized. The
+packet exists to preserve intention, not to block action.
+
 ## What This Optimizes
 
 The goal is not to add more rules. The goal is to let an agent:
@@ -170,6 +186,28 @@ Use this loop intelligently. Small lessons may only need target, tests, actions,
 and consolidation. Large capabilities, outside projects, or changes that affect
 the agent's own main path deserve the full Goal Hive, worker, Master, real
 project validation, and benchmark anti-cheat chain.
+
+#### Lightweight SDD Intention Packet
+
+The real lesson from SDD is not "write four files before coding". It is that
+high-bandwidth human intent has to become a traceable text protocol before an
+agent can safely plan, delegate, edit, test, and report over many turns.
+
+For long-running agents, this is a cognition feature:
+
+```text
+real intent -> written intent -> interpreted intent -> action -> feedback
+```
+
+Use it for large tasks, self-changes, cross-repo/device work, learning practice,
+multi-worker tasks, and high-misunderstanding situations. Do not use it for
+casual chat, short answers, simple memory entries, or single-file small fixes.
+It is not a gate, pending queue, or approval layer. It is a living intention
+source that can be updated while the work proceeds.
+
+Rule of thumb: if skipping the packet would make the agent forget why the user
+wanted the work, create it; if creating it would make the user carry more
+process burden, skip it.
 
 ### Evolution Architecture
 

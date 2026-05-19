@@ -42,6 +42,11 @@ user input -> scene/intent -> relevant context -> agent loop -> tools/action -> 
 
 Cognition should influence attention and association like intuition. It should not become a pending queue, admission gate, hard confirmation layer, fixed meta-command, or approval ceremony.
 
+An SDD intention packet is a cognition feature, not a new architecture or gate.
+For large, cross-module, self-change, multi-worker, learning-practice, or
+high-misunderstanding tasks, preserve intent as constitution, spec, plan, tasks,
+and checks. Do not force it onto casual chat, simple memory, or small fixes.
+
 ## Review Order
 
 1. Is information captured with source, time, and scope?
@@ -79,6 +84,11 @@ selection, compatibility scoring, Target / Tests / Actions, Goal Hive task
 split, worker read/build/test, Master second-pass validation, real local project
 validation, benchmark anti-cheat, artifact report, GA/Hermes assimilation, and
 agent-systems-patterns/how-to-agent consolidation.
+
+Use lightweight SDD intention packets when a task has high drift risk. They
+preserve "real intent -> written intent -> interpreted intent" with
+constitution/spec/plan/tasks/checks. They do not block action and do not replace
+the learning-practice loop.
 
 Evolution receives cognition-validated practice and promotes it into assets,
 source changes, skills, methods, versioned updates, and reports.
