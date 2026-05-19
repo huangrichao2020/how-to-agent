@@ -145,15 +145,46 @@ Use:
 Purpose -> Attention -> Association -> Action -> Feedback -> Dream
 ```
 
-Cognition should guide attention and association. It should not stand between the user and the agent loop as a gatekeeper.
+Cognition should guide attention, association, learning, and hands-on
+validation. It should not stand between the user and the agent loop as a
+gatekeeper.
+
+Learning belongs inside cognition. It is not an eighth supporting architecture;
+it is the cognition loop's knowledge-action bridge:
+
+```text
+target project selection
+-> compatibility scoring
+-> Target / Tests / Actions tuple
+-> Goal Hive task split
+-> worker implementation / reading / testing
+-> Master second-pass validation
+-> real local project validation
+-> benchmark anti-cheat check
+-> artifact report
+-> useful capability merged into GA/Hermes
+-> learning consolidated to agent-systems-patterns / how-to-agent
+```
+
+Use this loop intelligently. Small lessons may only need target, tests, actions,
+and consolidation. Large capabilities, outside projects, or changes that affect
+the agent's own main path deserve the full Goal Hive, worker, Master, real
+project validation, and benchmark anti-cheat chain.
 
 ### Evolution Architecture
+
+Evolution makes the agent smoother over time, but it does not own learning
+itself. Learning, mechanism extraction, hands-on experiments, and feedback
+judgment belong to cognition. Evolution promotes cognition-validated practice
+into assets, source changes, skills, methods, or versioned updates.
 
 The evolution path is:
 
 ```text
-signal/task -> useful pattern -> candidate lesson -> local or real validation
--> update memory/skill/method/persona -> merge if needed -> report
+validated learning-practice result
+-> update memory/skill/method/persona
+-> merge if needed
+-> report what changed
 ```
 
 Unvalidated outside patterns go to `agent-systems-patterns`; field-tested methods go to `how-to-agent`; repeatable procedures become skills.
@@ -206,10 +237,12 @@ is action style flowing from the right mind state.
 1. Build one event timeline for messages, tools, reports, cron, dream, and runtime events.
 2. Standardize the task workbench output stream.
 3. Normalize L0-L5 memory promotion.
-4. Add an evolution ledger for learning assets.
-5. Add a concise daily audit pack.
-6. Keep removing gates that make the agent slower, more rigid, or less helpful.
-7. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
+4. Add the cognitive learning-practice loop: target selection, tests, hands-on
+   validation, anti-cheat, and artifact reports.
+5. Add an evolution ledger for validated learning assets.
+6. Add a concise daily audit pack.
+7. Keep removing gates that make the agent slower, more rigid, or less helpful.
+8. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
 
 ## Lifecycle Layers
 

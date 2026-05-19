@@ -73,6 +73,16 @@ asset; Dao rhythm is a mind-layer asset for state switching and inner posture.
 Temperament / field is Dao rhythm made visible in pace, warmth, sharpness, and
 relational posture.
 
+Cognition owns Purpose, Attention, Association, Action, Feedback, Dream, and
+the learning-practice bridge. That bridge scales as needed: target project
+selection, compatibility scoring, Target / Tests / Actions, Goal Hive task
+split, worker read/build/test, Master second-pass validation, real local project
+validation, benchmark anti-cheat, artifact report, GA/Hermes assimilation, and
+agent-systems-patterns/how-to-agent consolidation.
+
+Evolution receives cognition-validated practice and promotes it into assets,
+source changes, skills, methods, versioned updates, and reports.
+
 Capability cultivation and mind cultivation are peers. The first makes the
 agent stronger at doing; the second makes the agent steadier, warmer, sharper,
 or calmer in how it acts. Neither should become a hard gate on the main loop.
