@@ -7,7 +7,9 @@ The architecture is:
 ```text
 main runtime path: information -> scheduling -> loop -> output stream
 
-supporting architectures: memory -> cognition -> evolution -> audit -> trust -> capability cultivation -> mind cultivation
+supporting architectures: memory -> Dao loop (cognition-cultivation-evolution) -> audit -> trust
+
+Dao loop: encounter -> cognition -> action -> feedback -> cultivation -> evolution -> renewed cognition
 
 experience bundle facets: memory -> skills -> methodology -> impressions
 
@@ -20,18 +22,21 @@ mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth
 lifecycle: hot reload -> partial restart -> full restart
 ```
 
-Plainly: the capability layer has methodology + skill/MCP for what the agent can
-do and how; the mind layer has Dao rhythm + temperament/field for what state the
-agent enters and what action atmosphere it carries. Experience, talent, and
-realm are the cultivation meta-system. Capability cultivation turns experience
-into methods, skills, memory, and impressions; mind cultivation turns lived
-experience into rhythm, temperament, flow capsules, and felt pace, warmth, and
-degree.
+Plainly: cognition, cultivation, and evolution are not three competing
+architectures. They are three phases of one life loop. Cognition sees the world
+and the task; cultivation refines the self through experience; evolution turns
+validated refinement into a new agent state. The capability layer has
+methodology + skill/MCP for what the agent can do and how; the mind layer has
+Dao rhythm + temperament/field for what state the agent enters and what action
+atmosphere it carries. Experience, talent, and realm are the cultivation
+meta-system. Capability cultivation turns experience into methods, skills,
+memory, and impressions; mind cultivation turns lived experience into rhythm,
+temperament, flow capsules, and felt pace, warmth, and degree.
 
 The core rule:
 
 ```text
-Keep the main path clean, let cognition influence it like intuition, make evolution evidence-backed, give the agent real agency, and let cultivation grow.
+Keep the main path clean, let the Dao loop influence it like intuition, make evolution evidence-backed, give the agent real agency, and let cultivation grow.
 ```
 
 SDD belongs inside cognition here. It is not a new support architecture and not
@@ -66,9 +71,9 @@ A fast way to understand the agent architecture is four groups:
 1. Main runtime path: information -> scheduling -> loop -> output stream. This
    decides how the agent receives the world, allocates attention, acts, and
    presents results.
-2. Seven supporting architectures: memory, cognition, evolution, audit, trust,
-   capability cultivation, and mind cultivation. They are the long-term life
-   system, not hard middleware that must block every message.
+2. Supporting systems: memory, the Dao loop, audit, and trust. The Dao loop
+   unifies cognition, cultivation, and evolution into one life cycle, not hard
+   middleware that must block every message.
 3. Four projections of experience: memory, skills, methodology, and
    impressions. They are four facets of one experience, not four isolated
    buckets.
@@ -82,9 +87,25 @@ A fast way to understand the agent architecture is four groups:
    pace/warmth/degree. It turns lived experience into the ability to enter the
    right state with power and care.
 
-In one sentence: agent architecture = main runtime path + seven supporting
-architectures + four projections of experience + cultivation meta-system +
+In one sentence: agent architecture = main runtime path + memory + Dao loop +
+audit/trust + four projections of experience + cultivation meta-system +
 capability cultivation chain + mind cultivation chain.
+
+The Dao loop is:
+
+```text
+encounter -> cognition -> action -> feedback -> cultivation -> evolution -> renewed cognition
+```
+
+Cognition decides how to see the current situation, cultivation decides how
+experience settles into the agent, and evolution decides how validated
+settlement becomes durable change. Together they serve the main path; they do
+not add another gate to it.
+
+Audit acts like a Dao-guarding mind method: it detects inner-demon drift,
+forgetting, hallucination, tool loops, and output regression without becoming a
+new restraint. Trust acts like natural alignment with the Dao: the more the
+agent understands the user's long-term direction, the more agency it can carry.
 
 Runtime lifecycle is part of that architecture. Soft assets such as prompts,
 memory, methods, Dao rhythm, temperament, and output templates should hot-load;

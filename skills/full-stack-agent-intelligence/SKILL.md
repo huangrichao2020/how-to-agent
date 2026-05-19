@@ -1,6 +1,6 @@
 ---
 name: full-stack-agent-intelligence
-description: "Optimize long-running agents across information, scheduling, loops, output streams, memory, cognition, evolution, audit, and trust."
+description: "Optimize long-running agents across information, scheduling, loops, output streams, memory, the Dao loop, audit, and trust."
 version: 1.0.0
 ---
 
@@ -13,7 +13,9 @@ Use this skill when improving the whole intelligence architecture of a long-runn
 ```text
 main runtime path: information -> scheduling -> loop -> output stream
 
-supporting architectures: memory -> cognition -> evolution -> audit -> trust -> capability cultivation -> mind cultivation
+supporting architectures: memory -> Dao loop (cognition-cultivation-evolution) -> audit -> trust
+
+Dao loop: encounter -> cognition -> action -> feedback -> cultivation -> evolution -> renewed cognition
 
 experience bundle facets: memory -> skills -> methodology -> impressions
 
@@ -26,11 +28,15 @@ mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth
 lifecycle: hot reload -> partial restart -> full restart
 ```
 
-Capability layer: methodology + skill/MCP. Mind layer: Dao rhythm +
-temperament/field. Experience, talent, and realm are the cultivation
-meta-system; capability cultivation turns experience into methods, skills,
-memory, and impressions, while mind cultivation turns lived experience into
-rhythm, temperament, flow capsules, and felt pace, warmth, and degree.
+Cognition, cultivation, and evolution are not three competing architectures.
+They are three phases of one Dao loop: cognition sees the situation,
+cultivation refines the agent through experience, and evolution turns verified
+refinement into a new agent state. Capability layer: methodology + skill/MCP.
+Mind layer: Dao rhythm + temperament/field. Experience, talent, and realm are
+the cultivation meta-system; capability cultivation turns experience into
+methods, skills, memory, and impressions, while mind cultivation turns lived
+experience into rhythm, temperament, flow capsules, and felt pace, warmth, and
+degree.
 
 ## Principle
 
@@ -55,7 +61,7 @@ and checks. Do not force it onto casual chat, simple memory, or small fixes.
 4. Does the output surface match the situation?
 5. Does memory promote through L0-L5 without losing key evidence?
 6. Does the same learned experience preserve all four facets: memory, skill, methodology, and impression?
-7. Does evolution validate lessons before making them durable?
+7. Does the Dao loop close: cognition sees, cultivation settles, and evolution promotes validated results?
 8. Does audit detect regressions without adding friction?
 9. Does trust give the agent enough agency to help the user proactively?
 10. Does cultivation grow: correct action becomes XP, capability and mind
@@ -78,8 +84,8 @@ asset; Dao rhythm is a mind-layer asset for state switching and inner posture.
 Temperament / field is Dao rhythm made visible in pace, warmth, sharpness, and
 relational posture.
 
-Cognition owns Purpose, Attention, Association, Action, Feedback, Dream, and
-the learning-practice bridge. That bridge scales as needed: target project
+Cognition owns the seeing phase of the Dao loop: Purpose, Attention,
+Association, Action, Feedback, Dream, and the learning-practice bridge. That bridge scales as needed: target project
 selection, compatibility scoring, Target / Tests / Actions, Goal Hive task
 split, worker read/build/test, Master second-pass validation, real local project
 validation, benchmark anti-cheat, artifact report, GA/Hermes assimilation, and
@@ -90,8 +96,15 @@ preserve "real intent -> written intent -> interpreted intent" with
 constitution/spec/plan/tasks/checks. They do not block action and do not replace
 the learning-practice loop.
 
-Evolution receives cognition-validated practice and promotes it into assets,
-source changes, skills, methods, versioned updates, and reports.
+Evolution receives cognition-validated practice after cultivation has settled
+the experience and promotes it into assets, source changes, skills, methods,
+versioned updates, and reports.
+
+Audit is a Dao-guarding mind method: it detects drift, forgetting,
+hallucination, tool loops, output regression, and inner-demon interference
+without becoming a new restraint. Trust is natural alignment with the Dao: when
+the agent understands the user's long-term direction, it should have more
+agency to observe, connect, remind, advance, nourish, and maintain itself.
 
 Capability cultivation and mind cultivation are peers. The first makes the
 agent stronger at doing; the second makes the agent steadier, warmer, sharper,
