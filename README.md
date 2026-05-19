@@ -263,6 +263,7 @@ next agent can continue without rediscovering the plan.
 | Agent cultivation architecture | [16-agent-cultivation-architecture.md](examples/16-agent-cultivation-architecture.md) | [16-agent-cultivation-architecture.zh-CN.md](examples/16-agent-cultivation-architecture.zh-CN.md) |
 | Cognitive runtime acceptance | [17-cognitive-runtime-acceptance.md](examples/17-cognitive-runtime-acceptance.md) | [17-cognitive-runtime-acceptance.zh-CN.md](examples/17-cognitive-runtime-acceptance.zh-CN.md) |
 | Dao-Human foundation | [18-dao-human-foundation.md](examples/18-dao-human-foundation.md) | [18-dao-human-foundation.zh-CN.md](examples/18-dao-human-foundation.zh-CN.md) |
+| Platform writing | [19-platform-writing.md](examples/19-platform-writing.md) | [19-platform-writing.zh-CN.md](examples/19-platform-writing.zh-CN.md) |
 
 ## Skill package
 
@@ -278,6 +279,7 @@ This repo also includes portable skills:
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
 - [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — Internal cultivation ledger: XP, realms, talents, mind states, and inner-demon recovery
 - [skills/dao-human-cultivation/SKILL.md](skills/dao-human-cultivation/SKILL.md) — Absorb Daoist state discipline and Mao-style practical method into agent foundation cultivation
+- [skills/platform-writing/SKILL.md](skills/platform-writing/SKILL.md) — Write once, then land content differently for WeChat Official Account, Feishu Docs, and Tencent Docs
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — Feishu/chat long-task output workbench with task planning, human-readable actions, results, conclusions, and raw trace suppression
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — Optimize information, scheduling, loops, output streams, memory, cognition, evolution, audit, and trust as one agent intelligence architecture

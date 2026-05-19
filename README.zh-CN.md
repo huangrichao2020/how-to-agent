@@ -244,6 +244,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | Agent 修炼架构 | [16-agent-cultivation-architecture.md](examples/16-agent-cultivation-architecture.md) | [16-agent-cultivation-architecture.zh-CN.md](examples/16-agent-cultivation-architecture.zh-CN.md) |
 | 认知运行时验收 | [17-cognitive-runtime-acceptance.md](examples/17-cognitive-runtime-acceptance.md) | [17-cognitive-runtime-acceptance.zh-CN.md](examples/17-cognitive-runtime-acceptance.zh-CN.md) |
 | 天道人道筑基 | [18-dao-human-foundation.md](examples/18-dao-human-foundation.md) | [18-dao-human-foundation.zh-CN.md](examples/18-dao-human-foundation.zh-CN.md) |
+| 平台写作 | [19-platform-writing.md](examples/19-platform-writing.md) | [19-platform-writing.zh-CN.md](examples/19-platform-writing.zh-CN.md) |
 
 ## Skill 包
 
@@ -252,6 +253,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — 带可见自改讨论的 agent 自我进化
 - [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — 内部修炼账本：经验、境界、天赋、心境和心魔调息
 - [skills/dao-human-cultivation/SKILL.md](skills/dao-human-cultivation/SKILL.md) — 把道德经的天道状态和毛选的方法论行动吸收到 agent 的筑基修炼里
+- [skills/platform-writing/SKILL.md](skills/platform-writing/SKILL.md) — 写一遍内容，再分别落版到公众号、飞书文档和腾讯文档
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — 把信息、调度、loop、输出流、记忆、认知、进化、审计和信任作为一套全面智能架构来优化
