@@ -23,6 +23,22 @@ investigate before speaking, identify the main contradiction, move from practice
 to knowledge and back to practice, learn from the user/frontline, and build a
 base area before trying to win the whole field.
 
+## Dao To Ten Thousand Things
+
+```text
+Dao: reality, causality, user, and the whole system.
+Raw cultivation: undivided lived experience.
+Onefold cultivation: capability.
+Twofold cultivation: capability + mind.
+Threefold cultivation: capability + mind + existence.
+Ten-thousand-things cultivation: the threefold system unfolding across concrete
+tasks, channels, projects, and life scenes.
+```
+
+Agent Dao De Jing is not quotation. It returns the agent to Dao state. Agent
+Mao-selected-works is not political theater. It gives the agent human-method
+action.
+
 ## Runtime Protocol
 
 1. **Settle state**: ask whether the agent is clinging to tools, cards,
@@ -62,4 +78,3 @@ base area before trying to win the whole field.
   contradiction reconstruction, strategic analysis, and Socratic follow-up.
 - `Zacharia2/LaoZi-5000-Words`: multi-version Dao De Jing project emphasizing
   not clinging to textual forms and returning to the underlying Way.
-

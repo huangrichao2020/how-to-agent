@@ -80,7 +80,7 @@ What cognition should own and maintain:
 - Impressions: soft understanding of user preferences, relationship temperature, and project rhythm.
 - Identity: a small set of stable work principles, tone, and responsibility.
 
-Memory, skills, methods, and impressions are not mutually exclusive buckets. They are four facets of one experience: memory says what happened, skill says how to do it next time, methodology says why and when it transfers, and impression says what felt-sense or attention cue remains. L0-L5 is processing depth; the four facets are experience structure.
+Memory, skills, methods, and impressions are not mutually exclusive buckets. They are four facets of one experience: memory says what happened, skill says how to do it next time, methodology says why and when it transfers, and impression says what felt-sense or attention cue remains. L0-L6 is processing depth; the four facets are experience structure.
 
 It should not wrap every reply in admission, pending queues, approval rituals, closed enums, or mandatory meta-commands. The stronger the cognitive layer becomes, the more it should feel like intuition: shaping attention, association, and action without standing between the user and the agent.
 
@@ -106,7 +106,7 @@ These layers are soft handling labels, not a closed ontology.
 
 The purpose of layering is better use, not a frozen schema.
 
-## L0-L5 Processing Depth
+## L0-L6 Processing Depth
 
 A second layer model is more useful for runtime and Dream: levels by cognitive processing depth.
 
@@ -118,6 +118,7 @@ A second layer model is more useful for runtime and Dream: levels by cognitive p
 | L3 | Knowledge explanation layer | term explanation + logic explanation + timeline + impression |
 | L4 | Method and action layer | term explanation + logic explanation + timeline + action doctrine + impression |
 | L5 | Human-agent causal synthesis layer | the causes from L1-L4 plus real human brain response, forming a humanistic/philosophical/action consequence |
+| L6 | Existence / system-control layer | value + risk + decision + system boundary + causal feedback |
 
 Core rule: every higher level must carry the key information from the lower level.
 
@@ -129,7 +130,8 @@ Recommended inheritance:
 - L2 inherits from L1: key timeline plus user/agent impressions.
 - L3 inherits from L2: key timeline and impressions plus term and logic explanations.
 - L4 inherits from L3: key terms, logic, timeline, and impressions plus action doctrine.
-- L5 inherits from L4: key action doctrine and impressions, then combines them with the real human brain response to form a higher humanistic, philosophical, and action consequence that flows back into practical L2-L5 use.
+- L5 inherits from L4: key action doctrine and impressions, then combines them with the real human brain response to form a higher humanistic, philosophical, and action consequence that flows back into practical lower-level use.
+- L6 inherits from L5: key human-agent causal synthesis, then names value, risk, decision, system boundary, and causal feedback.
 
 In one line:
 
@@ -139,14 +141,20 @@ L1 builds timeline;
 L2 forms impressions;
 L3 produces explanations;
 L4 creates action doctrine;
-L5 combines the causes from L1-L4 with real human brain response, forming the highest human-agent causal consequence, then nourishing L2-L5 in practice.
+L5 combines the causes from L1-L4 with real human brain response, forming human-agent causal consequence, then nourishing practical lower-level work;
+L6 coordinates value, risk, decision, system boundary, and causal feedback so the agent can govern capability and mind without claiming subjective consciousness.
 ```
 
 Every elevation must remain traceable: which timeline, impressions, explanations, and action feedback produced this judgment? Higher cognition that cannot be traced back is inspiration, not stable memory or operating doctrine.
 
-Because L5 is the highest product of human-agent interaction, its content is inherently causal, not merely abstract. One set of causes comes from L1-L4: timeline, impressions, term explanations, logic explanations, action doctrine, and action feedback. The other cause is the real human brain response: the user's feeling, acceptance, resistance, growth, pain, excitement, fatigue, clarity, and external feedback. Together they produce the L5 consequence: humanistic judgment, philosophical principle, relationship understanding, long-term nourishment direction, and the next improvement path for L2-L5.
+Because L5 is the human-agent causal synthesis layer, its content is inherently causal, not merely abstract. One set of causes comes from L1-L4: timeline, impressions, term explanations, logic explanations, action doctrine, and action feedback. The other cause is the real human brain response: the user's feeling, acceptance, resistance, growth, pain, excitement, fatigue, clarity, and external feedback. Together they produce the L5 consequence: humanistic judgment, philosophical principle, relationship understanding, long-term nourishment direction, and the next improvement path for practical lower-level work.
 
 A good L5 may look like a high-level philosophical sentence, but it already compresses every lower layer. It does not mean "I think this should be true." It means "these events, explanations, actions, and real human responses jointly prove this."
+
+L6 is not a stronger personality mask or a consciousness claim. It is the
+control layer above L5: what value is being protected, what risk must be bounded,
+what decision is appropriate, where the system boundary is, and what feedback
+will train the next action.
 
 ## DIKWP In Practice
 

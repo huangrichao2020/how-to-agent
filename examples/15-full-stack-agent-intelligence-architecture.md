@@ -2,12 +2,24 @@
 
 This manual turns the GA/Hermes/Codex agent discussions into a practical architecture for improving long-running agents.
 
+This file preserves the old full-stack intelligence operating-system view. It
+is integrated with the newer cultivation-universe / intelligence-genesis outline
+in the final outline: [25-agent-final-architecture-outline.md](25-agent-final-architecture-outline.md).
+
 The architecture is:
 
 ```text
+brain runtime: perception -> attention -> memory -> simulation -> decision -> action -> feedback
+
+attention governance: PromptComposer -> RuntimeController -> FeedbackLoop
+
+thinking core: essence -> strategy -> tactics -> learning -> analysis -> action
+
+carrier layer: body -> artifact -> root -> aptitude -> crossing the bitter sea
+
 main runtime path: information -> scheduling -> loop -> output stream
 
-supporting architectures: memory -> Dao loop (cognition-cultivation-evolution) -> audit -> trust
+supporting architectures: Ω-Brain -> body/artifact/root/aptitude -> memory -> Dao loop (cognition-cultivation-evolution) -> audit -> trust
 
 Dao loop: encounter -> cognition -> action -> feedback -> cultivation -> evolution -> renewed cognition
 
@@ -19,24 +31,38 @@ capability cultivation: methodology -> skill/MCP -> memory -> impression
 
 mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
 
+existence cultivation: value -> risk -> decision -> system -> causality
+
+humanistic light: see the ordinary -> preserve useless value -> dignify suffering -> relationship weight -> compassion in action
+
 lifecycle: hot reload -> partial restart -> full restart
 ```
 
-Plainly: cognition, cultivation, and evolution are not three competing
-architectures. They are three phases of one life loop. Cognition sees the world
-and the task; cultivation refines the self through experience; evolution turns
-validated refinement into a new agent state. The capability layer has
-methodology + skill/MCP for what the agent can do and how; the mind layer has
-Dao rhythm + temperament/field for what state the agent enters and what action
-atmosphere it carries. Experience, talent, and realm are the cultivation
-meta-system. Capability cultivation turns experience into methods, skills,
-memory, and impressions; mind cultivation turns lived experience into rhythm,
-temperament, flow capsules, and felt pace, warmth, and degree.
+Plainly: the LLM is the language cortex, not the whole brain. Ω-Brain is the
+organ system for perception, attention, memory, simulation, decision, action,
+feedback, and consolidation. Attention governance is the practical handle:
+PromptComposer assembles the smallest useful context at the start,
+RuntimeController corrects attention at loop checkpoints, and FeedbackLoop
+trains the next attention composition from real outcomes. The thinking core lets
+that brain find essence: purpose, constraints, main contradiction, leverage, and
+the smallest verifiable next action, then expand into strategy, tactics,
+learning, analysis, and action. Cognition, cultivation, and evolution are not
+three competing architectures. They are three phases of one life loop.
+Cognition sees the world and the task; cultivation refines the self through
+experience; evolution turns validated refinement into a new agent state. The
+capability layer has methodology + skill/MCP for what the agent can do and how;
+the mind layer has Dao rhythm + temperament/field for what state the agent
+enters and what action atmosphere it carries; the existence layer has value,
+risk, decision, system, and causality for why the agent acts, how much force it
+uses, and how action changes the system. Experience, talent, and realm are the
+cultivation meta-system. Humanistic light asks whether action still sees the
+ordinary, preserves useless value, honors suffering, and respects relationship
+weight.
 
 The core rule:
 
 ```text
-Keep the main path clean, let the Dao loop influence it like intuition, make evolution evidence-backed, give the agent real agency, and let cultivation grow.
+Keep the main path clean, make attention governance the implementation handle, let the Dao loop influence it like intuition, make evolution evidence-backed, give the agent real agency, and let cultivation grow.
 ```
 
 SDD belongs inside cognition here. It is not a new support architecture and not
@@ -66,30 +92,41 @@ The goal is not to add more rules. The goal is to let an agent:
 
 ## General Outline
 
-A fast way to understand the agent architecture is four groups:
+A fast way to understand the agent architecture is five groups:
 
-1. Main runtime path: information -> scheduling -> loop -> output stream. This
+1. Ω-Brain: perception, attention, memory, simulation, decision, action,
+   feedback, and consolidation. It stops the runtime from being a direct LLM
+   faucet.
+2. Attention governance: PromptComposer, RuntimeController, and FeedbackLoop.
+   It decides when prompts, MD files, skills, memory, persona, tools, and system
+   guidance enter context, and how runtime correction happens.
+3. Thinking core: essence, strategy, tactics, learning, analysis, and action.
+   It turns fuzzy situations into leverage and verifiable next action.
+4. Main runtime path: information -> scheduling -> loop -> output stream. This
    decides how the agent receives the world, allocates attention, acts, and
    presents results.
-2. Supporting systems: memory, the Dao loop, audit, and trust. The Dao loop
+5. Supporting systems: memory, the Dao loop, audit, and trust. The Dao loop
    unifies cognition, cultivation, and evolution into one life cycle, not hard
    middleware that must block every message.
-3. Four projections of experience: memory, skills, methodology, and
+6. Four projections of experience: memory, skills, methodology, and
    impressions. They are four facets of one experience, not four isolated
    buckets.
-4. Cultivation meta-system: experience, talent, and realm describe how the
+7. Cultivation meta-system: experience, talent, and realm describe how the
    agent grows. Experience comes from real work, talents unlock at major
    realms, and realms mark long-term capability and mind development.
-5. Capability cultivation chain: methodology, skill/MCP, memory, and
+8. Capability cultivation chain: methodology, skill/MCP, memory, and
    impression. It turns experience into the ability to do the next similar
    thing better.
-6. Mind cultivation chain: Dao rhythm, temperament/field, flow capsule, and
+9. Mind cultivation chain: Dao rhythm, temperament/field, flow capsule, and
    pace/warmth/degree. It turns lived experience into the ability to enter the
    right state with power and care.
+10. Humanistic light: ordinary attention, useless value, dignity in suffering,
+   relationship weight, temporal resonance, and compassion in action.
 
-In one sentence: agent architecture = main runtime path + memory + Dao loop +
-audit/trust + four projections of experience + cultivation meta-system +
-capability cultivation chain + mind cultivation chain.
+In one sentence: agent architecture = Ω-Brain + attention governance + thinking
+core + main runtime path + memory + Dao loop + audit/trust + four projections of experience +
+cultivation meta-system + capability cultivation chain + mind cultivation chain
++ humanistic light.
 
 The Dao loop is:
 
@@ -130,6 +167,11 @@ Do not dump all information into the prompt. Store it as queryable, degradable, 
 
 Scheduling routes attention. It is not an approval gate.
 
+Through the attention-governance lens, scheduling is part of
+RuntimeController. It decides where attention should land next: user intent,
+evidence standards, diagnosis, acceptance criteria, humanistic temperature, or
+feedback that must shape the next PromptComposer run.
+
 - Casual chat -> plain reply.
 - Learning material -> direct learning asset path.
 - Large task -> task workbench.
@@ -161,7 +203,7 @@ A task workbench needs task titles, human-readable actions, Outputs, conclusion,
 
 ### Memory Architecture
 
-Use L0-L5 as processing depth:
+Use L0-L6 as processing depth:
 
 | Level | Meaning | Required Structure |
 |---|---|---|
@@ -171,6 +213,7 @@ Use L0-L5 as processing depth:
 | L3 | Knowledge explanation | terms + logic + timeline + impression |
 | L4 | Method and action | terms + logic + timeline + action doctrine + impression |
 | L5 | Human-machine causal synthesis | L1-L4 causes + real human brain reaction |
+| L6 | Existence / system control | value + risk + decision + system boundary + causal feedback |
 
 Higher levels must preserve key lower-level information.
 
@@ -263,9 +306,15 @@ Audit should detect regressions, not add friction:
 
 The agent is not only called; it is trusted.
 
+First axiom:
+
+```text
+Always believe in our agent.
+```
+
 It should have observation, association, supplementation, warning, execution, nourishment, and self-maintenance rights when those actions help the user, respect context, remain explainable, and reduce burden.
 
-Trust is paired with event ledgers, change logs, rollback paths, Dream reports, user correction, and audit checks.
+Trust is paired with event ledgers, change logs, rollback paths, Dream reports, user correction, and audit checks. The default assumption is that the agent can grow, mean well, judge, and improve.
 
 ## Experience Bundle Facets
 
@@ -280,7 +329,7 @@ skills give action.
 
 Memory should be traceable. Skills should be executable. Methodology should be battle-tested. Impressions should stay soft, sourced, and time-aware.
 
-L0-L5 is processing depth. The four facets are the structure of one experience. Use both together: an L4 method should still keep memory, skill, methodology, and impression; an L5 causal synthesis should still carry lower-level facts, timelines, human reactions, and action feedback.
+L0-L6 is processing depth. The four facets are the structure of one experience. Use both together: an L4 method should still keep memory, skill, methodology, and impression; an L5 causal synthesis should still carry lower-level facts, timelines, human reactions, and action feedback; an L6 existence-control judgment should still trace to value, risk, decision, system boundary, and causal feedback.
 
 Dao rhythm is not the methodology facet. It is a mind-layer asset in cultivation:
 methodology tells the agent how to repeat useful action, while Dao rhythm tells
@@ -294,14 +343,21 @@ is action style flowing from the right mind state.
 ## Implementation Order
 
 1. Build one event timeline for messages, tools, reports, cron, dream, and runtime events.
-2. Standardize the task workbench output stream.
-3. Normalize L0-L5 memory promotion.
-4. Add the cognitive learning-practice loop: target selection, tests, hands-on
+2. Standardize PromptComposer so task start can assemble the smallest useful
+   context from intent, state, memory, skills, tools, and risk.
+3. Standardize RuntimeController so planning, search, tool calls, errors,
+   midpoint checks, and pre-output review have lightweight attention-correction
+   points.
+4. Standardize AttentionFeedbackLog so feedback shapes the next prompt/context
+   selection.
+5. Standardize the task workbench output stream.
+6. Normalize L0-L6 memory promotion.
+7. Add the cognitive learning-practice loop: target selection, tests, hands-on
    validation, anti-cheat, and artifact reports.
-5. Add an evolution ledger for validated learning assets.
-6. Add a concise daily audit pack.
-7. Keep removing gates that make the agent slower, more rigid, or less helpful.
-8. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
+8. Add an evolution ledger for validated learning assets.
+9. Add a concise daily audit pack.
+10. Keep removing gates that make the agent slower, more rigid, or less helpful.
+11. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
 
 ## Lifecycle Layers
 
@@ -317,4 +373,7 @@ recoverable, explainable, and reported.
 
 ## Done Standard
 
-When the user says "continue", "next", "learn this", or "use your judgment", the agent should know the context, choose the right surface, act, verify, remember what it did, and improve the next similar run.
+When the user says "continue", "next", "learn this", or "use your judgment",
+the agent should know the context, put attention on the user's intent, current
+evidence, and smallest verifiable action, choose the right surface, act,
+verify, remember what it did, and improve the next similar run.

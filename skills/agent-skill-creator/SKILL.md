@@ -18,6 +18,23 @@ the runtime can find and use it.
 repeated need -> reusable workflow -> skill package -> index check -> real use -> maintenance
 ```
 
+More precisely:
+
+```text
+A prompt is a one-off conversation instruction.
+A skill is a cross-session, on-demand, executable, versioned capability package.
+```
+
+The value of a skill is not that its Markdown looks different from a prompt. It
+comes from three things:
+
+- Progressive disclosure: keep only `name + description` resident; read the
+  body after trigger; read long material only when needed.
+- Script determinism: move repeatable, format-sensitive, verifiable steps into
+  `scripts/`.
+- Durable asset management: skills can be managed with git, reviewed,
+  installed, indexed, reused, and retired.
+
 ## When To Create A Skill
 
 Create or update a skill when at least one is true:
@@ -32,6 +49,18 @@ Create or update a skill when at least one is true:
 
 Do not create a new skill for a one-off fact, a private raw log, a secret, or a
 tiny note that belongs in memory.
+
+## Skill Admission Gate
+
+Before creating a skill, ask:
+
+1. Will this workflow repeat?
+2. Does it need cross-session, cross-agent, or team sharing?
+3. Does it contain steps that must run consistently?
+4. Can scripts reduce uncertainty?
+5. Does it reduce context cost better than a prompt?
+
+If mostly no, use a prompt, memory entry, or ordinary document.
 
 ## Skill Anatomy
 
@@ -73,6 +102,41 @@ The frontmatter `description` is the trigger. It should answer:
 
 Keep the body concise. Put long reference material into `references/` and tell
 the agent exactly when to read it.
+
+If `description` is too broad, the skill will false-trigger. If it is too
+narrow, recall will fail. It is not brochure copy; it is the runtime discovery
+mechanism.
+
+## Progressive Disclosure Design
+
+Organize skills in three layers:
+
+```text
+L1 metadata: name + description
+  discovery and triggering only
+
+L2 SKILL.md / SKILL.zh-CN.md
+  core procedure, prohibitions, output, and validation
+
+L3 references / scripts / assets
+  long material, deterministic scripts, templates, examples
+```
+
+The main file should not become a long prompt. If a section is not needed on
+every trigger, split it out.
+
+## Script Determinism
+
+Prefer `scripts/` for:
+
+- sorting, aggregation, validation, conversion;
+- document, spreadsheet, PDF, image, and video structure operations;
+- API parameter validation, batching, retry, and pagination;
+- output size, file integrity, schema, lint, and tests;
+- anything code can compute exactly.
+
+The model handles judgment and tradeoffs; scripts handle determinism and
+validation. Script source does not need to enter context; script output does.
 
 ## Creation Workflow
 
@@ -127,6 +191,9 @@ the agent exactly when to read it.
 - If a skill is rarely used or domain-specific, archive it outside the core
   daily skill set.
 - Never store secrets, raw private logs, credentials, or tokens in a skill.
+- Do not install untrusted skills; review read/write paths, external downloads,
+  permissions, and data exfiltration risk for any skill with scripts.
+- Do not wrap a one-sentence task in a skill just to look systematic.
 
 ## Output Contract
 
@@ -137,4 +204,3 @@ When creating or updating a skill, report:
 3. how it will be used;
 4. verification performed;
 5. whether GA/Hermes runtime indexes were updated.
-

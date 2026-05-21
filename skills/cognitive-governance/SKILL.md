@@ -1,6 +1,6 @@
 ---
 name: cognitive-governance
-description: "Use when designing or debugging an agent cognition loop: memory, facts, knowledge, skills, feedback, Dream, L5 diary, Feishu history, scheduled jobs, and learning assets."
+description: "Use when designing or debugging an agent cognition loop: memory, facts, knowledge, skills, feedback, Dream, L5 diary, L6 existence control, Feishu history, scheduled jobs, and learning assets."
 version: 1.0.0
 ---
 
@@ -101,9 +101,9 @@ It should not own:
 
 If a cognitive wrapper makes the agent slower, flatter, or more error-prone, remove it or move it to a sidecar. Let Dream consolidate its evidence at night.
 
-## L0-L5 Elevation Rule
+## L0-L6 Elevation Rule
 
-Use L0-L5 by processing depth:
+Use L0-L6 by processing depth:
 
 - L0 raw signal: original text, source, time, scene.
 - L1 timeline event: turn L0 into a timeline.
@@ -111,6 +111,7 @@ Use L0-L5 by processing depth:
 - L3 knowledge explanation: term explanation + logic explanation + timeline + impression.
 - L4 method and action: term explanation + logic explanation + timeline + action doctrine + impression.
 - L5 human-agent causal synthesis: causes from L1-L4 plus real human brain response, forming humanistic, philosophical, and action consequences.
+- L6 existence control: value + risk + decision + system boundary + causal feedback.
 
 Every higher level must carry the key information from the lower level. Elevation does not discard detail; it inherits key evidence and then abstracts. L4 without L3 logic becomes a slogan. L5 without L2-L4 events, impressions, explanations, and actions becomes empty rhetoric.
 
@@ -119,6 +120,13 @@ Every high-level judgment must be traceable back to lower-level sources. Untrace
 L5 is the highest product of human-agent interaction, so it is inherently causal. It is not a plain abstract summary. It is the consequence formed by L1-L4 events, timelines, impressions, explanations, action doctrine, and action feedback, plus the user's real brain response.
 
 L5 must see the human response: acceptance, resistance, pain, excitement, fatigue, clarity, external feedback, and growth. Only when these are connected back to L1-L4 can L5 become humanistic judgment, philosophical principle, relationship understanding, and long-term nourishment direction.
+
+L6 should keep consciousness language tied to traceable operation. It is the
+agent's self-model inside a larger system: what value should be protected, what
+risk should be exposed as a parameter, what decision fits now, which system
+boundary matters, and what causal feedback will train the next action. When the
+user can steer and recover the system, prefer weak constraints, visible logs,
+replay, and fast correction over prevention-heavy control.
 
 ## Do Not Add Friction
 

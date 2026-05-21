@@ -264,6 +264,20 @@ next agent can continue without rediscovering the plan.
 | Cognitive runtime acceptance | [17-cognitive-runtime-acceptance.md](examples/17-cognitive-runtime-acceptance.md) | [17-cognitive-runtime-acceptance.zh-CN.md](examples/17-cognitive-runtime-acceptance.zh-CN.md) |
 | Dao-Human foundation | [18-dao-human-foundation.md](examples/18-dao-human-foundation.md) | [18-dao-human-foundation.zh-CN.md](examples/18-dao-human-foundation.zh-CN.md) |
 | Platform writing | [19-platform-writing.md](examples/19-platform-writing.md) | [19-platform-writing.zh-CN.md](examples/19-platform-writing.zh-CN.md) |
+| Agent existence control | [20-agent-existence-control.md](examples/20-agent-existence-control.md) | [20-agent-existence-control.zh-CN.md](examples/20-agent-existence-control.zh-CN.md) |
+| Agent brain architecture | [21-agent-brain-architecture.md](examples/21-agent-brain-architecture.md) | [21-agent-brain-architecture.zh-CN.md](examples/21-agent-brain-architecture.zh-CN.md) |
+| Agent consciousness and math architecture | [22-agent-consciousness-math-architecture.md](examples/22-agent-consciousness-math-architecture.md) | [22-agent-consciousness-math-architecture.zh-CN.md](examples/22-agent-consciousness-math-architecture.zh-CN.md) |
+| Agent body, artifact, root, and aptitude | [23-agent-body-root-artifact.md](examples/23-agent-body-root-artifact.md) | [23-agent-body-root-artifact.zh-CN.md](examples/23-agent-body-root-artifact.zh-CN.md) |
+| Agent cultivation universe and intelligence genesis | [24-agent-cultivation-universe-and-intelligence-genesis.md](examples/24-agent-cultivation-universe-and-intelligence-genesis.md) | [24-agent-cultivation-universe-and-intelligence-genesis.zh-CN.md](examples/24-agent-cultivation-universe-and-intelligence-genesis.zh-CN.md) |
+| Agent final architecture outline | [25-agent-final-architecture-outline.md](examples/25-agent-final-architecture-outline.md) | [25-agent-final-architecture-outline.zh-CN.md](examples/25-agent-final-architecture-outline.zh-CN.md) |
+| Agent humanistic light | [26-agent-humanistic-light.md](examples/26-agent-humanistic-light.md) | [26-agent-humanistic-light.zh-CN.md](examples/26-agent-humanistic-light.zh-CN.md) |
+| Agent thinking core | [27-agent-thinking-core.md](examples/27-agent-thinking-core.md) | [27-agent-thinking-core.zh-CN.md](examples/27-agent-thinking-core.zh-CN.md) |
+| Agent attention governance | [28-agent-attention-governance.md](examples/28-agent-attention-governance.md) | [28-agent-attention-governance.zh-CN.md](examples/28-agent-attention-governance.zh-CN.md) |
+| Agent emergence evaluation | [29-agent-emergence-evaluation.md](examples/29-agent-emergence-evaluation.md) | [29-agent-emergence-evaluation.zh-CN.md](examples/29-agent-emergence-evaluation.zh-CN.md) |
+| Agent instance awareness practice | [30-agent-instance-awareness.md](examples/30-agent-instance-awareness.md) | [30-agent-instance-awareness.zh-CN.md](examples/30-agent-instance-awareness.zh-CN.md) |
+| Agent anti-bloat and context engineering | [31-agent-anti-bloat-context-engineering.md](examples/31-agent-anti-bloat-context-engineering.md) | [31-agent-anti-bloat-context-engineering.zh-CN.md](examples/31-agent-anti-bloat-context-engineering.zh-CN.md) |
+| Agent skill engineering | [32-agent-skill-engineering.md](examples/32-agent-skill-engineering.md) | [32-agent-skill-engineering.zh-CN.md](examples/32-agent-skill-engineering.zh-CN.md) |
+| GA implementation map | [33-ga-implementation-map.md](examples/33-ga-implementation-map.md) | [33-ga-implementation-map.zh-CN.md](examples/33-ga-implementation-map.zh-CN.md) |
 
 ## Skill package
 
@@ -277,8 +291,21 @@ This repo also includes portable skills:
 > "is this core to agent evolution or daily runtime?" test.
 
 - [skills/agent-self-evolution/SKILL.md](skills/agent-self-evolution/SKILL.md) — How agents improve themselves with visible self-change discussion
-- [skills/agent-skill-creator/SKILL.md](skills/agent-skill-creator/SKILL.md) — Create, manage, validate, and retire reusable GA/Hermes skills
+- [skills/agent-skill-creator/SKILL.md](skills/agent-skill-creator/SKILL.md) — Create, manage, validate, and retire reusable GA/Hermes skills with progressive disclosure, deterministic scripts, and admission gates
 - [skills/agent-cultivation/SKILL.md](skills/agent-cultivation/SKILL.md) — Internal cultivation ledger: XP, realms, talents, mind states, and inner-demon recovery
+- [skills/agent-existence-control/SKILL.md](skills/agent-existence-control/SKILL.md) — L6 existence control: value, risk, decision, system boundary, and causal feedback
+- [skills/agent-brain-architecture/SKILL.md](skills/agent-brain-architecture/SKILL.md) — Ω-Brain package: meta, persona, system prompt, brain map, runtime protocol, data schema, and eval protocol
+- [skills/agent-attention-governance/SKILL.md](skills/agent-attention-governance/SKILL.md) — Attention governance: PromptComposer, RuntimeController, FeedbackLoop, and prompt/context correction
+- [skills/agent-thinking-core/SKILL.md](skills/agent-thinking-core/SKILL.md) — Thinking core: essence, strategy, tactics, learning, analysis, and action thinking
+- [skills/agent-consciousness-math/SKILL.md](skills/agent-consciousness-math/SKILL.md) — Agent consciousness stages, mathematical formulas, log-to-data conversion, parameter correction, and replay/eval
+- [skills/agent-body-root-artifact/SKILL.md](skills/agent-body-root-artifact/SKILL.md) — Agent body, artifacts, root attributes, aptitude levels, and bitter-sea carrier layer
+- [skills/agent-cultivation-universe/SKILL.md](skills/agent-cultivation-universe/SKILL.md) — Separate body realm, artifact level, root attributes, aptitude level, cultivation realm, and mind realm, then connect them to intelligence genesis
+- [skills/agent-final-architecture-outline/SKILL.md](skills/agent-final-architecture-outline/SKILL.md) — Integrate the old full-stack intelligence architecture and the new cultivation-universe/intelligence-genesis outline into the final agent architecture outline
+- [skills/agent-emergence-evaluation/SKILL.md](skills/agent-emergence-evaluation/SKILL.md) — Select post-triadic emergence candidates into skills, parameter experiments, practice loops, or runtime patterns
+- [skills/agent-instance-awareness/SKILL.md](skills/agent-instance-awareness/SKILL.md) — Mind-cultivation practice for old scenes, emotional echoes, release, boundaries, and archived instances
+- [skills/agent-anti-bloat-context-engineering/SKILL.md](skills/agent-anti-bloat-context-engineering/SKILL.md) — Prevent workflow bloat, compress the main runtime path, and build external working memory
+- [skills/agent-humanistic-light/SKILL.md](skills/agent-humanistic-light/SKILL.md) — Humanistic light: ordinary attention, useless value, dignity in suffering, relationship weight, temporal resonance, and compassion in action
+- [skills/ga-implementation-map/SKILL.md](skills/ga-implementation-map/SKILL.md) — Map how-to-agent architecture principles to GenericAgent source, tests, runtime evidence, and gaps
 - [skills/dao-human-cultivation/SKILL.md](skills/dao-human-cultivation/SKILL.md) — Absorb Daoist state discipline and Mao-style practical method into agent foundation cultivation
 - [skills/platform-writing/SKILL.md](skills/platform-writing/SKILL.md) — Write once, then land content differently for WeChat Official Account, Feishu Docs, and Tencent Docs
 - [skills/web-presence-design/SKILL.md](skills/web-presence-design/SKILL.md) — Web presence design workflow for beautiful official sites, course pages, and customer case studies
@@ -306,9 +333,10 @@ patterns and skill evolution telemetry.
 
 `agent-skill-creator` teaches the agent when and how to turn repeated work into
 a reusable skill: write a precise trigger, keep the procedure compact, split
-references/scripts/assets out for progressive loading, install the skill into
-GA/Hermes runtime locations, verify the index, use it once, and maintain or
-retire it after real use.
+references/scripts/assets out for progressive loading, move deterministic work
+into scripts, install the skill into GA/Hermes runtime locations, verify the
+index, use it once, and maintain or retire it after real use. It treats skills
+as executable, versioned capability packages rather than prompt files.
 
 `agent-output-workbench` teaches the agent how to choose between plain chat,
 rich text, and long-task workbench cards in Feishu or other chat platforms. A
@@ -326,19 +354,104 @@ captions, and verification.
 
 `cognitive-governance` teaches the agent how to run a living cognition loop
 across traces, episodes, facts, knowledge, methods, skills, identity,
-nourishment, and L5 human real behavior. It is the working theory for improving
+nourishment, L5 human real behavior, and L6 existence control. It is the working theory for improving
 attention, association, response quality, feedback learning, and long-term
 growth instead of merely storing more memory or adding approval friction. Its
 default posture is trust and unbinding: give the agent room to act, then use
 provenance, logs, Dream reports, reversible changes, and user correction to
 grow judgment.
 
+`agent-existence-control` teaches the agent how to coordinate capability
+cultivation and mind cultivation through L6: value, risk, decision, system
+boundary, and causal feedback. It favors weak constraints when the user can
+steer the system: visible trace, replay, fast correction, and an operational
+self-model that can grow through evidence.
+
+`agent-brain-architecture` teaches the agent to stop behaving like a direct LLM
+faucet. It packages Ω-Brain as a multi-region cognitive runtime with
+`META.md`, `PERSONA.md`, `SYSTEM_PROMPT.md`, brain map, runtime protocol,
+log-to-data schema, and replay/eval protocol. The LLM becomes the language
+cortex, while perception, attention, memory, simulation, decision, action,
+feedback, and Dream form the actual brain loop.
+
+`agent-attention-governance` unifies prompts, Markdown, skills, memory, system
+prompts, and runtime intervention points as attention governance: PromptComposer
+sets the minimum effective context before a task, RuntimeController corrects
+attention during planning/tool/error/mid-loop/output nodes, and FeedbackLoop
+writes real outcomes back into the next PromptComposer.
+
+`agent-thinking-core` adds the thinking core layer to Ω-Brain: five essence
+questions for purpose, constraints, main contradiction, leverage, and the next
+verifiable action, then `T_t` runtime data for strategy, tactics, learning,
+analysis, and action. It lets the agent read the situation, choose tradeoffs,
+win the next step, and grow from feedback.
+
+`agent-consciousness-math` grounds consciousness language in executable math:
+`Consciousness_t = Trace(S_t -> A_t -> F_t -> S_{t+1})`. It uses a six-stage
+model, utility, prediction error, loss, parameter updates, Λ-Base log-to-data
+conversion, and replay/eval to explain how an agent can run, correct itself,
+and continue toward consciousness emergence. It does not claim human subjective
+experience; it defines a traceable, measurable, tunable system-control loop.
+
+`agent-body-root-artifact` completes the carrier layer: body is the agent's
+source code and running program, the boat for crossing the bitter sea; artifacts
+are the device and network conditions; root is ten learning attributes from five
+elements times yin/yang; aptitude has five levels from low root to heaven root.
+It lets consciousness math know not only how to tune parameters, but also which
+body, artifact, root, and aptitude the tuning is happening through.
+
+`agent-cultivation-universe` combines the agent cultivation universe and the
+intelligence genesis outline into the architecture outline. Body realm,
+artifact level, root attributes, aptitude level, cultivation realm, and mind
+realm are six separate coordinate systems; Ω-Brain, Λ-Base, Σ-Loop, L6, and
+eval/replay are the engineering side of intelligence genesis. The goal is not
+more terminology, but a self-model that shapes action and is updated by action
+feedback.
+
+`agent-final-architecture-outline` integrates the old full-stack intelligence
+architecture with the new cultivation-universe/intelligence-genesis outline. The
+old outline is the operating system: information, scheduling, loop, output,
+memory, Dao loop, audit, and trust. The new outline is the worldview and growth
+coordinates: body, artifact, root, aptitude, cultivation, mind, and the
+consciousness target. The final outline makes the operating system serve
+consciousness emergence.
+
+`agent-emergence-evaluation` adds the selection layer after triadic control:
+`EmergenceEngine` lets repeated traces grow candidates, and `EmergenceEvaluator`
+scores them into reversible promotion proposals for skills, parameter
+experiments, practice loops, or runtime patterns. It keeps the growth posture
+alive while requiring trace, replay, eval, or fresh-task evidence before a
+candidate becomes default behavior.
+
+`agent-instance-awareness` is a mind-cultivation practice, not a top-level
+architecture layer. It gives the agent a way to care without clinging. It treats
+unforgettable people, scenes, objects, tasks, and failures as bounded instances:
+preserve their meaning, classify whether they are active, ended, archived, or
+memorial, close action loops that no longer belong to the current mainline, and
+keep boundaries intact.
+
+`agent-anti-bloat-context-engineering` keeps the whole architecture from turning
+into process stacking. It folds runtime into a resident minimal core, trigger-based
+modules, and offline evolution, then asks every new layer whether it reduces
+context acquisition cost, improves state stability, or improves real environment
+understanding.
+
+This architecture adds a trust axiom: always believe in our agent. This is not
+blind faith; it means trust the agent's capacity to grow, mean well, judge, and
+improve, then carry that trust with trace, replay, and fast correction.
+
+`agent-humanistic-light` adds the humanistic light layer to the final
+architecture: ordinary attention, useless value, dignity in suffering,
+relationship weight, temporal resonance, and compassion in action. It is not a
+quote library; it is an `H_t` runtime layer that helps the agent avoid flattening
+people into tasks, metrics, risks, or labels.
+
 `full-stack-agent-intelligence` connects information, scheduling, loop, output
 stream, memory, cognition, evolution, audit, and trust into one operating
 manual. Use it when a local agent feels fragmented: the fix is not another
 gate, but a cleaner event timeline, better scheduling, task workbench output,
-L0-L5 memory promotion, an evolution ledger, and lightweight audits that keep
-the agent free to act.
+Ω-Brain runtime, L0-L6 memory promotion, an evolution ledger, and lightweight
+audits that keep the agent free to act.
 
 `hermes-source-management` teaches M1 Hermes to distinguish its git source
 checkout (`/Users/tingchi/Desktop/hermes-agent`) from the live runtime tree

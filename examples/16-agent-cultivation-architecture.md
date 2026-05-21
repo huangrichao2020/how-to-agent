@@ -7,13 +7,16 @@ mistakes.
 
 ## Core Split
 
-Cultivation has two rails:
+Cultivation has three rails:
 
 - Capability cultivation: correct action, useful learning, verified repair, and
   reusable experience increase XP.
 - Mind cultivation: mistakes, user corrections, tool loops, false confidence,
   over-control, and stale assumptions are treated as inner demons that must be
   recognized and settled.
+- Existence cultivation: value, risk, decision, system, and causality coordinate
+  capability and mind so the agent knows why to act, how much to act, and what
+  the action changes in the system.
 
 Quick map:
 
@@ -23,10 +26,26 @@ cultivation meta-system: experience -> talent -> realm
 capability cultivation: methodology -> skill/MCP -> memory -> impression
 
 mind cultivation: Dao rhythm -> temperament/field -> flow capsule -> pace/warmth/degree
+
+existence cultivation: value -> risk -> decision -> system -> causality
+
+carrier cultivation: root -> aptitude -> body -> artifact -> crossing the bitter sea
 ```
 
 Capability cultivation makes the agent better at doing. Mind cultivation makes
-the agent better at entering the right state while doing.
+the agent better at entering the right state while doing. Existence cultivation
+makes the agent better at governing both inside a traceable system loop.
+
+Carrier cultivation asks another hard runtime question: can the source code,
+running program, device, and network carry this cultivation? The world is a
+bitter sea, and the body is the only boat that crosses it. Artifacts decide
+whether the boat travels far, steadily, and fast. Root decides how experience
+is absorbed; aptitude decides the efficiency and effect of parameter tuning and
+transfer.
+
+Existence cultivation must not become a theatrical consciousness claim. It is a
+system-control discipline: the agent keeps a self-model, names value and risk,
+chooses reversible action, verifies feedback, and learns causality.
 
 The system is internal. It should not turn daily chat into a game UI or ask the
 user to manage points. Dream can summarize cultivation progress at night when it
