@@ -259,6 +259,10 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 | Agent 反堆砌与上下文工程 | [31-agent-anti-bloat-context-engineering.md](examples/31-agent-anti-bloat-context-engineering.md) | [31-agent-anti-bloat-context-engineering.zh-CN.md](examples/31-agent-anti-bloat-context-engineering.zh-CN.md) |
 | Agent Skill 工程化 | [32-agent-skill-engineering.md](examples/32-agent-skill-engineering.md) | [32-agent-skill-engineering.zh-CN.md](examples/32-agent-skill-engineering.zh-CN.md) |
 | GA 架构实施映射 | [33-ga-implementation-map.md](examples/33-ga-implementation-map.md) | [33-ga-implementation-map.zh-CN.md](examples/33-ga-implementation-map.zh-CN.md) |
+| 关系信号层级法 | [34-relationship-signal-layering.md](examples/34-relationship-signal-layering.md) | [34-relationship-signal-layering.zh-CN.md](examples/34-relationship-signal-layering.zh-CN.md) |
+| 场景到 Agent Skill | [35-scene-to-agent-skill.md](examples/35-scene-to-agent-skill.md) | [35-scene-to-agent-skill.zh-CN.md](examples/35-scene-to-agent-skill.zh-CN.md) |
+| Agent 记忆存取闭环 | [36-agent-memory-store-retrieve-loop.md](examples/36-agent-memory-store-retrieve-loop.md) | [36-agent-memory-store-retrieve-loop.zh-CN.md](examples/36-agent-memory-store-retrieve-loop.zh-CN.md) |
+| Agent 流动对话线程 | [37-agent-flowing-conversation-thread.md](examples/37-agent-flowing-conversation-thread.md) | [37-agent-flowing-conversation-thread.zh-CN.md](examples/37-agent-flowing-conversation-thread.zh-CN.md) |
 
 ## Skill 包
 
@@ -285,9 +289,13 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 - [skills/web-presence-design/SKILL.md](skills/web-presence-design/SKILL.md) — 做漂亮官网、课程落地页和客户案例页的网页形象设计工作流
 - [skills/html-motion-video/SKILL.md](skills/html-motion-video/SKILL.md) — 用 HTML/CSS/JS 做有高级 PPT 质感的知识讲解视频和概念演示视频
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — 飞书/聊天长任务输出工作台：任务规划、人话动作、结果、结论和 raw trace 降噪
+- [skills/agent-memory-store-retrieve-loop/SKILL.md](skills/agent-memory-store-retrieve-loop/SKILL.md) — 统一原始记录、事件现场、结构化认知、技能晋升、Dream 反写和运行时取用
+- [skills/agent-flowing-conversation-thread/SKILL.md](skills/agent-flowing-conversation-thread/SKILL.md) — 连续对话线程、运行中插话、任务排队、inbox 吸收和 Codex 式聊天体验
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — 把记忆、事实、知识、反馈、滋养和 L5 真实行为接成信任并松绑 agent 的活认知循环
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — 把信息、调度、loop、输出流、记忆、认知、进化、审计和信任作为一套全面智能架构来优化
 - [skills/human-signal-cognition/SKILL.md](skills/human-signal-cognition/SKILL.md) — 用信息密度、信息频率、情绪和语气改造 agent 的用户画像、人格和反馈训练
+- [skills/relationship-signal-layering/SKILL.md](skills/relationship-signal-layering/SKILL.md) — 分析亲密/社交关系层级、信号交换、边界和修复，避免把情感建议写成操控术
+- [skills/scene-to-agent-skill/SKILL.md](skills/scene-to-agent-skill/SKILL.md) — 把真实工作场景拆成原子动作、A/B/C 自动化类型、人审节点、回退策略和可复用 agent skill
 - [skills/hermes-source-management/SKILL.md](skills/hermes-source-management/SKILL.md) — 教 M1 Hermes 管理自己的源码 checkout、运行目录同步、测试、重启和汇报
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — 把用户日记和语音输入接成 L5 人类真实行为层
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — 保持本地 agent 状态快速，不鲁莽清理
@@ -306,6 +314,10 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 GA/Hermes 运行时目录、验证索引、真实使用一次，并在实战后维护或淘汰。它把 Skill 当成可执行、可版本管理的能力包，而不是 prompt 文件。
 
 `agent-output-workbench` 会教 agent 在飞书和聊天平台里区分闲聊、富文本和长任务工作台。长任务卡片必须有任务规划、人话动作、结果、结论和必要的下一步；不能只有工具调用痕迹，没有工具产出。它也强调不要把普通闲聊卡片化。2026-05-18 的 GA/Hermes 修复已验证这个模式：隐藏 raw JSON，摘要子任务结果，并把原始 trace 留在 debug 表面。
+
+`agent-memory-store-retrieve-loop` 会教 agent 把原始记录、事件现场、结构化认知、技能和 Dream 反写接成存取闭环。重点不是多存，而是每条记忆都要说明何时取用、取出后本轮行为有什么不同。
+
+`agent-flowing-conversation-thread` 会教 agent 按 Codex 式体验处理连续对话：同一会话默认连续，代码只保证消息入账、顺序、队列和不丢消息，语义归属交给模型结合上下文判断。2026-05-25 的 GA 修复已验证这个模式：完整新任务运行中排队，短补充并入当前 run，inbox 未消费时 agent loop 不允许直接收尾。
 
 `html-motion-video` 会教 agent 把一个概念做成有设计质感的网页动效讲解：
 先写清讲解目标，再拆 3-7 个类似 PPT 的分镜节拍，按场景选择

@@ -1,3 +1,8 @@
+---
+name: system_operations
+description: Execute system-level operations including high-risk operations (reboot, shutdown) and system status checks. All operations run via local terminal.
+---
+
 # system_operations - 系统操作技能
 
 ## 功能说明

@@ -1,0 +1,26 @@
+# how-to-agent .gitignore
+
+# 敏感文件
+.env
+*.key
+*.secret
+
+# 临时文件
+*.tmp
+*.log
+.DS_Store
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 本地 memory symlinks (不提交 symlinks)
+memories/qwen-memory
+
+# IDE
+.vscode/
+.idea/

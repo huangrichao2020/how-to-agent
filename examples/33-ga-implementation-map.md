@@ -291,6 +291,72 @@ Result:
 64 passed
 ```
 
+## 2026-05-25 Flowing Conversation Thread Landing
+
+The recent GA work added a layer below ordinary "intent recognition": the
+conversation-thread event model.
+
+Core result:
+
+```text
+One chat is continuous by default.
+Code owns message capture, order, queueing, interruption, and no-loss.
+The model owns semantic ownership from context.
+```
+
+Source landing:
+
+| Capability | GA source landing | Runtime insertion point | Validation |
+| --- | --- | --- | --- |
+| flowing thread state | `conversation_thread.py` | after a Feishu message enters the frontend | `tests/test_conversation_thread.py` |
+| routing hint, not semantic verdict | `conversation_intent_router.py` | before a Feishu message enters the task queue | `hard_route` separates engineering action from semantic hint |
+| quote/current-message extraction | `feishu_reply_context.py`, `current_user_text()` | quoted Feishu messages, wrapped prompts, short continuations | `tests/test_feishu_reply_context.py`, `tests/test_conversation_intent_router.py` |
+| complete new task queues while running | `conversation_intent_router.py`, `frontends/fsapp.py` | new goal arrives while agent is running | `test_complete_task_does_not_get_swallowed_by_running_chat` |
+| in-flight supplement must be absorbed | `agentmain.py::has_user_interventions()`, `agent_loop.py` | before `CURRENT_TASK_DONE` exits | `test_agent_loop_absorbs_user_followup_before_final_exit` |
+| lightweight chat avoids workbench noise | `frontends/feishu_interaction_mode.py`, `frontends/feishu_task_stream.py` | choose plain text, rich text, or workbench | `tests/test_feishu_interaction_mode.py`, `tests/test_feishu_task_stream.py` |
+| anti-bloat main path | `agentmain.py`, `frontends/fsapp.py`, `frontends/task_timeout_policy.py` | remove stale env switches and light/heavy task forks | full tests and launchd restart |
+
+Real failure chain:
+
+```text
+User 1: How do you feel?
+User 2: Self-check your recent source changes.
+
+Old behavior:
+The second message became append_to_current.
+It entered user_interventions / flow inbox.
+The agent loop exited on CURRENT_TASK_DONE.
+The final reply did not mention source self-checking.
+
+New behavior:
+Complete new goals queue_after_current during a run.
+If a message really enters the inbox, the loop must feed it into the next model turn before exit.
+```
+
+This means continuous conversation cannot be prompt-only. It needs an event
+model:
+
+```text
+Raw Message
+  -> Conversation Thread
+  -> Conversation Run
+  -> Run Inbox
+  -> Model Context
+  -> Final Reply / Episode
+```
+
+Validation:
+
+```bash
+pytest -q
+```
+
+Result:
+
+```text
+450 passed, 3 skipped
+```
+
 ## Next Implementation Order
 
 1. Extend the GA architecture scoring script with more source modules, tests,

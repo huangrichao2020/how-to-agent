@@ -270,6 +270,70 @@ pytest -q tests/test_runtime_status.py tests/test_cognitive_response_policy.py t
 64 passed
 ```
 
+## 2026-05-25 流动对话线程落地
+
+这次 GA 近期改动补上了一个比“意图识别”更底层的层：对话线程事件模型。
+
+核心结论：
+
+```text
+同一会话默认连续。
+代码只负责消息入账、顺序、队列、中断和不丢消息。
+语义归属主要交给模型结合上下文判断。
+```
+
+真实落点：
+
+| 能力 | GA 源码落点 | 运行时插手点 | 验收 |
+| --- | --- | --- | --- |
+| 流动线程状态 | `conversation_thread.py` | Feishu 消息进入后建立 thread/run/inbox | `tests/test_conversation_thread.py` |
+| 路由线索而非语义裁决 | `conversation_intent_router.py` | 每条 Feishu 消息进入任务队列前 | `hard_route` 区分工程动作和语义 hint |
+| 引用/当前消息抽取 | `feishu_reply_context.py`、`current_user_text()` | 飞书引用消息、包装 prompt、短句续做 | `tests/test_feishu_reply_context.py`、`tests/test_conversation_intent_router.py` |
+| 运行中完整新任务排队 | `conversation_intent_router.py`、`frontends/fsapp.py` | agent 正在跑时收到新目标 | `test_complete_task_does_not_get_swallowed_by_running_chat` |
+| 运行中补充必须被吸收 | `agentmain.py::has_user_interventions()`、`agent_loop.py` | `CURRENT_TASK_DONE` 前检查 inbox | `test_agent_loop_absorbs_user_followup_before_final_exit` |
+| 轻对话不工作台化 | `frontends/feishu_interaction_mode.py`、`frontends/feishu_task_stream.py` | Feishu 输出选择普通文本、富文本或工作台 | `tests/test_feishu_interaction_mode.py`、`tests/test_feishu_task_stream.py` |
+| 主路径反堆砌 | `agentmain.py`、`frontends/fsapp.py`、`frontends/task_timeout_policy.py` | 删除过多 env 开关和轻重任务分叉 | 全量测试与 launchd 重启验证 |
+
+真实故障链：
+
+```text
+用户第一条：你感觉怎么样
+用户第二条：自检一下你源码近期的改动
+
+旧行为：
+第二条被判成 append_to_current。
+消息进了 user_interventions / flow inbox。
+agent loop 因 CURRENT_TASK_DONE 直接退出。
+最终回复完全没有自检源码的意思。
+
+新行为：
+完整新目标在运行中 queue_after_current。
+如果消息确实进入 inbox，loop 退出前必须把它喂给下一轮模型。
+```
+
+这说明 GA 不能只靠 prompt 写“连续对话”。连续对话必须有事件模型承载：
+
+```text
+Raw Message
+  -> Conversation Thread
+  -> Conversation Run
+  -> Run Inbox
+  -> Model Context
+  -> Final Reply / Episode
+```
+
+验证：
+
+```bash
+pytest -q
+```
+
+结果：
+
+```text
+450 passed, 3 skipped
+```
+
 ## 下一步改造顺序
 
 1. 扩展 GA 架构评分脚本：继续接入更多源码模块、测试、cron registry、lifecycle event 和真实运行指标。

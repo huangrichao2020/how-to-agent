@@ -278,6 +278,10 @@ next agent can continue without rediscovering the plan.
 | Agent anti-bloat and context engineering | [31-agent-anti-bloat-context-engineering.md](examples/31-agent-anti-bloat-context-engineering.md) | [31-agent-anti-bloat-context-engineering.zh-CN.md](examples/31-agent-anti-bloat-context-engineering.zh-CN.md) |
 | Agent skill engineering | [32-agent-skill-engineering.md](examples/32-agent-skill-engineering.md) | [32-agent-skill-engineering.zh-CN.md](examples/32-agent-skill-engineering.zh-CN.md) |
 | GA implementation map | [33-ga-implementation-map.md](examples/33-ga-implementation-map.md) | [33-ga-implementation-map.zh-CN.md](examples/33-ga-implementation-map.zh-CN.md) |
+| Relationship signal layering | [34-relationship-signal-layering.md](examples/34-relationship-signal-layering.md) | [34-relationship-signal-layering.zh-CN.md](examples/34-relationship-signal-layering.zh-CN.md) |
+| Scene to agent skill | [35-scene-to-agent-skill.md](examples/35-scene-to-agent-skill.md) | [35-scene-to-agent-skill.zh-CN.md](examples/35-scene-to-agent-skill.zh-CN.md) |
+| Agent memory store-retrieve loop | [36-agent-memory-store-retrieve-loop.md](examples/36-agent-memory-store-retrieve-loop.md) | [36-agent-memory-store-retrieve-loop.zh-CN.md](examples/36-agent-memory-store-retrieve-loop.zh-CN.md) |
+| Agent flowing conversation thread | [37-agent-flowing-conversation-thread.md](examples/37-agent-flowing-conversation-thread.md) | [37-agent-flowing-conversation-thread.zh-CN.md](examples/37-agent-flowing-conversation-thread.zh-CN.md) |
 
 ## Skill package
 
@@ -311,9 +315,13 @@ This repo also includes portable skills:
 - [skills/web-presence-design/SKILL.md](skills/web-presence-design/SKILL.md) — Web presence design workflow for beautiful official sites, course pages, and customer case studies
 - [skills/html-motion-video/SKILL.md](skills/html-motion-video/SKILL.md) — HTML/CSS/JS animated explainers and concept videos with polished slide-deck motion and video export
 - [skills/agent-output-workbench/SKILL.md](skills/agent-output-workbench/SKILL.md) — Feishu/chat long-task output workbench with task planning, human-readable actions, results, conclusions, and raw trace suppression
+- [skills/agent-memory-store-retrieve-loop/SKILL.md](skills/agent-memory-store-retrieve-loop/SKILL.md) — Unify raw evidence, episode/worksite recall, structured cognition, skill promotion, dream writeback, and runtime retrieval
+- [skills/agent-flowing-conversation-thread/SKILL.md](skills/agent-flowing-conversation-thread/SKILL.md) — Continuous chat threads, in-flight user guidance, task queueing, inbox absorption, and Codex-like conversation feel
 - [skills/cognitive-governance/SKILL.md](skills/cognitive-governance/SKILL.md) — Turn memory, facts, knowledge, feedback, nourishment, and L5 real behavior into a living cognition loop that trusts and unbinds agents
 - [skills/full-stack-agent-intelligence/SKILL.md](skills/full-stack-agent-intelligence/SKILL.md) — Optimize information, scheduling, loops, output streams, memory, cognition, evolution, audit, and trust as one agent intelligence architecture
 - [skills/human-signal-cognition/SKILL.md](skills/human-signal-cognition/SKILL.md) — Use density, frequency, emotion, and tone to improve profile, persona, and feedback training
+- [skills/relationship-signal-layering/SKILL.md](skills/relationship-signal-layering/SKILL.md) — Analyze romantic/social relationship layers, signal exchange, boundaries, and repair without turning guidance into manipulation
+- [skills/scene-to-agent-skill/SKILL.md](skills/scene-to-agent-skill/SKILL.md) — Convert real work scenes into atomic work units, A/B/C automation classes, approval points, rollback policy, and reusable agent skills
 - [skills/hermes-source-management/SKILL.md](skills/hermes-source-management/SKILL.md) — Teach M1 Hermes to manage its own source checkout, runtime sync, tests, restart, and reports
 - [skills/l5-diary-capture/SKILL.md](skills/l5-diary-capture/SKILL.md) — Receive user diary and voice input as the L5 human real behavior layer
 - [skills/codex-state-maintenance/SKILL.md](skills/codex-state-maintenance/SKILL.md) — Keep local agent state fast without reckless cleanup
@@ -345,6 +353,19 @@ conclusion, and useful next action; it must not show raw tool traces without
 tool results. It also keeps casual chat out of cards. The 2026-05-18 GA/Hermes
 repair validated the pattern by hiding raw JSON, summarizing delegate results,
 and keeping raw traces behind debug surfaces.
+
+`agent-memory-store-retrieve-loop` teaches the agent how to connect raw
+evidence, episode/worksite recall, structured cognition, skills, and Dream
+writeback into a real store-retrieve loop. The point is not to store more; each
+memory must say when it should be recalled and what the agent should do
+differently after recalling it.
+
+`agent-flowing-conversation-thread` teaches the agent how to handle continuous
+conversation with a Codex-like feel: one chat is continuous by default, code
+owns capture/order/queueing/no-loss, and the model owns semantic ownership from
+context. The 2026-05-25 GA repair validated the pattern: complete new goals
+queue during a run, short supplements append to the active run, and the agent
+loop must absorb unconsumed inbox messages before final exit.
 
 `html-motion-video` teaches the agent how to turn a concept into a polished
 HTML/CSS/JS motion lesson: write the teaching point, storyboard slide-like
