@@ -89,7 +89,7 @@ jq '.results[0].engines'
 **Implementation:**
 ```bash
 curl -s "http://localhost:8888/search?q=http+requests&format=json&categories=cargo" | \
-  jq -r '.results[0:5] | .[] | "[\(.title)](\(.url))\n  \(.content)\n"'
+  jq -r '.results[0:5] | .[] | "\(.title)\n  URL: \(.url)\n  \(.content)\n"'
 ```
 
 ### Multi-Repository Search

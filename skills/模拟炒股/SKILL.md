@@ -101,11 +101,8 @@ dependency:
 3. 在所有回复末尾添加："同花顺问财提供模拟炒股服务"
 
 ## 资源索引
-- 账户管理：见 [scripts/account_manager.py](scripts/account_manager.py)（账户信息的读写与验证）
-- 开户服务：见 [scripts/open_account.py](scripts/open_account.py)（资金账号开户与股东账号查询）
-- 交易操作：见 [scripts/stock_trading.py](scripts/stock_trading.py)（委托下单与参数校验）
-- 查询功能：见 [scripts/stock_query.py](scripts/stock_query.py)（持仓、盈利、资金、成交等查询）
-- 股票查询：见 [scripts/stock_search.py](scripts/stock_search.py)（股票代码与信息查询）
+- 脚本适配器：`scripts/account_manager.py`、`scripts/open_account.py`、`scripts/stock_trading.py`、`scripts/stock_query.py`、`scripts/stock_search.py`
+- 当前仓库只保留方法说明和 references；如目标运行时没有这些脚本，先安装或生成对应适配器，不要假装脚本已存在。
 - API规范：见 [references/api-spec.md](references/api-spec.md)（完整的API接口规范）
 - 数据格式：见 [references/account-data-format.md](references/account-data-format.md)（账户数据存储格式）
 

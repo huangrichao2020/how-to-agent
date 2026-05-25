@@ -44,6 +44,10 @@ Commit and push with a clear message explaining the fusion.
 
 ## What Was Done (2026-05-13)
 
+Status note: this file records the original fusion pass. Some contributed skill
+names below were later consolidated or renamed during cleanup; treat them as
+historical paths unless the directory still exists in `skills/`.
+
 ### Adopted from how-to-agent
 - **Prompt trail methodology**: The 9-step conversation sequence
 - **Consent gate pattern**: Before modifying agent-owned surfaces
@@ -60,16 +64,17 @@ Commit and push with a clear message explaining the fusion.
   delegation patterns from 2026-05 runs
 
 ### New Files Created
-- `skills/hermes-ttsr-memory/SKILL.md` — Trigger-based layered memory
-- `skills/self-healing-browser/SKILL.md` — Dynamic browser helper writing
+- Historical path: `skills/hermes-ttsr-memory/SKILL.md` — now represented by
+  the trigger-based memory and anti-bloat material in the current agent skills.
+- Historical path: `skills/self-healing-browser/SKILL.md` — now represented by
+  `skills/self-healing-browser-extractor/SKILL.md`.
 - `examples/08-fuse-external-into-local-architecture.md` — This file
 
 ### Updated Files
 - `README.md` — Architecture principles section + new skills listed
 - `README.zh-CN.md` — Chinese version of the same
-- `skills/agent-self-evolution/SKILL.md` — Added TTSR integration section
-- `skills/production-agent-runtime/SKILL.md` — Added Code Graph, SysWatch,
-  self-healing browser, and 2026-05 production patterns
+- Historical path: `skills/agent-self-evolution/SKILL.md`
+- Historical path: `skills/production-agent-runtime/SKILL.md`
 
 ## Verification Checklist
 

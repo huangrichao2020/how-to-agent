@@ -35,9 +35,18 @@
 
 ## 本次贡献内容
 
+Status note: this is a historical example. The original
+`skills/production-agent-runtime/` package is no longer a live skill path in
+this repository; the useful runtime material has since been folded into
+`full-stack-agent-intelligence`, `ga-implementation-map`,
+`agent-output-workbench`, `runtime-identity-correction`, and later GA repair
+examples.
+
 ### 新增文件
-- `skills/production-agent-runtime/SKILL.md` (英文)
-- `skills/production-agent-runtime/SKILL.zh-CN.md` (中文)
+- Historical path: `skills/production-agent-runtime/SKILL.md`
+- Current related entries: `skills/full-stack-agent-intelligence/`,
+  `skills/ga-implementation-map/`, `skills/agent-output-workbench/`,
+  `skills/runtime-identity-correction/`
 
 ### 更新文件
 - `README.md` — 目录树 + Skill package 列表
@@ -54,11 +63,11 @@
 
 ## 验收检查
 
-- [x] 新 skill 与现有 skill 风格一致
-- [x] 同时提供中英文版本
-- [x] README.md 和 README.zh-CN.md 都已更新
-- [x] 目录树结构正确
-- [x] Skill package 列表已添加引用
+- [x] 新 skill 与当时的现有 skill 风格一致
+- [x] 当时同时提供中英文版本
+- [x] README.md 和 README.zh-CN.md 当时已更新
+- [x] 后续精简时已从 README 默认索引移除旧路径
+- [x] 当前可从相关 runtime/cognition skills 继续读取
 - [x] 内容提炼自真实运行经验，不是空想
 
 ## 给下一个 agent 的提示

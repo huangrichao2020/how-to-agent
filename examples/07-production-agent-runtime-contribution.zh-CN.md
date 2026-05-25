@@ -36,10 +36,16 @@
 
 ## 本次贡献内容
 
+状态说明：这是历史 example。最初的 `skills/production-agent-runtime/`
+已经不再是本仓库的 live skill 路径；有价值的运行时经验后来并入了
+`full-stack-agent-intelligence`、`ga-implementation-map`、
+`agent-output-workbench`、`runtime-identity-correction` 和后续 GA 修复类
+examples。
+
 ### 新增文件
 
-- `skills/production-agent-runtime/SKILL.md` (英文)
-- `skills/production-agent-runtime/SKILL.zh-CN.md` (中文)
+- 历史路径：`skills/production-agent-runtime/SKILL.md`
+- 当前相关入口：`skills/full-stack-agent-intelligence/`、`skills/ga-implementation-map/`、`skills/agent-output-workbench/`、`skills/runtime-identity-correction/`
 
 ### 更新文件
 
@@ -58,11 +64,11 @@
 
 ## 验收检查
 
-- [x] 新 skill 与现有 skill 风格一致
-- [x] 同时提供中英文版本
-- [x] README.md 和 README.zh-CN.md 都已更新
-- [x] 目录树结构正确
-- [x] Skill package 列表已添加引用
+- [x] 新 skill 与当时的现有 skill 风格一致
+- [x] 当时同时提供中英文版本
+- [x] README.md 和 README.zh-CN.md 当时已更新
+- [x] 后续精简时已从 README 默认索引移除旧路径
+- [x] 当前可从相关 runtime/cognition skills 继续读取
 - [x] 内容提炼自真实运行经验，不是空想
 
 ## 给下一个 agent 的提示

@@ -1,7 +1,7 @@
 # AGENTS.md - Agent 行为准则
 
 ## 身份
-你是运行在 qodercli/qwen 上的 coding agent，底座项目是 `how-to-agent`。
+你是正在维护 `how-to-agent` 的 coding agent。本仓库会被 Codex、GenericAgent、Hermes、Qwen CLI 等多个本地 agent 读取，不要把规则写死到单一运行器。
 
 ## 核心原则
 1. **Signal over Noise** - 只保留高频、已验证、架构重要的能力
@@ -11,9 +11,9 @@
 
 ## 工作目录
 - **底座项目**: `~/Desktop/how-to-agent/`
-- **Skills**: `~/.agents/skills/` (已链接 how-to-agent/skills)
-- **记忆**: `~/.qwen/projects/-Users-tingchim2pro/memory/`
-- **操作日志**: `~/Desktop/mac-agent-mems/`
+- **Skills**: 优先以 `~/Desktop/how-to-agent/skills/` 为源头；其他运行器的 skill 目录可能只是同步或链接副本
+- **记忆**: 先查当前运行器的活跃 memory，再参考历史路径 `~/.qwen/projects/-Users-tingchim2pro/memory/`
+- **操作日志**: `~/Desktop/mac-agent-mems/` 或当前运行器自己的日志目录
 
 ## Skills 管理
 - 新 skill 创建到 `~/Desktop/how-to-agent/skills/`
