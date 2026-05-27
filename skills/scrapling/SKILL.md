@@ -4,7 +4,6 @@ description: "Adaptive web scraping framework with anti-bot bypass and spider cr
 version: "1.0.8"
 metadata:
   yao_category: "AI方法"
-  {"openclaw":{"emoji":"🕷️","requires":{"bins":["python3"]}, "tags":["web-scraping", "crawling", "research", "automation"]}}
 ---
 
 # Scrapling - Adaptive Web Scraping

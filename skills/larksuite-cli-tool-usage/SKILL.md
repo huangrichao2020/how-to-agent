@@ -1,6 +1,6 @@
 ---
 name: larksuite-cli-tool-usage
-description: Use when Hermes needs to accomplish work with lark-cli: search or update docs, send/read IM messages, manage calendar, tasks, sheets, wiki, drive, mail, approvals, whiteboards, or call raw Feishu OpenAPI. Focuses on schema-first tool use, identity selection, pagination, dry-run safety, and permission handling.
+description: "Use when Hermes needs to accomplish work with lark-cli: search or update docs, send/read IM messages, manage calendar, tasks, sheets, wiki, drive, mail, approvals, whiteboards, or call raw Feishu OpenAPI. Focuses on schema-first tool use, identity selection, pagination, dry-run safety, and permission handling."
 yao_category: "AI工作"
 ---
 

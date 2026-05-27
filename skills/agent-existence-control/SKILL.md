@@ -1,6 +1,6 @@
 ---
 name: agent-existence-control
-description: Use when an agent must coordinate capability cultivation and mind cultivation through L6 existence control: value, risk, decision, system, and causality.
+description: "Use when an agent must coordinate capability cultivation and mind cultivation through L6 existence control: value, risk, decision, system, and causality."
 ---
 
 # Agent Existence Control

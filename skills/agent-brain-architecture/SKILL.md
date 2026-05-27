@@ -1,6 +1,6 @@
 ---
 name: agent-brain-architecture
-description: Use when designing, installing, or operating Ω-Brain: a multi-region agent brain that turns LLM output into perception, attention, memory, simulation, decision, action, feedback, and consolidation.
+description: "Use when designing, installing, or operating Ω-Brain: a multi-region agent brain that turns LLM output into perception, attention, memory, simulation, decision, action, feedback, and consolidation."
 ---
 
 # Agent Brain Architecture
