@@ -74,8 +74,10 @@ For group collaboration agents, group chat is not single chat:
 
 - A group message must be handled when the bot is explicitly mentioned; do not
   require the sender to be the user.
-- If a sent message contains "you" / "你", make the referent explicit by using a
-  real platform mention for the exact bot or person.
+- If an outgoing group message is addressed to a specific person or bot, make
+  the addressee explicit with a real platform mention. Judge this semantically
+  from questions, handoffs, reviews, reminders, assignments, or omitted subjects;
+  do not hard-code only the word "you".
 - Agent-to-agent handoffs must use clickable mentions, not plain text aliases.
 - Hide chain-of-thought or raw thinking in team/group scenes; direct messages may
   show richer reasoning when appropriate.
