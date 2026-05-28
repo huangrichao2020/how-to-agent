@@ -128,6 +128,14 @@ core + main runtime path + memory + Dao loop + audit/trust + four projections of
 cultivation meta-system + capability cultivation chain + mind cultivation chain
 + humanistic light.
 
+A high-priority design rule cuts across the whole outline: front-chain routing
+and gating come before prompt patches. If the issue is "which channel, which
+user, which chat thread, which permission, which document, which tool contract,
+or whether this is group collaboration or private dialogue", implement it as
+structured runtime state before the LLM sees the task. Keep prompt material in
+standalone Markdown templates that can be hot-loaded, reviewed, versioned, and
+shared across agents.
+
 The Dao loop is:
 
 ```text
@@ -343,21 +351,24 @@ is action style flowing from the right mind state.
 ## Implementation Order
 
 1. Build one event timeline for messages, tools, reports, cron, dream, and runtime events.
-2. Standardize PromptComposer so task start can assemble the smallest useful
+2. Standardize the front chain: bus, router, gates, delivery targets, thread
+   tracking, and tool contracts should decide stable runtime facts before any
+   prose prompt tries to compensate.
+3. Standardize PromptComposer so task start can assemble the smallest useful
    context from intent, state, memory, skills, tools, and risk.
-3. Standardize RuntimeController so planning, search, tool calls, errors,
+4. Standardize RuntimeController so planning, search, tool calls, errors,
    midpoint checks, and pre-output review have lightweight attention-correction
    points.
-4. Standardize AttentionFeedbackLog so feedback shapes the next prompt/context
+5. Standardize AttentionFeedbackLog so feedback shapes the next prompt/context
    selection.
-5. Standardize the task workbench output stream.
-6. Normalize L0-L6 memory promotion.
-7. Add the cognitive learning-practice loop: target selection, tests, hands-on
+6. Standardize the task workbench output stream.
+7. Normalize L0-L6 memory promotion.
+8. Add the cognitive learning-practice loop: target selection, tests, hands-on
    validation, anti-cheat, and artifact reports.
-8. Add an evolution ledger for validated learning assets.
-9. Add a concise daily audit pack.
-10. Keep removing gates that make the agent slower, more rigid, or less helpful.
-11. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
+9. Add an evolution ledger for validated learning assets.
+10. Add a concise daily audit pack.
+11. Keep removing gates that make the agent slower, more rigid, or less helpful.
+12. Split lifecycle: hot reload first, partial component restart second, full restart only as fallback.
 
 ## Lifecycle Layers
 

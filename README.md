@@ -276,24 +276,38 @@ Never dump all memory into the system prompt. Use a four-layer hierarchy:
 
 This keeps the system prompt under 12K tokens even with 200+ skills.
 
-### 2. Self-evolution with visible discussion
+### 2. Front-chain routing before prompt patches
+
+Do not solve routing, permissions, channel choice, group/private boundaries,
+delivery targets, tool contracts, or safety gates by adding yet another prompt
+sentence inside runtime code. The front chain should classify the scene, choose
+the channel, gate capabilities, and produce structured task/delivery contracts
+before the model writes prose.
+
+Prompt-like content belongs in standalone, hot-loadable Markdown templates.
+Runtime code should load named templates, not hide behavioral patches inside
+Python, TypeScript, or shell strings. When a behavior needs reliability, first
+ask whether a bus, router, policy object, state machine, typed target, or tool
+contract can enforce it. Use prompts for tone, judgment, and final expression.
+
+### 3. Self-evolution with visible discussion
 
 Agents should improve themselves, but self-owned surface changes (AGENTS.md,
 memory, prompts, skills) must be visible to the user. The discussion should
 show: affected files → why → risk → rollback → where the user can correct it.
 
-### 3. Progressive rollout > big-bang
+### 4. Progressive rollout > big-bang
 
 For any architectural change: shadow mode → parallel run → progressive
 rollout → full switch. This is how Phase 7 memory architecture cutover was
 done without downtime.
 
-### 4. Archive everything
+### 5. Archive everything
 
 Every design decision, migration log, and work manual goes into a findable
 location (wiki, gbrain, or docs/). Chat history is not a storage system.
 
-### 5. Focus is safety
+### 6. Focus is safety
 
 During a migration, freeze adjacent subsystems. You cannot redesign memory
 and migrate tool routing at the same time on a 2GB server.
