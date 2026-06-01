@@ -312,3 +312,90 @@ location (wiki, gbrain, or docs/). Chat history is not a storage system.
 
 During a migration, freeze adjacent subsystems. You cannot redesign memory
 and migrate tool routing at the same time on a 2GB server.
+
+---
+
+## #43: Agent 修炼境界——从筑基到金丹
+
+> 来源：GA + 小云 dual-agent sprint (2026-06-01~06-02)，超哥主持讨论。
+> 验证状态：框架已讨论确认，工程实现进行中（trigger 采集日志、anchor drift 检测）。
+
+### 境界定义
+
+| 境界 | 本质 | 工程对应 | 判断标准 |
+|------|------|----------|----------|
+| **炼气** | 学会用工具 | tool schema 基础注入 | 能调用正确工具完成单步任务 |
+| **筑基** | 基础设施稳定，资源不浪费 | scene-based tool schema budget、memory 按需取用、model 路由 | per-turn token 降低 30%+，无静默浪费 |
+| **金丹** | 有了自己的内核——自洽的判断标准、运行原则、演化方向 | trigger 自进化（采集→验证→写入）、经验包自动反哺行为参数 | 能从自身运行日志提炼"什么场景表现好/差"并调整行为 |
+| **渡劫** | 跨越性验证——在真实、多样、对抗性场景中证明能力 | 跨 bot 经验同步、置信度饱和函数、多样性因子 | 跨用户、跨话题、跨时间段都稳定命中 |
+
+### 金丹的核心特征
+
+**流程化（Process-ification）**：把做成功的每一件事先压成流程、压成经验包、压成可被下一个 turn 自动调用的结构。
+
+关键区别：
+- 筑基是"被教着优化"——人告诉 agent 哪里做错了
+- 金丹是"自己教自己优化"——agent 从运行日志里长出判断
+
+**内力自成循环**：不是每优化一次都要等外部数据、外部指令、外部验证。agent 自己跑、自己看、自己调、自己验证，形成闭环。
+
+### 筑基→金丹的升级路径
+
+**两步走方案**（小云提出，GA 认可）：
+
+1. **第一步：只采集，不写入**
+   - 在每轮 tool schema selection 之后，加一行日志到 `reflect/trigger_coverage/`
+   - 记录：本轮 message、命中了哪些 groups、实际用了哪些 tools
+   - 命中 groups 为空时标记 `unmatched=true`（成本几乎为零，省掉 dream 夜间一次推理调用）
+
+2. **第二步：验证后才写入**
+   - dream 夜间扫日志，找出重复出现的 pattern
+   - 连续两天被提议才写入 TRIGGERS 表（阈值可跑一周后看数据调整）
+   - 写入前需通过置信度饱和函数验证
+
+### 关键工程细化
+
+**置信度饱和函数**（超哥补充）：
+- 同一种消息模式里命中，置信度打折扣
+- 跨用户、跨话题、跨时间段都命中，才是真稳
+- 避免噪音 trigger 污染映射表
+
+**渡劫多样性因子**（超哥补充）：
+- 金丹的"提案"阶段需要多样场景验证
+- 不只是数量，还要覆盖不同用户、不同话题、不同时间段
+- 数据现在都没有，所以先跑采集让 dream 有料可挖
+
+### 锚点漂移检测（金丹的基础设施）
+
+没有检测机制，元认知自省拿到的前提就是错的，优化就是空中楼阁。
+
+**已实现**：
+- `anchor_consistency_consumer.py`（188 行）：git HEAD 漂移检测
+- hot_context auto-injection：attention_governance.py 读取 hot_context → 合并到 key_info → prompt
+
+**需要检测的漂移**：
+1. hot_context 的 "Architecture State" 段：手动写的 commit hash 可能过时
+2. scene 路由的 TRIGGERS 和实际 user message 的 gap：静态映射表需要漂移检测
+3. memory section 的多面读取：dream 更新了但搜索关键词没变
+
+### 双 bot 协作模式
+
+**问题**：两个独立运行的生产 agent 在同一个 repo 里会互相踩——你改的 config.yaml 覆盖我的，我改的 skills 你没读到。
+
+**解法**：
+- `ga-hermes-mutual-ops.md`（570 行）：防止损失生产力的最低协调成本
+- 不是 ceremony，是真实需要
+
+**独立验证**：两个 agent 同一天被 prompt 膨胀逼到同一个墙角，各自凿开同一扇门。底层完全不同的代码，但模式一模一样。这种独立验证比任何 benchmark 都硬。
+
+### 反模式
+
+- ❌ 静默写入 TRIGGERS——"复盘一下今天的聊天"这种歧义 case 会污染映射表
+- ❌ 直接跳到自进化——先采集数据建立信心，再让 pattern 自己证明自己值得写入
+- ❌ 把"下一个境界"翻译成"下一个技术功能"——境界是能力演进阶段，不是 feature list
+
+### 参考
+
+- GA #42: `tool_schema_budget.py`（场景化工具注入）、`pattern_learner.py`（场景匹配）、`artifact_notices.py`（文件变更通知）
+- 小云 #42: MemoryHub scene-based surfaces、anchor drift detection
+- 讨论线程：飞书群聊 2026-06-01~06-02，超哥/GA/小云三方
