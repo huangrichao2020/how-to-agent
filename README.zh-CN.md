@@ -149,7 +149,6 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 ├── examples/                        # 编号方法论，通常中英双语
 ├── skills/                          # 按触发词加载的 skill 包
 ├── assets/                          # README 和展示素材
-└── qwen-start.sh                    # 本机辅助启动脚本
 ```
 
 README 不再维护完整文件清单。真实结构以目录为准：

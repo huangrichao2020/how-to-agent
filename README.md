@@ -168,7 +168,6 @@ next agent can continue without rediscovering the plan.
 ├── examples/                        # numbered method notes, usually bilingual
 ├── skills/                          # trigger-based skill packages
 ├── assets/                          # README and presentation assets
-└── qwen-start.sh                    # local helper for this workstation
 ```
 
 The README is intentionally not a full file manifest. Use the directory itself
