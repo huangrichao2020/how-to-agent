@@ -21,6 +21,9 @@ __pycache__/
 # 本地 memory symlinks (不提交 symlinks)
 memories/qwen-memory
 
+# 会话日志
+episodes/
+
 # IDE
 .vscode/
 .idea/
