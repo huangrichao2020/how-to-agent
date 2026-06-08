@@ -42,6 +42,61 @@ The core idea is simple:
 - Teams that want a practical "agent training conversation" example rather
   than another abstract autonomous-agent manifesto.
 
+## Manifesto: a cultivation-oriented Agent OS
+
+Most agent platforms optimize for **feature composition** — drag workflows,
+plug in an LLM, ship a chatbot. Dify, FastGPT, Coze, and n8n are excellent at
+this.
+
+`how-to-agent` optimizes for something different: **the evolution loop**.
+
+The hard problem is not the prompt, the model, or the tool. It is the closed
+loop that turns:
+
+```text
+external signal
+  -> source-level research
+  -> architecture archive
+  -> ordered discussion
+  -> risk / reward review
+  -> progressive rollout
+  -> work manual
+  -> next external signal
+```
+
+When this loop runs, the agent gets better at *being an agent* — at learning,
+forgetting, self-correcting, and rebuilding — not just at answering the next
+prompt. In the project's own culture, this loop is called **xiuzhen (修真)**,
+or cultivation. A cultivation-oriented Agent OS treats learning, forgetting,
+self-correction, and reputation as first-class runtime concerns, not as
+developer afterthoughts.
+
+### What this looks like compared to feature-composition platforms
+
+| Concern | Feature-composition platforms | Cultivation-oriented Agent OS |
+|---|---|---|
+| Memory | vector store + retrieval | layered memory with trigger-based injection, evidence chain, and drift correction |
+| Skills | plugin marketplace | trigger-based skills that earn their place by reducing context cost or improving stability |
+| Self-change | manual config edit | visible discussion, versioned manuals, rollback paths, adjacent-system freeze |
+| Evolution | operator-driven release | native loop: signal → practice → method → skill → reflex → next signal |
+
+The column on the right is not a roadmap. Every row is already running in
+production, in some form, in the agent projects that this repo describes.
+
+### The five-piece ecosystem
+
+`how-to-agent` is the handbook, not the whole OS. The OS is assembled across
+five repos, each one earning its place by feeding the evolution loop:
+
+- **[GenericAgent](https://github.com/huangrichao2020/GenericAgent)** — the runtime
+- **[hermes-agent](https://github.com/huangrichao2020/hermes-agent)** — a live sample of the cultivation loop
+- **how-to-agent** (this repo) — the methodology manual
+- **[agent-systems-patterns](https://github.com/huangrichao2020/agent-systems-patterns)** — pattern radar from real systems
+- **[uwillberich](https://github.com/huangrichao2020/uwillberich)** — the loop's productization in finance
+
+If you only read one repo, read this one. If you want to see the loop running,
+read the other four.
+
 ## The prompt trail
 
 These are the original instructions, kept in order. They are intentionally
