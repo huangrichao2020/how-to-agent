@@ -87,7 +87,7 @@ POINT ▶ 触发 (overlay 浮上来)：22 秒 cinematic
 | 视觉运动 | 漂浮 / 辐射 / pentagon | 循环 / 上升 / 对比 |
 | Scene 2 | 3D Orbit · 8 张档案在透视椭圆漂浮 | Spin Loop · token 沿 6 节点圆环跑 5 圈 |
 | Scene 3 | Pentagon · 5 token 从中央辐射 | v1 vs v5 · 并列 diff（红版 vs 金版） |
-| Scene 4 | SKILL.md typewriter | Hill-Climb · 全屏曲线绘制 |
+| Scene 4 | SKILL_技能说明与使用指南.md typewriter | Hill-Climb · 全屏曲线绘制 |
 | Scene 5 hero | 「21 分钟」serif italic 大字 | 旋转齿轮 ⚙ + 「KEPT +1.1」金色 tag |
 
 **判断标准**：盖住文案，只看视觉，能不能区分这是哪个 demo？区分不了就是偷懒。

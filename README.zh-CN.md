@@ -7,14 +7,14 @@
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![English](https://img.shields.io/badge/docs-English-blue)](README.md)
-[![中文](https://img.shields.io/badge/docs-中文-red)](README.zh-CN.md)
+[![English](https://img.shields.io/badge/docs-English-blue)](README_项目自述与概述.md)
+[![中文](https://img.shields.io/badge/docs-中文-red)](README_项目自述中文版.md)
 [![GitHub stars](https://img.shields.io/github/stars/huangrichao2020/how-to-agent?style=social)](https://github.com/huangrichao2020/how-to-agent)
 
 <p align="center">
-  <a href="README.md"><strong>English</strong></a>
+  <a href="README_项目自述与概述.md"><strong>English</strong></a>
   ·
-  <a href="README.zh-CN.md"><strong>简体中文</strong></a>
+  <a href="README_项目自述中文版.md"><strong>简体中文</strong></a>
 </p>
 
 这是一个面向开发者的小型实战指南：如何通过连续对话，让 coding
@@ -189,7 +189,7 @@ agent 的指令，把 agent 从"去研究这些项目"一步步推到"归档新�
 
 ```text
 .
-├── README.md / README.zh-CN.md      # 精简导览和阅读路线
+├── README_项目自述与概述.md / README_项目自述中文版.md      # 精简导览和阅读路线
 ├── examples/                        # 编号方法论，通常中英双语
 ├── skills/                          # 按触发词加载的 skill 包
 ├── assets/                          # README 和展示素材
@@ -199,7 +199,7 @@ README 不再维护完整文件清单。真实结构以目录为准：
 
 ```sh
 find examples -maxdepth 1 -name '*.md' | sort
-find skills -maxdepth 2 -name SKILL.md | sort
+find skills -maxdepth 2 -name SKILL_技能说明与使用指南.md | sort
 ```
 
 ## 阅读路线
@@ -209,13 +209,13 @@ find skills -maxdepth 2 -name SKILL.md | sort
 | 需求 | 先读 |
 |---|---|
 | 教 agent 沉淀一个新习惯 | [01-source-learning.zh-CN.md](examples/01-source-learning.zh-CN.md)、[02-architecture-first.zh-CN.md](examples/02-architecture-first.zh-CN.md)、[04-archive-the-work.zh-CN.md](examples/04-archive-the-work.zh-CN.md) |
-| 安全修改运行时 | [03-progressive-rollout.zh-CN.md](examples/03-progressive-rollout.zh-CN.md)、[12-runtime-identity-correction.zh-CN.md](examples/12-runtime-identity-correction.zh-CN.md)、[38-agent-runtime-repair-loop.zh-CN.md](examples/38-agent-runtime-repair-loop.zh-CN.md) |
-| Token 优化和运行时裁剪 | [42-per-scene-context-budget-and-anchor-consistency.zh-CN.md](examples/42-per-scene-context-budget-and-anchor-consistency.zh-CN.md)、[31-agent-anti-bloat-context-engineering.zh-CN.md](examples/31-agent-anti-bloat-context-engineering.zh-CN.md) |
-| 处理认知、记忆、注意力 | [10-cognitive-governance.zh-CN.md](examples/10-cognitive-governance.zh-CN.md)、[28-agent-attention-governance.zh-CN.md](examples/28-agent-attention-governance.zh-CN.md)、[36-agent-memory-store-retrieve-loop.zh-CN.md](examples/36-agent-memory-store-retrieve-loop.zh-CN.md)、[42-per-scene-context-budget-and-anchor-consistency.zh-CN.md](examples/42-per-scene-context-budget-and-anchor-consistency.zh-CN.md) |
-| 防止架构堆砌 | [25-agent-final-architecture-outline.zh-CN.md](examples/25-agent-final-architecture-outline.zh-CN.md)、[31-agent-anti-bloat-context-engineering.zh-CN.md](examples/31-agent-anti-bloat-context-engineering.zh-CN.md)、[32-agent-skill-engineering.zh-CN.md](examples/32-agent-skill-engineering.zh-CN.md) |
-| 落到 GenericAgent | [33-ga-implementation-map.zh-CN.md](examples/33-ga-implementation-map.zh-CN.md)、[37-agent-flowing-conversation-thread.zh-CN.md](examples/37-agent-flowing-conversation-thread.zh-CN.md)、[38-agent-runtime-repair-loop.zh-CN.md](examples/38-agent-runtime-repair-loop.zh-CN.md) |
+| 安全修改运行时 | [03-progressive-rollout_渐进式架构演进.md](examples/03-progressive-rollout_渐进式架构演进.md)、[12-runtime-identity-correction.zh-CN.md](examples/12-runtime-identity-correction.zh-CN.md)、[38-agent-runtime-repair-loop.zh-CN.md](examples/38-agent-runtime-repair-loop.zh-CN.md) |
+| Token 优化和运行时裁剪 | [42-per-scene-context-budget-and-anchor-consistency.zh-CN.md](examples/42-per-scene-context-budget-and-anchor-consistency.zh-CN.md)、[31-agent-anti-bloat-context-engineering_上下文防膨胀工程.zh-CN.md](examples/31-agent-anti-bloat-context-engineering_上下文防膨胀工程.zh-CN.md) |
+| 处理认知、记忆、注意力 | [10-cognitive-governance_认知治理与记忆治理.zh-CN.md](examples/10-cognitive-governance_认知治理与记忆治理.zh-CN.md)、[28-agent-attention-governance_注意力治理与提示词编排.zh-CN.md](examples/28-agent-attention-governance_注意力治理与提示词编排.zh-CN.md)、[36-agent-memory-store-retrieve-loop_分层记忆存储与检索循环.zh-CN.md](examples/36-agent-memory-store-retrieve-loop_分层记忆存储与检索循环.zh-CN.md)、[42-per-scene-context-budget-and-anchor-consistency.zh-CN.md](examples/42-per-scene-context-budget-and-anchor-consistency.zh-CN.md) |
+| 防止架构堆砌 | [25-agent-final-architecture-outline_Agent终极架构纲要.zh-CN.md](examples/25-agent-final-architecture-outline_Agent终极架构纲要.zh-CN.md)、[31-agent-anti-bloat-context-engineering_上下文防膨胀工程.zh-CN.md](examples/31-agent-anti-bloat-context-engineering_上下文防膨胀工程.zh-CN.md)、[32-agent-skill-engineering.zh-CN.md](examples/32-agent-skill-engineering.zh-CN.md) |
+| 落到 GenericAgent | [33-ga-implementation-map.zh-CN.md](examples/33-ga-implementation-map.zh-CN.md)、[37-agent-flowing-conversation-thread_流式对话线程与上下文贯通.zh-CN.md](examples/37-agent-flowing-conversation-thread_流式对话线程与上下文贯通.zh-CN.md)、[38-agent-runtime-repair-loop.zh-CN.md](examples/38-agent-runtime-repair-loop.zh-CN.md) |
 | 打磨用户可见输出 | [13-verified-runtime-repairs-2026-05-18.zh-CN.md](examples/13-verified-runtime-repairs-2026-05-18.zh-CN.md)、[19-platform-writing.zh-CN.md](examples/19-platform-writing.zh-CN.md)、[35-scene-to-agent-skill.zh-CN.md](examples/35-scene-to-agent-skill.zh-CN.md) |
-| 售卖和交付企业级 agent | [39-enterprise-agent-commercialization.zh-CN.md](examples/39-enterprise-agent-commercialization.zh-CN.md)、[enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL.zh-CN.md) |
+| 售卖和交付企业级 agent | [39-enterprise-agent-commercialization.zh-CN.md](examples/39-enterprise-agent-commercialization.zh-CN.md)、[enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL_技能说明中文版.md) |
 
 多数编号 example 都有 `.zh-CN.md` 版本。已知单语例外只在原始材料本身就是本地或场景化资产时保留：`08-fuse-external-into-local-architecture.md` 和 `2026-05-17-抖音风控应对策略.md`。
 
@@ -225,16 +225,16 @@ find skills -maxdepth 2 -name SKILL.md | sort
 
 核心 agent 进化入口：
 
-- [agent-anti-bloat-context-engineering](skills/agent-anti-bloat-context-engineering/SKILL.md) — 压缩主运行路径，把大型工作状态移出 prompt。
-- [agent-skill-creator](skills/agent-skill-creator/SKILL.md) — 把重复工作沉淀成紧凑、可触发、可验证的 skill。
-- [agent-output-workbench](skills/agent-output-workbench/SKILL.md) — 让聊天长任务可读，而不是暴露 raw trace。
-- [agent-memory-store-retrieve-loop](skills/agent-memory-store-retrieve-loop/SKILL.md) — 打通证据捕获、回忆、晋升和运行时取用。
-- [agent-flowing-conversation-thread](skills/agent-flowing-conversation-thread/SKILL.md) — 在用户运行中继续说话时保持上下文连续。
-- [runtime-identity-correction](skills/runtime-identity-correction/SKILL.md) — 修正宿主机、工作区或运行时迁移后的过期自我认知。
-- [ga-implementation-map](skills/ga-implementation-map/SKILL.md) — 把手册原则映射回 GenericAgent 源码和测试。
-- [enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL.zh-CN.md) — 把企业级 agent 工作包装成诊断、工作坊、落地计划、转化钩子和复购路径。
+- [agent-anti-bloat-context-engineering_上下文防膨胀工程](skills/agent-anti-bloat-context-engineering_上下文防膨胀工程/SKILL_技能说明与使用指南.md) — 压缩主运行路径，把大型工作状态移出 prompt。
+- [agent-skill-creator_Skill技能自动构建器](skills/agent-skill-creator_Skill技能自动构建器/SKILL_技能说明与使用指南.md) — 把重复工作沉淀成紧凑、可触发、可验证的 skill。
+- [agent-output-workbench_输出流工作台与卡片生成](skills/agent-output-workbench_输出流工作台与卡片生成/SKILL_技能说明与使用指南.md) — 让聊天长任务可读，而不是暴露 raw trace。
+- [agent-memory-store-retrieve-loop_分层记忆存储与检索循环](skills/agent-memory-store-retrieve-loop_分层记忆存储与检索循环/SKILL_技能说明与使用指南.md) — 打通证据捕获、回忆、晋升和运行时取用。
+- [agent-flowing-conversation-thread_流式对话线程与上下文贯通](skills/agent-flowing-conversation-thread_流式对话线程与上下文贯通/SKILL_技能说明与使用指南.md) — 在用户运行中继续说话时保持上下文连续。
+- [runtime-identity-correction](skills/runtime-identity-correction/SKILL_技能说明与使用指南.md) — 修正宿主机、工作区或运行时迁移后的过期自我认知。
+- [ga-implementation-map](skills/ga-implementation-map/SKILL_技能说明与使用指南.md) — 把手册原则映射回 GenericAgent 源码和测试。
+- [enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL_技能说明中文版.md) — 把企业级 agent 工作包装成诊断、工作坊、落地计划、转化钩子和复购路径。
 
-架构与认知类 skill 适合设计阶段使用，但也应按需触发：`agent-final-architecture-outline`、`agent-attention-governance`、`agent-thinking-core`、`agent-consciousness-math`、`cognitive-governance`、`full-stack-agent-intelligence`，以及相关修炼/人类信号技能。
+架构与认知类 skill 适合设计阶段使用，但也应按需触发：`agent-final-architecture-outline_Agent终极架构纲要`、`agent-attention-governance_注意力治理与提示词编排`、`agent-thinking-core_Agent思考核心与思维链`、`agent-consciousness-math_Agent意识数学与演化模型`、`cognitive-governance_认知治理与记忆治理`、`full-stack-agent-intelligence`，以及相关修炼/人类信号技能。
 
 领域和工具类 skill 仍保留在 `skills/` 下，但不属于默认 agent 进化阅读路径。任务明确提到领域、工具、市场、文档格式或平台时再检索。
 

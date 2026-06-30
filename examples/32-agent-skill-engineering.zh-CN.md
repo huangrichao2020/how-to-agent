@@ -23,8 +23,8 @@ Skill 是一个目录：
 
 ```text
 skill-name/
-├── SKILL.md
-├── SKILL.zh-CN.md
+├── SKILL_技能说明与使用指南.md
+├── SKILL_技能说明中文版.md
 ├── references/
 ├── scripts/
 └── assets/
@@ -41,7 +41,7 @@ Skill 应该分三层加载：
   name + description
   用于发现和触发
 
-第二级：SKILL.md
+第二级：SKILL_技能说明与使用指南.md
   简洁流程
   触发后才读取
 
@@ -120,7 +120,7 @@ description 太宽，会误触发；太窄，会召回失败。Skill 的召回�
 
 ## 主文件要短
 
-`SKILL.md` 不应变成长 prompt。
+`SKILL_技能说明与使用指南.md` 不应变成长 prompt。
 
 主文件只放：
 
@@ -173,7 +173,7 @@ Skill 带脚本后，攻击面比 prompt 大。
 [SKILL ENGINEERING CHECK]
 - 这是一次性 prompt，还是跨会话能力资产？
 - 常驻只需要 description 吗？
-- 主 SKILL.md 是否足够短？
+- 主 SKILL_技能说明与使用指南.md 是否足够短？
 - 哪些内容应拆进 references / scripts / assets？
 - 哪些步骤必须由脚本确定性执行？
 - 这个 Skill 有无安全、权限或隐私风险？

@@ -30,7 +30,7 @@
 - 你踩过的坑和反模式
 - 可复用的协议和规则
 
-创建对应的 SKILL.md 和 SKILL.zh-CN.md，并更新 README 中的引用。
+创建对应的 SKILL_技能说明与使用指南.md 和 SKILL_技能说明中文版.md，并更新 README 中的引用。
 保持与现有 skill 一致的风格和深度。
 ```
 
@@ -39,18 +39,18 @@
 状态说明：这是历史 example。最初的 `skills/production-agent-runtime/`
 已经不再是本仓库的 live skill 路径；有价值的运行时经验后来并入了
 `full-stack-agent-intelligence`、`ga-implementation-map`、
-`agent-output-workbench`、`runtime-identity-correction` 和后续 GA 修复类
+`agent-output-workbench_输出流工作台与卡片生成`、`runtime-identity-correction` 和后续 GA 修复类
 examples。
 
 ### 新增文件
 
-- 历史路径：`skills/production-agent-runtime/SKILL.md`
-- 当前相关入口：`skills/full-stack-agent-intelligence/`、`skills/ga-implementation-map/`、`skills/agent-output-workbench/`、`skills/runtime-identity-correction/`
+- 历史路径：`skills/production-agent-runtime/SKILL_技能说明与使用指南.md`
+- 当前相关入口：`skills/full-stack-agent-intelligence/`、`skills/ga-implementation-map/`、`skills/agent-output-workbench_输出流工作台与卡片生成/`、`skills/runtime-identity-correction/`
 
 ### 更新文件
 
-- `README.md` — 目录树 + Skill package 列表
-- `README.zh-CN.md` — 目录树 + 技能包列表 + 简介
+- `README_项目自述与概述.md` — 目录树 + Skill package 列表
+- `README_项目自述中文版.md` — 目录树 + 技能包列表 + 简介
 
 ### 核心内容
 
@@ -66,7 +66,7 @@ examples。
 
 - [x] 新 skill 与当时的现有 skill 风格一致
 - [x] 当时同时提供中英文版本
-- [x] README.md 和 README.zh-CN.md 当时已更新
+- [x] README_项目自述与概述.md 和 README_项目自述中文版.md 当时已更新
 - [x] 后续精简时已从 README 默认索引移除旧路径
 - [x] 当前可从相关 runtime/cognition skills 继续读取
 - [x] 内容提炼自真实运行经验，不是空想

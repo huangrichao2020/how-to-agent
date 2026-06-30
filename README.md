@@ -7,14 +7,14 @@ Teach your agent to evolve through conversation.
 </p>
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![English](https://img.shields.io/badge/docs-English-blue)](README.md)
-[![中文](https://img.shields.io/badge/docs-中文-red)](README.zh-CN.md)
+[![English](https://img.shields.io/badge/docs-English-blue)](README_项目自述与概述.md)
+[![中文](https://img.shields.io/badge/docs-中文-red)](README_项目自述中文版.md)
 [![GitHub stars](https://img.shields.io/github/stars/huangrichao2020/how-to-agent?style=social)](https://github.com/huangrichao2020/how-to-agent)
 
 <p align="center">
-  <a href="README.md"><strong>English</strong></a>
+  <a href="README_项目自述与概述.md"><strong>English</strong></a>
   ·
-  <a href="README.zh-CN.md"><strong>简体中文</strong></a>
+  <a href="README_项目自述中文版.md"><strong>简体中文</strong></a>
 </p>
 
 A small field guide for developers who want to teach a coding agent new
@@ -219,7 +219,7 @@ next agent can continue without rediscovering the plan.
 
 ```text
 .
-├── README.md / README.zh-CN.md      # compact orientation and reading routes
+├── README_项目自述与概述.md / README_项目自述中文版.md      # compact orientation and reading routes
 ├── examples/                        # numbered method notes, usually bilingual
 ├── skills/                          # trigger-based skill packages
 ├── assets/                          # README and presentation assets
@@ -230,7 +230,7 @@ as the source of truth:
 
 ```sh
 find examples -maxdepth 1 -name '*.md' | sort
-find skills -maxdepth 2 -name SKILL.md | sort
+find skills -maxdepth 2 -name SKILL_技能说明与使用指南.md | sort
 ```
 
 ## Reading routes
@@ -242,12 +242,12 @@ route that fits the task.
 |---|---|
 | Teach an agent a new durable habit | [01-source-learning.md](examples/01-source-learning.md), [02-architecture-first.md](examples/02-architecture-first.md), [04-archive-the-work.md](examples/04-archive-the-work.md) |
 | Change a runtime safely | [03-progressive-rollout.md](examples/03-progressive-rollout.md), [12-runtime-identity-correction.md](examples/12-runtime-identity-correction.md), [38-agent-runtime-repair-loop.md](examples/38-agent-runtime-repair-loop.md) |
-| Token optimization and runtime trimming | [42-per-scene-context-budget-and-anchor-consistency.md](examples/42-per-scene-context-budget-and-anchor-consistency.md), [31-agent-anti-bloat-context-engineering.md](examples/31-agent-anti-bloat-context-engineering.md) |
-| Work on cognition, memory, or attention | [10-cognitive-governance.md](examples/10-cognitive-governance.md), [28-agent-attention-governance.md](examples/28-agent-attention-governance.md), [36-agent-memory-store-retrieve-loop.md](examples/36-agent-memory-store-retrieve-loop.md), [42-per-scene-context-budget-and-anchor-consistency.md](examples/42-per-scene-context-budget-and-anchor-consistency.md) |
-| Prevent architecture bloat | [25-agent-final-architecture-outline.md](examples/25-agent-final-architecture-outline.md), [31-agent-anti-bloat-context-engineering.md](examples/31-agent-anti-bloat-context-engineering.md), [32-agent-skill-engineering.md](examples/32-agent-skill-engineering.md) |
-| Map the ideas into GenericAgent | [33-ga-implementation-map.md](examples/33-ga-implementation-map.md), [37-agent-flowing-conversation-thread.md](examples/37-agent-flowing-conversation-thread.md), [38-agent-runtime-repair-loop.md](examples/38-agent-runtime-repair-loop.md) |
+| Token optimization and runtime trimming | [42-per-scene-context-budget_场景上下文预算与锚点一致性.md](examples/42-per-scene-context-budget_场景上下文预算与锚点一致性.md), [31-agent-anti-bloat-context-engineering_上下文防膨胀工程.md](examples/31-agent-anti-bloat-context-engineering_上下文防膨胀工程.md) |
+| Work on cognition, memory, or attention | [10-cognitive-governance_认知治理与记忆治理.md](examples/10-cognitive-governance_认知治理与记忆治理.md), [28-agent-attention-governance_注意力治理与提示词编排.md](examples/28-agent-attention-governance_注意力治理与提示词编排.md), [36-agent-memory-store-retrieve-loop_分层记忆存储与检索循环.md](examples/36-agent-memory-store-retrieve-loop_分层记忆存储与检索循环.md), [42-per-scene-context-budget_场景上下文预算与锚点一致性.md](examples/42-per-scene-context-budget_场景上下文预算与锚点一致性.md) |
+| Prevent architecture bloat | [25-agent-final-architecture-outline_Agent终极架构纲要.md](examples/25-agent-final-architecture-outline_Agent终极架构纲要.md), [31-agent-anti-bloat-context-engineering_上下文防膨胀工程.md](examples/31-agent-anti-bloat-context-engineering_上下文防膨胀工程.md), [32-agent-skill-engineering.md](examples/32-agent-skill-engineering.md) |
+| Map the ideas into GenericAgent | [33-ga-implementation-map.md](examples/33-ga-implementation-map.md), [37-agent-flowing-conversation-thread_流式对话线程与上下文贯通.md](examples/37-agent-flowing-conversation-thread_流式对话线程与上下文贯通.md), [38-agent-runtime-repair-loop.md](examples/38-agent-runtime-repair-loop.md) |
 | Build user-facing output | [13-verified-runtime-repairs-2026-05-18.md](examples/13-verified-runtime-repairs-2026-05-18.md), [19-platform-writing.md](examples/19-platform-writing.md), [35-scene-to-agent-skill.md](examples/35-scene-to-agent-skill.md) |
-| Sell and deliver enterprise agents | [39-enterprise-agent-commercialization.md](examples/39-enterprise-agent-commercialization.md), [enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL.md) |
+| Sell and deliver enterprise agents | [39-enterprise-agent-commercialization.md](examples/39-enterprise-agent-commercialization.md), [enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL_技能说明与使用指南.md) |
 
 Most numbered examples have a `.zh-CN.md` companion. Known single-language
 exceptions are kept only when the original artifact was already local or
@@ -261,18 +261,18 @@ skills by trigger and keep the resident context small.
 
 Core agent-evolution entries:
 
-- [agent-anti-bloat-context-engineering](skills/agent-anti-bloat-context-engineering/SKILL.md) — keep the main path small and move large working state outside the prompt.
-- [agent-skill-creator](skills/agent-skill-creator/SKILL.md) — turn repeated work into compact, trigger-based, verifiable skills.
-- [agent-output-workbench](skills/agent-output-workbench/SKILL.md) — make long chat tasks readable without exposing raw traces.
-- [agent-memory-store-retrieve-loop](skills/agent-memory-store-retrieve-loop/SKILL.md) — connect evidence capture, recall, promotion, and runtime use.
-- [agent-flowing-conversation-thread](skills/agent-flowing-conversation-thread/SKILL.md) — preserve continuity while the user keeps talking during a run.
-- [runtime-identity-correction](skills/runtime-identity-correction/SKILL.md) — correct stale host, workspace, or runtime self-knowledge.
-- [ga-implementation-map](skills/ga-implementation-map/SKILL.md) — map the handbook principles back to GenericAgent source and tests.
-- [enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL.md) — turn enterprise agent work into diagnostics, workshops, rollout plans, conversion hooks, and renewal paths.
+- [agent-anti-bloat-context-engineering_上下文防膨胀工程](skills/agent-anti-bloat-context-engineering_上下文防膨胀工程/SKILL_技能说明与使用指南.md) — keep the main path small and move large working state outside the prompt.
+- [agent-skill-creator_Skill技能自动构建器](skills/agent-skill-creator_Skill技能自动构建器/SKILL_技能说明与使用指南.md) — turn repeated work into compact, trigger-based, verifiable skills.
+- [agent-output-workbench_输出流工作台与卡片生成](skills/agent-output-workbench_输出流工作台与卡片生成/SKILL_技能说明与使用指南.md) — make long chat tasks readable without exposing raw traces.
+- [agent-memory-store-retrieve-loop_分层记忆存储与检索循环](skills/agent-memory-store-retrieve-loop_分层记忆存储与检索循环/SKILL_技能说明与使用指南.md) — connect evidence capture, recall, promotion, and runtime use.
+- [agent-flowing-conversation-thread_流式对话线程与上下文贯通](skills/agent-flowing-conversation-thread_流式对话线程与上下文贯通/SKILL_技能说明与使用指南.md) — preserve continuity while the user keeps talking during a run.
+- [runtime-identity-correction](skills/runtime-identity-correction/SKILL_技能说明与使用指南.md) — correct stale host, workspace, or runtime self-knowledge.
+- [ga-implementation-map](skills/ga-implementation-map/SKILL_技能说明与使用指南.md) — map the handbook principles back to GenericAgent source and tests.
+- [enterprise-agent-commercialization](skills/enterprise-agent-commercialization/SKILL_技能说明与使用指南.md) — turn enterprise agent work into diagnostics, workshops, rollout plans, conversion hooks, and renewal paths.
 
 Architecture and cognition entries are useful for design work, but should stay
-trigger-based: `agent-final-architecture-outline`, `agent-attention-governance`,
-`agent-thinking-core`, `agent-consciousness-math`, `cognitive-governance`,
+trigger-based: `agent-final-architecture-outline_Agent终极架构纲要`, `agent-attention-governance_注意力治理与提示词编排`,
+`agent-thinking-core_Agent思考核心与思维链`, `agent-consciousness-math_Agent意识数学与演化模型`, `cognitive-governance_认知治理与记忆治理`,
 `full-stack-agent-intelligence`, and related cultivation/human-signal skills.
 
 Domain and tool skills are still available under `skills/`, but they are not

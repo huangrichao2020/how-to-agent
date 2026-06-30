@@ -178,10 +178,10 @@ visible artifacts, and conversion into the next paid step.
 - Two-layer decomposition:
   [methodology/two-layer-decomposition.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/methodology/two-layer-decomposition.md)
 - Business loop:
-  [business-playbook/README.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/README.md)
+  [business-playbook/README_项目自述与概述.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/README_项目自述与概述.md)
 - Conversion:
   [stage-2-conversion.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/stage-2-conversion.md)
 - Course system:
-  [course-system/README.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/README.md)
+  [course-system/README_项目自述与概述.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/README_项目自述与概述.md)
 - Enterprise case:
   [social-ecommerce/skill-landing-report.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/enterprise-cases/social-ecommerce/skill-landing-report.md)

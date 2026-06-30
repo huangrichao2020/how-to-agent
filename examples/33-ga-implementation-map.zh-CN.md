@@ -43,7 +43,7 @@ GenericAgent 源码是肉身。
 | 开局 prompt/context 拼接 | `attention_governance.py::PromptComposer.compose()` | 每次 agent loop 开始 | 组合结果必须包含用户意图、任务验收、必要上下文和三经坐标 |
 | 运行中纠偏 | `attention_governance.py::RuntimeController.after_tool()`、`_turn_correction()` | 工具失败、重复工具、无工具漂移、中段检查 | 输出 `[THREE CLASSICS CORRECTION]`，但不变成审批流程 |
 | 结束后反馈 | `RuntimeController.on_task_complete()`、`on_task_error()` | 任务成功或失败 | 记录 task lifecycle after_task 事件 |
-| 反堆砌 | `agent-anti-bloat-context-engineering` 指导；GA 里由 PromptComposer/历史窗口承担 | 每次装配上下文 | 不把全部世界观常驻进每个任务 |
+| 反堆砌 | `agent-anti-bloat-context-engineering_上下文防膨胀工程` 指导；GA 里由 PromptComposer/历史窗口承担 | 每次装配上下文 | 不把全部世界观常驻进每个任务 |
 
 ## 大脑、肉身、法器
 

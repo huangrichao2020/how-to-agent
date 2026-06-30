@@ -1,6 +1,6 @@
 # Example 08: Excellent Agent Architecture
 
-[English](09-excellent-agent-architecture.md) · [简体中文](09-excellent-agent-architecture.zh-CN.md)
+[English](09-excellent-agent-architecture_Agent架构设计与记忆系统.md) · [简体中文](09-excellent-agent-architecture_Agent架构设计与记忆系统.zh-CN.md)
 
 Use this when a conversation produces reusable architecture taste, not just a
 patch.

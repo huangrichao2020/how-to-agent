@@ -54,7 +54,7 @@ TRIGGERS (keyword → groups mapping):
 
 ## Pattern 3: File Artifact Classification
 
-**What**: When the agent writes files, `artifact_notices.py` classifies the file path and generates a user-visible notice (e.g., "💾 Skill X created", "💾 Memory MEMORY.md updated").
+**What**: When the agent writes files, `artifact_notices.py` classifies the file path and generates a user-visible notice (e.g., "💾 Skill X created", "💾 Memory MEMORY_长期交易记忆与画像.md updated").
 
 **Why it works**: Users lose trust when agents make changes silently. A deterministic classifier (regex-based, no LLM needed) produces lightweight feedback that says "I changed something, here's what."
 
@@ -62,7 +62,7 @@ TRIGGERS (keyword → groups mapping):
 ```python
 def classify_file_artifact(path, *, existed_before=None):
     # Pattern match: skills/** → "💾 Skill name created/updated"
-    # Pattern match: memory/MEMORY.md → "💾 Memory file updated"
+    # Pattern match: memory/MEMORY_长期交易记忆与画像.md → "💾 Memory file updated"
     # Pattern match: wiki/** → "💾 Wiki entry created"
     # Empty string for non-notable files
 ```

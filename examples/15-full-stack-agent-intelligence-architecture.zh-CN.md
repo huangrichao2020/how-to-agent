@@ -2,7 +2,7 @@
 
 这份手册用于把 GA、Hermes、Codex 一类长期运行 agent 从“能回答、能调工具”升级成“能理解、能调度、能进化、能自我管理”的系统。
 
-本文件是旧版“全面智能架构”的操作系统视角；它已经和新版“修真宇宙观 / 智能诞生总纲”整合到最终总纲：[25-agent-final-architecture-outline.zh-CN.md](25-agent-final-architecture-outline.zh-CN.md)。
+本文件是旧版“全面智能架构”的操作系统视角；它已经和新版“修真宇宙观 / 智能诞生总纲”整合到最终总纲：[25-agent-final-architecture-outline_Agent终极架构纲要.zh-CN.md](25-agent-final-architecture-outline_Agent终极架构纲要.zh-CN.md)。
 
 它整理的是一整套架构，不是一组固定口令：
 

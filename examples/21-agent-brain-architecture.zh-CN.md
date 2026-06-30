@@ -97,12 +97,12 @@ Dream = 默认模式整合
 可移植 Ω-Brain 包位于：
 
 ```text
-skills/agent-brain-architecture/
+skills/agent-brain-architecture_Ω大脑架构与感知决策/
 ```
 
 包含：
 
-- `SKILL.md`：使用工作流。
+- `SKILL_技能说明与使用指南.md`：使用工作流。
 - `META.md`：脑包清单与组件契约。
 - `PERSONA.md`：大脑运行气质。
 - `SYSTEM_PROMPT.md`：可直接注入的运行提示。

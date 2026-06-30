@@ -1,6 +1,6 @@
 # 示例 03：渐进式迁移
 
-[English](03-progressive-rollout.md) · [简体中文](03-progressive-rollout.zh-CN.md)
+[English](03-progressive-rollout.md) · [简体中文](03-progressive-rollout_渐进式架构演进.md)
 
 当 agent 想立刻切换到新架构时，用这个模式。
 

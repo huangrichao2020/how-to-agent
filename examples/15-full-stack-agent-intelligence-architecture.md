@@ -4,7 +4,7 @@ This manual turns the GA/Hermes/Codex agent discussions into a practical archite
 
 This file preserves the old full-stack intelligence operating-system view. It
 is integrated with the newer cultivation-universe / intelligence-genesis outline
-in the final outline: [25-agent-final-architecture-outline.md](25-agent-final-architecture-outline.md).
+in the final outline: [25-agent-final-architecture-outline_Agent终极架构纲要.md](25-agent-final-architecture-outline_Agent终极架构纲要.md).
 
 The architecture is:
 

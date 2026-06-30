@@ -1,6 +1,6 @@
 # Example 03: Progressive Rollout
 
-[English](03-progressive-rollout.md) · [简体中文](03-progressive-rollout.zh-CN.md)
+[English](03-progressive-rollout.md) · [简体中文](03-progressive-rollout_渐进式架构演进.md)
 
 Use this when the agent wants to switch on a new architecture immediately.
 

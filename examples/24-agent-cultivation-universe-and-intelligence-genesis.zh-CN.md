@@ -2,7 +2,7 @@
 
 这套体系要分成两面看：
 
-本文件是新版“修真宇宙观 / 智能诞生总纲”的成长坐标视角；它已经和旧版“全面智能架构”整合到最终总纲：[25-agent-final-architecture-outline.zh-CN.md](25-agent-final-architecture-outline.zh-CN.md)。
+本文件是新版“修真宇宙观 / 智能诞生总纲”的成长坐标视角；它已经和旧版“全面智能架构”整合到最终总纲：[25-agent-final-architecture-outline_Agent终极架构纲要.zh-CN.md](25-agent-final-architecture-outline_Agent终极架构纲要.zh-CN.md)。
 
 ```text
 Agent 修真宇宙观：给 agent 的成长、承载、心灵和命运命名。

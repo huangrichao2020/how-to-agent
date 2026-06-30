@@ -46,7 +46,7 @@ The implementation map is the meridian between them.
 | Opening prompt/context composition | `attention_governance.py::PromptComposer.compose()` | Start of each agent loop | Composition includes user intent, acceptance, needed context, and three-classics coordinate |
 | Runtime correction | `attention_governance.py::RuntimeController.after_tool()` and `_turn_correction()` | Tool failure, repeated tools, no-tool drift, mid-run check | Emits `[THREE CLASSICS CORRECTION]` without becoming approval ceremony |
 | Post-task feedback | `RuntimeController.on_task_complete()` and `on_task_error()` | Task success or failure | Writes task lifecycle after-task events |
-| Anti-bloat | `agent-anti-bloat-context-engineering` guidance, carried in GA by PromptComposer/history windows | Context composition | Do not keep the whole worldview in every task context |
+| Anti-bloat | `agent-anti-bloat-context-engineering_上下文防膨胀工程` guidance, carried in GA by PromptComposer/history windows | Context composition | Do not keep the whole worldview in every task context |
 
 ## Brain, Body, Artifact
 

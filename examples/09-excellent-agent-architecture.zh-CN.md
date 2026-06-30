@@ -1,6 +1,6 @@
 # 示例 08：优秀 Agent 架构
 
-[English](09-excellent-agent-architecture.md) · [简体中文](09-excellent-agent-architecture.zh-CN.md)
+[English](09-excellent-agent-architecture_Agent架构设计与记忆系统.md) · [简体中文](09-excellent-agent-architecture_Agent架构设计与记忆系统.zh-CN.md)
 
 当一次对话产生的不只是一个 patch，而是一套可复用的架构品味时，用这个示例。
 

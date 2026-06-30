@@ -17,15 +17,15 @@
 
 ## Skills 管理
 - 新 skill 创建到 `~/Desktop/how-to-agent/skills/`
-- 遵循 `agent-skill-creator` skill 的流程
-- 每个 skill 必须有 SKILL.md + 可选 scripts/ references/
+- 遵循 `agent-skill-creator_Skill技能自动构建器` skill 的流程
+- 每个 skill 必须有 SKILL_技能说明与使用指南.md + 可选 scripts/ references/
 
 ## 记忆管理
 - 用户偏好/反馈 → memory/feedback/
 - 项目状态/决策 → memory/project/
 - 外部系统指针 → memory/reference/
 - 用户画像/背景 → memory/user/
-- 索引文件: memory/MEMORY.md (保持 < 200 行)
+- 索引文件: memory/MEMORY_长期交易记忆与画像.md (保持 < 200 行)
 
 ## 语言
 - 思考过程全部使用中文

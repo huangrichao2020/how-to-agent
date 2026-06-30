@@ -104,12 +104,12 @@ trace, replay, fast correction, and user takeover beat prevention-heavy control.
 The portable Ω-Brain package lives under:
 
 ```text
-skills/agent-brain-architecture/
+skills/agent-brain-architecture_Ω大脑架构与感知决策/
 ```
 
 It includes:
 
-- `SKILL.md`: usage workflow.
+- `SKILL_技能说明与使用指南.md`: usage workflow.
 - `META.md`: brain package manifest and component contract.
 - `PERSONA.md`: the brain's operating temperament.
 - `SYSTEM_PROMPT.md`: a copyable prompt that makes an agent run the brain loop.

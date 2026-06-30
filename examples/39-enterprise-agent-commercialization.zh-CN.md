@@ -163,10 +163,10 @@
 - 两层拆解法：
   [methodology/two-layer-decomposition.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/methodology/two-layer-decomposition.md)
 - 业务闭环：
-  [business-playbook/README.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/README.md)
+  [business-playbook/README_项目自述与概述.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/README_项目自述与概述.md)
 - 咨询转化：
   [stage-2-conversion.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/stage-2-conversion.md)
 - 课程体系：
-  [course-system/README.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/README.md)
+  [course-system/README_项目自述与概述.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/README_项目自述与概述.md)
 - 企业案例：
   [social-ecommerce/skill-landing-report.md](https://github.com/hmy1990116/ai-training-methodology/blob/main/enterprise-cases/social-ecommerce/skill-landing-report.md)

@@ -65,9 +65,9 @@ Produce:
 
 ```text
 project/
-├── README.md
-├── SKILL.md
-├── SKILL.zh-CN.md
+├── README_项目自述与概述.md
+├── SKILL_技能说明与使用指南.md
+├── SKILL_技能说明中文版.md
 ├── methodology/
 │   └── index.zh-CN.md
 ├── references/

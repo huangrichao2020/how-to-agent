@@ -26,11 +26,11 @@ This source is useful because it connects three things that are often split:
 - Repository README:
   <https://github.com/hmy1990116/ai-training-methodology/tree/main>
 - Methodology overview:
-  <https://github.com/hmy1990116/ai-training-methodology/blob/main/methodology/README.md>
+  <https://github.com/hmy1990116/ai-training-methodology/blob/main/methodology/README_项目自述与概述.md>
 - Two-layer decomposition:
   <https://github.com/hmy1990116/ai-training-methodology/blob/main/methodology/two-layer-decomposition.md>
 - Business playbook:
-  <https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/README.md>
+  <https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/README_项目自述与概述.md>
 - Acquisition:
   <https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/stage-1-acquisition.md>
 - Conversion:
@@ -42,13 +42,13 @@ This source is useful because it connects three things that are often split:
 - Hooks:
   <https://github.com/hmy1990116/ai-training-methodology/blob/main/business-playbook/hooks-framework.md>
 - Course system:
-  <https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/README.md>
+  <https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/README_项目自述与概述.md>
 - Course design principles:
   <https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/design-principles.md>
 - AI maturity model:
   <https://github.com/hmy1990116/ai-training-methodology/blob/main/course-system/knowledge-base/maturity-model.md>
 - Skill system:
-  <https://github.com/hmy1990116/ai-training-methodology/blob/main/skills/README.md>
+  <https://github.com/hmy1990116/ai-training-methodology/blob/main/skills/README_项目自述与概述.md>
 - Skill writing guide:
   <https://github.com/hmy1990116/ai-training-methodology/blob/main/skills/writing-guide.md>
 - Enterprise case:

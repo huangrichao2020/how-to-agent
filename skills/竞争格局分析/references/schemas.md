@@ -1,6 +1,6 @@
 # Schemas Reference
 
-Additional table formats not shown in main SKILL.md.
+Additional table formats not shown in main SKILL_技能说明与使用指南.md.
 
 ## M&A Transaction Table
 

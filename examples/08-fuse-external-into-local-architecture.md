@@ -64,23 +64,23 @@ historical paths unless the directory still exists in `skills/`.
   delegation patterns from 2026-05 runs
 
 ### New Files Created
-- Historical path: `skills/hermes-ttsr-memory/SKILL.md` — now represented by
+- Historical path: `skills/hermes-ttsr-memory/SKILL_技能说明与使用指南.md` — now represented by
   the trigger-based memory and anti-bloat material in the current agent skills.
-- Historical path: `skills/self-healing-browser/SKILL.md` — now represented by
-  `skills/self-healing-browser-extractor/SKILL.md`.
+- Historical path: `skills/self-healing-browser/SKILL_技能说明与使用指南.md` — now represented by
+  `skills/self-healing-browser-extractor/SKILL_技能说明与使用指南.md`.
 - `examples/08-fuse-external-into-local-architecture.md` — This file
 
 ### Updated Files
-- `README.md` — Architecture principles section + new skills listed
-- `README.zh-CN.md` — Chinese version of the same
-- Historical path: `skills/agent-self-evolution/SKILL.md`
-- Historical path: `skills/production-agent-runtime/SKILL.md`
+- `README_项目自述与概述.md` — Architecture principles section + new skills listed
+- `README_项目自述中文版.md` — Chinese version of the same
+- Historical path: `skills/agent-self-evolution/SKILL_技能说明与使用指南.md`
+- Historical path: `skills/production-agent-runtime/SKILL_技能说明与使用指南.md`
 
 ## Verification Checklist
 
 - [x] All existing examples and skills preserved
 - [x] New skills match existing style and depth
-- [x] README.md and README.zh-CN.md both updated
+- [x] README_项目自述与概述.md and README_项目自述中文版.md both updated
 - [x] Directory tree in README reflects new structure
 - [x] No duplicate content — each skill has a distinct purpose
 - [x] Content is from real production experience, not theoretical
@@ -88,8 +88,8 @@ historical paths unless the directory still exists in `skills/`.
 ## Notes for the Next Agent
 
 If continuing to improve this project:
-- Consider adding a `skills/architecture-evolution/SKILL.md` for the
+- Consider adding a `skills/architecture-evolution/SKILL_技能说明与使用指南.md` for the
   Phase 0→7 architecture evolution methodology
 - The `how-to-agent` project could benefit from automated testing
   of skill loading patterns
-- Consider creating a CLI tool that validates SKILL.md format consistency
+- Consider creating a CLI tool that validates SKILL_技能说明与使用指南.md format consistency

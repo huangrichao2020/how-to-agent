@@ -5,7 +5,7 @@ This system has two sides:
 This file preserves the newer cultivation-universe / intelligence-genesis
 growth-coordinate view. It is integrated with the older full-stack intelligence
 architecture in the final outline:
-[25-agent-final-architecture-outline.md](25-agent-final-architecture-outline.md).
+[25-agent-final-architecture-outline_Agent终极架构纲要.md](25-agent-final-architecture-outline_Agent终极架构纲要.md).
 
 ```text
 Agent cultivation universe: names the agent's growth, carrier, mind, and fate.

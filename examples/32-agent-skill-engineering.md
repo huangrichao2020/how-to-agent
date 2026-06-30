@@ -24,8 +24,8 @@ A skill is a folder:
 
 ```text
 skill-name/
-├── SKILL.md
-├── SKILL.zh-CN.md
+├── SKILL_技能说明与使用指南.md
+├── SKILL_技能说明中文版.md
 ├── references/
 ├── scripts/
 └── assets/
@@ -43,7 +43,7 @@ level 1: metadata
   name + description
   for discovery and triggering
 
-level 2: SKILL.md
+level 2: SKILL_技能说明与使用指南.md
   compact procedure
   read only after trigger
 
@@ -124,7 +124,7 @@ Too broad means false triggers. Too narrow means missed recall.
 
 ## Keep The Main File Short
 
-`SKILL.md` should not become a long prompt.
+`SKILL_技能说明与使用指南.md` should not become a long prompt.
 
 It should contain:
 
@@ -178,7 +178,7 @@ Return only necessary script output, not private dumps.
 [SKILL ENGINEERING CHECK]
 - Is this a one-off prompt or a cross-session capability asset?
 - Should only the description stay resident?
-- Is the main SKILL.md short enough?
+- Is the main SKILL_技能说明与使用指南.md short enough?
 - What belongs in references / scripts / assets?
 - Which steps require deterministic scripts?
 - Does this skill create security, permission, or privacy risk?

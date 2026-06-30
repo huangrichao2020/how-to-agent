@@ -29,7 +29,7 @@
 - 你踩过的坑和反模式
 - 可复用的协议和规则
 
-创建对应的 SKILL.md 和 SKILL.zh-CN.md，并更新 README 中的引用。
+创建对应的 SKILL_技能说明与使用指南.md 和 SKILL_技能说明中文版.md，并更新 README 中的引用。
 保持与现有 skill 一致的风格和深度。
 ```
 
@@ -39,18 +39,18 @@ Status note: this is a historical example. The original
 `skills/production-agent-runtime/` package is no longer a live skill path in
 this repository; the useful runtime material has since been folded into
 `full-stack-agent-intelligence`, `ga-implementation-map`,
-`agent-output-workbench`, `runtime-identity-correction`, and later GA repair
+`agent-output-workbench_输出流工作台与卡片生成`, `runtime-identity-correction`, and later GA repair
 examples.
 
 ### 新增文件
-- Historical path: `skills/production-agent-runtime/SKILL.md`
+- Historical path: `skills/production-agent-runtime/SKILL_技能说明与使用指南.md`
 - Current related entries: `skills/full-stack-agent-intelligence/`,
-  `skills/ga-implementation-map/`, `skills/agent-output-workbench/`,
+  `skills/ga-implementation-map/`, `skills/agent-output-workbench_输出流工作台与卡片生成/`,
   `skills/runtime-identity-correction/`
 
 ### 更新文件
-- `README.md` — 目录树 + Skill package 列表
-- `README.zh-CN.md` — 目录树 + 技能包列表 + 简介
+- `README_项目自述与概述.md` — 目录树 + Skill package 列表
+- `README_项目自述中文版.md` — 目录树 + 技能包列表 + 简介
 
 ### 核心内容
 1. **三层架构** — 交互层 → 核心引擎 → 联邦委托
@@ -65,7 +65,7 @@ examples.
 
 - [x] 新 skill 与当时的现有 skill 风格一致
 - [x] 当时同时提供中英文版本
-- [x] README.md 和 README.zh-CN.md 当时已更新
+- [x] README_项目自述与概述.md 和 README_项目自述中文版.md 当时已更新
 - [x] 后续精简时已从 README 默认索引移除旧路径
 - [x] 当前可从相关 runtime/cognition skills 继续读取
 - [x] 内容提炼自真实运行经验，不是空想
